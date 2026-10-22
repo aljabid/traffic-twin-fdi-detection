@@ -1,0 +1,8 @@
+# crypto bench start
+R,sha256_64B,1000,21.499,21.492,21.660
+R,hmac_sha256_64B,1000,53.733,53.728,53.840
+R,ecdsa_p256_keygen,5,4357.550,4356.136,4358.348
+R,ecdsa_p256_sign,20,4693.089,4690.504,4695.692
+R,ecdsa_p256_verify,20,5154.234,5154.224,5154.392
+# verify ok 20/20
+# crypto bench done
