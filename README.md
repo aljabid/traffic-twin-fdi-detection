@@ -31,11 +31,11 @@ code, firmware, raw results and figures behind every number in the article.
 
 | Result | Value | File |
 |---|---|---|
-| Hybrid+ worst-case F1, all ten attack families, seeds 4 to 13 | 0.478 | results/ml/hybrid-plus-*.json |
-| Hybrid+ on held-out seeds 14 to 23 | 0.474; beats the plain hybrid in 30 of 30 units (+0.025) | results/ml/hybrid-plus-confirm-*.json |
-| Loss when a whole attack category is withheld | forest 14%, Hybrid+ 9% | results/ml/leave-category-out-*.json |
+| Hybrid+ worst-case F1, all ten attack families, seeds 4 to 13 | 0.478 | results/ml/hybrid-plus-\*.json |
+| Hybrid+ on held-out seeds 14 to 23 | 0.474; beats the plain hybrid in 30 of 30 units (+0.025) | results/ml/hybrid-plus-confirm-\*.json |
+| Loss when a whole attack category is withheld | forest 14%, Hybrid+ 9% | results/ml/leave-category-out-\*.json |
 | VeReMi Extension F1 (seen, unseen type, unseen category) | Hybrid+ 0.796, 0.767, 0.756 | results/ml/veremi-benchmark.json |
-| Kalman chi-squared test under adaptive attack | 0.162 | results/ml/sota-*.json |
+| Kalman chi-squared test under adaptive attack | 0.162 | results/ml/sota-\*.json |
 | Live bench runs: rehearsed attacks detected | congestion spoof 83% and 88%, clear-road spoof 100% | results/hardware/live_2.csv, live_3.csv |
 | Live bench runs: benign false alarms per message | 4.7% and 3.1% | results/hardware/live_2.csv, live_3.csv |
 | ECDSA-P256 signing on the ATmega2560 | 4.69 s | results/hardware/crypto_mega.txt |
@@ -169,22 +169,22 @@ baud. The ESP32 prints CPU cycles: milliseconds = cycles / 240000.
 | Article | Source files in results/ |
 |---|---|
 | Table 1 (parts and prices) | section 4, level 4 of this file |
-| Table 2 (attack families and categories withheld) | ml/leave-one-out-*.json, ml/leave-category-out-*.json |
-| Table 3 (hybrid on known and novel families) | ml/hybrid-*.json, ml/hybrid-novel2-*.json, ml/novel-rf-*.json, ml/novel-unsup-*.json |
-| Table 4 (established baselines and Hybrid+) | ml/sota-*.json, ml/hybrid-plus-*.json, ml/hybrid-*.json |
-| Table 5 (held-out seeds 14 to 23) | ml/hybrid-plus-confirm-*.json |
+| Table 2 (attack families and categories withheld) | ml/leave-one-out-\*.json, ml/leave-category-out-\*.json |
+| Table 3 (hybrid on known and novel families) | ml/hybrid-\*.json, ml/hybrid-novel2-\*.json, ml/novel-rf-\*.json, ml/novel-unsup-\*.json |
+| Table 4 (established baselines and Hybrid+) | ml/sota-\*.json, ml/hybrid-plus-\*.json, ml/hybrid-\*.json |
+| Table 5 (held-out seeds 14 to 23) | ml/hybrid-plus-confirm-\*.json |
 | Table 6 (VeReMi Extension) | ml/veremi-benchmark.json |
-| Table 7 (operating points) | ml/alarm-tradeoff-*.json, ml/plus-tradeoff-*.json, ml/plus-episodes-*.json |
-| Table 8 (network impairment) | ml/hybrid-network-*.json, ml/plus-network-*.json |
+| Table 7 (operating points) | ml/alarm-tradeoff-\*.json, ml/plus-tradeoff-\*.json, ml/plus-episodes-\*.json |
+| Table 8 (network impairment) | ml/hybrid-network-\*.json, ml/plus-network-\*.json |
 | Table 9 (cryptographic cost) | hardware/crypto_mega.txt, hardware/crypto_esp32.txt |
 | Table 10 (live bench runs) | hardware/live_2.csv (run 1), hardware/live_3.csv (run 2) |
 | Figure 1 (system flow chart) | drawn by scripts/make_system_figure.py |
 | Figure 2 (breadboard layout and assembled node) | drawn by scripts/make_breadboard_figure.py from docs/figures/photos/bench_daylight.jpg |
 | Figure 3 (circuit schematic) | drawn by scripts/make_wiring_schematic.py |
 | Figure 4 (live run during an attack) | drawn by scripts/make_prototype_figures.py from docs/figures/photos/bench_attack_esp32.jpg |
-| Figure 5 (detectors) | ml/sota-*, ml/hybrid-*, ml/hybrid-confirm-*, ml/hybrid-novel2-*, ml/hybrid-plus-*, ml/hybrid-plus-confirm-* |
-| Figure 6 (evaluation pitfalls) | ml/network-*.json (panel a), ml/supervised-*.json and ml/supervised-grid-*.json (panel b) |
-| Figure 7 (alarm trade-off) | ml/alarm-tradeoff-*.json |
+| Figure 5 (detectors) | ml/sota-\*, ml/hybrid-\*, ml/hybrid-confirm-\*, ml/hybrid-novel2-\*, ml/hybrid-plus-\*, ml/hybrid-plus-confirm-\* |
+| Figure 6 (evaluation pitfalls) | ml/network-\*.json (panel a), ml/supervised-\*.json and ml/supervised-grid-\*.json (panel b) |
+| Figure 7 (alarm trade-off) | ml/alarm-tradeoff-\*.json |
 
 The figure files keep their working names: Figure 5 is fig5_detectors.png,
 Figure 6 is fig7_pitfalls.png and Figure 7 is fig6_alarm_tradeoff.png.
@@ -196,15 +196,15 @@ docs/experiment6_avds.md gives the full tables per source and seed.
 
 | Article section | Command | Output in results/ml/ |
 |---|---|---|
-| 4.1 and 4.6 Supervised vs unsupervised, divergence | bash scripts/run_avds4.sh, run_avds_replace.sh, run_avds_kalman.sh | avds4-*.json |
-| 4.2 Leave one family or category out | bash scripts/run_leave_one_out.sh, run_leave_category_out.sh | leave-one-out-*.json, leave-category-out-*.json |
-| 4.2 Rehearsal composition | bash scripts/run_rehearsal_composition.sh | composition-*.json |
+| 4.1 and 4.6 Supervised vs unsupervised, divergence | bash scripts/run_avds4.sh, run_avds_replace.sh, run_avds_kalman.sh | avds4-\*.json |
+| 4.2 Leave one family or category out | bash scripts/run_leave_one_out.sh, run_leave_category_out.sh | leave-one-out-\*.json, leave-category-out-\*.json |
+| 4.2 Rehearsal composition | bash scripts/run_rehearsal_composition.sh | composition-\*.json |
 | 4.2 pNEUMA occupancy check | bash scripts/run_coupled_check.sh | coupled-check-pneuma.json |
-| 4.3 Hybrid on novel attacks | bash scripts/run_novel_attacks.sh, run_hybrid_followups.sh | novel-*.json, hybrid-*.json |
-| 4.4 Baselines and Hybrid+ | python -m smart_city_security.integration.sota_baselines, bash scripts/run_hybrid_plus.sh | sota-*.json, hybrid-plus-*.json |
+| 4.3 Hybrid on novel attacks | bash scripts/run_novel_attacks.sh, run_hybrid_followups.sh | novel-\*.json, hybrid-\*.json |
+| 4.4 Baselines and Hybrid+ | python -m smart_city_security.integration.sota_baselines, bash scripts/run_hybrid_plus.sh | sota-\*.json, hybrid-plus-\*.json |
 | 4.5 VeReMi Extension | python -m smart_city_security.integration.veremi_benchmark --root PATH_TO_VEREMI | veremi-benchmark.json |
-| 4.7 Gradient masking | bash scripts/run_grid_attacker.sh | supervised-grid-*.json |
-| 4.8 and 4.9 Episodes, trade-off, network, poisoning | bash scripts/run_hybrid_plus_followups.sh, run_network_impairment.sh, run_avds_poisoning.sh | plus-*.json, network-*.json |
+| 4.7 Gradient masking | bash scripts/run_grid_attacker.sh | supervised-grid-\*.json |
+| 4.8 and 4.9 Episodes, trade-off, network, poisoning | bash scripts/run_hybrid_plus_followups.sh, run_network_impairment.sh, run_avds_poisoning.sh | plus-\*.json, network-\*.json |
 | 4.10 Link budget | python -m smart_city_security.evaluation.link_budget | printed table |
 | 3.6 and 4.11 Hardware prototype | see section 4, level 4 | results/hardware/ |
 
