@@ -1,0 +1,26 @@
+seed: 42
+simulation:
+  devices: 10
+  messages_per_device: 30
+  publish_rate_hz: 10.0
+  attack_ratio: 0.15
+network:
+  mode: simulated
+  broker: localhost
+  port: 1883
+  topic: smart-city/telemetry
+  preset: ideal
+security:
+  backend: classical
+  session_max_messages: 50
+  session_max_age_seconds: 300
+  replay_tolerance_seconds: 30
+digital_twin:
+  history_window: 8
+ml:
+  model: isolation_forest
+  include_divergence: true
+  contamination: 0.15
+experiment:
+  name: pipeline
+  output_dir: results/system

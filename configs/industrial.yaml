@@ -1,0 +1,23 @@
+extends: base.yaml
+seed: 42
+deployment:
+  environment: staging
+  service_name: smart-city-security
+  audit_log: results/system/audit.jsonl
+  healthcheck_interval_seconds: 10
+identity:
+  require_enrollment: true
+  rotate_credentials_days: 30
+security:
+  backend: classical
+  session_max_messages: 1000
+  session_max_age_seconds: 900
+  replay_tolerance_seconds: 30
+network:
+  mode: simulated
+  preset: congested
+  sleep: false
+simulation:
+  devices: 100
+  messages_per_device: 100
+  attack_ratio: 0.15

@@ -1,0 +1,7 @@
+extends: base.yaml
+experiment:
+  name: divergence_ablation
+  output_dir: results/ml
+simulation:
+  devices: 50
+  messages_per_device: 40

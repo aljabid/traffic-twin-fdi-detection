@@ -1,0 +1,5 @@
+extends: base.yaml
+experiment:
+  name: pqc_vs_classical
+  output_dir: results/crypto
+  repetitions: 20

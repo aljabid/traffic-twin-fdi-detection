@@ -1,0 +1,6 @@
+extends: base.yaml
+experiment:
+  name: scalability
+  output_dir: results/system
+  device_counts: [10, 50, 100]
+  network_presets: [ideal, congested, degraded]

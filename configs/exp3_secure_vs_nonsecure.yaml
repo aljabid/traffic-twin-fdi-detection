@@ -1,0 +1,6 @@
+extends: base.yaml
+experiment:
+  name: secure_vs_nonsecure
+  output_dir: results/system
+simulation:
+  attack_ratio: 0.25

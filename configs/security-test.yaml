@@ -1,0 +1,5 @@
+extends: industrial.yaml
+deployment: {environment: security-test}
+simulation: {devices: 100, messages_per_device: 200, attack_ratio: 0.4}
+network: {mode: simulated, preset: degraded, sleep: false}
+identity: {require_enrollment: true}

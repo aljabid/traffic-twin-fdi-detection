@@ -1,0 +1,9 @@
+extends: field_trial.yaml
+ml:
+  model: isolation_forest
+  include_divergence: true
+  contamination: 0.15
+  calibration:
+    enabled: true
+    warmup_messages: 24
+    target_false_positive_rate: 0.05

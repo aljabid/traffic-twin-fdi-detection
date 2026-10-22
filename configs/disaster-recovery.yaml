@@ -1,0 +1,3 @@
+extends: production.yaml
+deployment: {environment: disaster-recovery}
+network: {broker: mqtt-dr.internal.example}

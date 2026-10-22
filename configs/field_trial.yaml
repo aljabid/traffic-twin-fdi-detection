@@ -1,0 +1,15 @@
+extends: base.yaml
+deployment:
+  environment: field-trial
+  service_name: smart-city-field-trial
+  audit_log: results/system/field_trial_audit.jsonl
+identity:
+  require_enrollment: false
+security:
+  backend: none
+network:
+  mode: mqtt
+  broker: test.mosquitto.org
+  port: 1883
+  topic: smart-city-security/scs-fieldtrial-7k2p9x/telemetry
+  preset: ideal

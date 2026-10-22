@@ -1,0 +1,18 @@
+extends: base.yaml
+seed: 7
+simulation:
+  devices: 3
+  messages_per_device: 5
+  publish_rate_hz: 1000
+  attack_ratio: 0.2
+network:
+  preset: ideal
+  sleep: false
+security:
+  backend: classical
+  session_max_messages: 10
+ml:
+  contamination: 0.2
+experiment:
+  name: pipeline
+  output_dir: results/system/test

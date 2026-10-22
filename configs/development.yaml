@@ -1,0 +1,4 @@
+extends: base.yaml
+deployment: {environment: development}
+network: {mode: simulated, preset: ideal, sleep: false}
+identity: {require_enrollment: false}

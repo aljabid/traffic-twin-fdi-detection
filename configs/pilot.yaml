@@ -1,0 +1,4 @@
+extends: staging.yaml
+deployment: {environment: pilot}
+operation: {mode: shadow, automatic_control: false, operator_ack_required: true}
+identity: {require_enrollment: true}

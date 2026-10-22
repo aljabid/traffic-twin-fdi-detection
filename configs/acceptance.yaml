@@ -1,0 +1,17 @@
+extends: industrial.yaml
+deployment: {environment: acceptance}
+simulation:
+  devices: 100
+  messages_per_device: 100
+  attack_ratio: 0.15
+network:
+  mode: simulated
+  preset: ideal
+  sleep: false
+ml:
+  model: isolation_forest
+  include_divergence: true
+  contamination: 0.01
+experiment:
+  name: pipeline
+  output_dir: results/system/acceptance

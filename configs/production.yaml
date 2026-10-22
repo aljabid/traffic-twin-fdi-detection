@@ -1,0 +1,4 @@
+extends: pilot.yaml
+deployment: {environment: production}
+operation: {mode: advisory, automatic_control: false, operator_ack_required: true}
+network: {mode: mqtt, broker: mqtt.internal.example, port: 8883, preset: ideal}

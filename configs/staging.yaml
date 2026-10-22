@@ -1,0 +1,4 @@
+extends: industrial.yaml
+deployment: {environment: staging}
+identity: {require_enrollment: true}
+network: {mode: mqtt, broker: mosquitto, port: 8883, preset: congested}
