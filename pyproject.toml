@@ -1,0 +1,91 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "traffic-twin-fdi-detection"
+version = "1.0.0"
+description = "Falsified-telemetry detection for traffic digital twins: hybrid detector under adaptive attack, hardware prototype and post-quantum device costs"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "cryptography>=44",
+    "joblib>=1.4",
+    "matplotlib>=3.9",
+    "numpy>=2.1",
+    "paho-mqtt>=2.1",
+    "pandas>=2.2",
+    "PyYAML>=6.0",
+    "scikit-learn>=1.6",
+    "schemdraw>=0.19",
+    "scipy>=1.13",
+]
+
+[project.optional-dependencies]
+pqc = ["liboqs-python>=0.12"]
+api = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.34",
+    "httpx>=0.28",
+]
+sumo = [
+    "eclipse-sumo>=1.20",
+    "sumolib>=1.20",
+    "traci>=1.20",
+]
+dev = [
+    "build>=1.2",
+    "pytest>=8.3",
+    "pytest-cov>=6.0",
+    "ruff>=0.9",
+    "mypy>=1.14",
+    "bandit>=1.8",
+    "pip-audit>=2.7",
+]
+
+[project.scripts]
+smart-city-experiment = "smart_city_security.integration.run_experiment:main"
+smart-city-benchmark = "smart_city_security.integration.benchmark_runner:main"
+smart-city-mqtt-validate = "smart_city_security.integration.mqtt_validator:main"
+smart-city-dataset-validate = "smart_city_security.integration.dataset_validator:main"
+smart-city-pqc-validate = "smart_city_security.integration.pqc_validator:main"
+smart-city-api = "smart_city_security.api.run:main"
+smart-city-endurance = "smart_city_security.integration.endurance_runner:main"
+smart-city-live-ingest = "smart_city_security.integration.live_service:main"
+smart-city-divergence-sweep = "smart_city_security.integration.divergence_sweep:main"
+smart-city-provision-device = "smart_city_security.integration.provision_device:main"
+smart-city-real-data-experiment = "smart_city_security.integration.real_data_experiment:main"
+smart-city-avds-experiment = "smart_city_security.integration.avds_experiment:main"
+smart-city-link-budget = "smart_city_security.evaluation.link_budget:main"
+smart-city-sumo-fcd = "smart_city_security.integration.sumo_scenario:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.coverage.run]
+source = ["smart_city_security"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.12"
+packages = ["smart_city_security"]
+strict = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "smart_city_security.api.app"
+disallow_untyped_decorators = false
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv"]
