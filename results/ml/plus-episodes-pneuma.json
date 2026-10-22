@@ -1,0 +1,1608 @@
+{
+  "experiment": "episode_detection",
+  "generated_at": "2026-10-15T08:56:29.547247+00:00",
+  "seeds": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "window_s": 10.0,
+  "attacks": [
+    "congestion_spoof",
+    "replay_stale",
+    "position_spoof"
+  ],
+  "datasets": {
+    "pneuma": {
+      "units": [
+        {
+          "seed": 4,
+          "detectors": {
+            "forest": {
+              "false_alarms_per_hour": {
+                "raw": 4680.262199563001,
+                "persist_2of3": 1809.1769847050255
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 0.8100602233843119,
+                  "window_f1": 0.20625000000000002
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 1.909373782703483,
+                  "window_f1": 0.36075949367088606
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 0.8100602233843119,
+                  "window_f1": 0.20625000000000002
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 1.909373782703483,
+                  "window_f1": 0.36075949367088606
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.0868698687496874,
+                  "window_f1": 0.22492401215805474
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.19537490566384,
+                  "window_f1": 0.4290030211480363
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.0868698687496874,
+                  "window_f1": 0.22769230769230767
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.19537490566384,
+                  "window_f1": 0.4355828220858896
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 0.6280496983587227,
+                  "window_f1": 0.15286624203821655
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.2,
+                  "median_delay_s": 15.051313944488982,
+                  "window_f1": 0.06015037593984962
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 0.6280496983587227,
+                  "window_f1": 0.1903276131045242
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.75,
+                  "median_delay_s": 10.364888697680726,
+                  "window_f1": 0.19580419580419578
+                }
+              }
+            },
+            "lof": {
+              "false_alarms_per_hour": {
+                "raw": 5152.221412964312,
+                "persist_2of3": 1599.4173343044429
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 1.5801949485754676,
+                  "window_f1": 0.2099827882960413
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 2.1793994270234975,
+                  "window_f1": 0.411552346570397
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 1.5801949485754676,
+                  "window_f1": 0.2099827882960413
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 2.1793994270234975,
+                  "window_f1": 0.4172661870503597
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.8415340226728176,
+                  "window_f1": 0.24915824915824916
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 4.985683364421902,
+                  "window_f1": 0.3837638376383764
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.8415340226728176,
+                  "window_f1": 0.24915824915824916
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 6.493542265602258,
+                  "window_f1": 0.37174721189591076
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.6197310574000312,
+                  "window_f1": 0.16549295774647887
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.3,
+                  "median_delay_s": 5.781158518440492,
+                  "window_f1": 0.07964601769911504
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.6197310574000312,
+                  "window_f1": 0.19410745233968804
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.8,
+                  "median_delay_s": 11.907585363344708,
+                  "window_f1": 0.19917012448132776
+                }
+              }
+            },
+            "hybrid": {
+              "false_alarms_per_hour": {
+                "raw": 5257.101238164603,
+                "persist_2of3": 1678.0772032046614
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 0.8100602233843119,
+                  "window_f1": 0.20349761526232116
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 1.810060223384312,
+                  "window_f1": 0.4013840830449827
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 0.8100602233843119,
+                  "window_f1": 0.2044728434504792
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 1.810060223384312,
+                  "window_f1": 0.4013840830449827
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4076323830647652,
+                  "window_f1": 0.23380726698262244
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.48168307842235,
+                  "window_f1": 0.4717607973421926
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4076323830647652,
+                  "window_f1": 0.23380726698262244
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.48168307842235,
+                  "window_f1": 0.4717607973421926
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.6197310574000312,
+                  "window_f1": 0.15057283142389524
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.45,
+                  "median_delay_s": 6.382917609857486,
+                  "window_f1": 0.10743801652892561
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.6197310574000312,
+                  "window_f1": 0.18910256410256412
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.85,
+                  "median_delay_s": 10.658607178857096,
+                  "window_f1": 0.2178988326848249
+                }
+              }
+            },
+            "hybrid_plus": {
+              "false_alarms_per_hour": {
+                "raw": 5257.101238164603,
+                "persist_2of3": 1651.8572469045885
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 0.9093737827034829,
+                  "window_f1": 0.20569620253164556
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 1.909373782703483,
+                  "window_f1": 0.4083044982698962
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 0.9093737827034829,
+                  "window_f1": 0.20634920634920634
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 1.909373782703483,
+                  "window_f1": 0.4083044982698962
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.0868698687496874,
+                  "window_f1": 0.23233908948194662
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.19537490566384,
+                  "window_f1": 0.4717607973421926
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.0868698687496874,
+                  "window_f1": 0.23233908948194662
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.19537490566384,
+                  "window_f1": 0.4717607973421926
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.6197310574000312,
+                  "window_f1": 0.14959349593495935
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.35,
+                  "median_delay_s": 6.382917609857486,
+                  "window_f1": 0.08438818565400844
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.6197310574000312,
+                  "window_f1": 0.18789808917197454
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.8,
+                  "median_delay_s": 10.825254939188056,
+                  "window_f1": 0.19123505976095617
+                }
+              }
+            }
+          }
+        },
+        {
+          "seed": 5,
+          "detectors": {
+            "forest": {
+              "false_alarms_per_hour": {
+                "raw": 4575.382374362709,
+                "persist_2of3": 1442.0975965040059
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3568348200529954,
+                  "window_f1": 0.24834437086092712
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4551761552622224,
+                  "window_f1": 0.48727272727272725
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3568348200529954,
+                  "window_f1": 0.24875621890547261
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4551761552622224,
+                  "window_f1": 0.49275362318840576
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.826043460119422,
+                  "window_f1": 0.2536585365853658
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.7716125903580178,
+                  "window_f1": 0.48299319727891155
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.8323829828909197,
+                  "window_f1": 0.25448613376835233
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.8323829828909197,
+                  "window_f1": 0.49134948096885805
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 0.35547280535968184,
+                  "window_f1": 0.1793570219966159
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.35,
+                  "median_delay_s": 4.176322703561368,
+                  "window_f1": 0.125
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3569797649020643,
+                  "window_f1": 0.22148760330578515
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 11.726511093117665,
+                  "window_f1": 0.3064516129032258
+                }
+              }
+            },
+            "lof": {
+              "false_alarms_per_hour": {
+                "raw": 5152.221412964312,
+                "persist_2of3": 1599.4173343044429
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.2300618798778942,
+                  "window_f1": 0.22635135135135137
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.3555505515046207,
+                  "window_f1": 0.4491228070175438
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.2300618798778942,
+                  "window_f1": 0.22635135135135137
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.3555505515046207,
+                  "window_f1": 0.4491228070175438
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.1573562395084878,
+                  "window_f1": 0.24707846410684475
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 4.065526556169345,
+                  "window_f1": 0.39272727272727276
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.1573562395084878,
+                  "window_f1": 0.24707846410684475
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 4.065526556169345,
+                  "window_f1": 0.39416058394160586
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.35532786051061294,
+                  "window_f1": 0.17708333333333337
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.3,
+                  "median_delay_s": 5.69147487537532,
+                  "window_f1": 0.0782608695652174
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3569797649020643,
+                  "window_f1": 0.2081911262798635
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.75,
+                  "median_delay_s": 7.808220671372737,
+                  "window_f1": 0.2105263157894737
+                }
+              }
+            },
+            "hybrid": {
+              "false_alarms_per_hour": {
+                "raw": 5126.0014566642385,
+                "persist_2of3": 1520.7574654042244
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3568348200529954,
+                  "window_f1": 0.23662884927066452
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.5812141372466044,
+                  "window_f1": 0.47826086956521735
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3568348200529954,
+                  "window_f1": 0.23739837398373984
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4551761552622224,
+                  "window_f1": 0.48000000000000004
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.826043460119422,
+                  "window_f1": 0.24154589371980675
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.8323829828909197,
+                  "window_f1": 0.4965517241379311
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.826043460119422,
+                  "window_f1": 0.2435897435897436
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.8323829828909197,
+                  "window_f1": 0.5
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.35532786051061294,
+                  "window_f1": 0.19205298013245034
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.45,
+                  "median_delay_s": 4.176322703561368,
+                  "window_f1": 0.10619469026548672
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3569797649020643,
+                  "window_f1": 0.2156862745098039
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.85,
+                  "median_delay_s": 7.180981737543561,
+                  "window_f1": 0.2530612244897959
+                }
+              }
+            },
+            "hybrid_plus": {
+              "false_alarms_per_hour": {
+                "raw": 4863.801893663511,
+                "persist_2of3": 1468.3175528040786
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3568348200529954,
+                  "window_f1": 0.2444821731748727
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.5812141372466044,
+                  "window_f1": 0.48888888888888893
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3568348200529954,
+                  "window_f1": 0.24531516183986377
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4551761552622224,
+                  "window_f1": 0.48888888888888893
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.826043460119422,
+                  "window_f1": 0.2562396006655574
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.9421560647490992,
+                  "window_f1": 0.5159010600706714
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.826043460119422,
+                  "window_f1": 0.2570951585976628
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.9421560647490992,
+                  "window_f1": 0.5177304964539007
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.35532786051061294,
+                  "window_f1": 0.1896551724137931
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.3,
+                  "median_delay_s": 9.417993753230917,
+                  "window_f1": 0.06511627906976744
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3569797649020643,
+                  "window_f1": 0.22033898305084745
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.7,
+                  "median_delay_s": 9.690190606826945,
+                  "window_f1": 0.20689655172413793
+                }
+              }
+            }
+          }
+        },
+        {
+          "seed": 6,
+          "detectors": {
+            "forest": {
+              "false_alarms_per_hour": {
+                "raw": 4536.0524399126,
+                "persist_2of3": 1573.19737800437
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 0.4851703210029825,
+                  "window_f1": 0.2145214521452145
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 1.4851703210029825,
+                  "window_f1": 0.39860139860139865
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 0.4851703210029825,
+                  "window_f1": 0.2152317880794702
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 1.4851703210029825,
+                  "window_f1": 0.4055944055944056
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.0561355464735698,
+                  "window_f1": 0.24476650563607086
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.706221680973613,
+                  "window_f1": 0.4675324675324676
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.0561355464735698,
+                  "window_f1": 0.2467532467532468
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.706221680973613,
+                  "window_f1": 0.47682119205298024
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 0.3469141754066811,
+                  "window_f1": 0.15771812080536912
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.3,
+                  "median_delay_s": 15.414017880003115,
+                  "window_f1": 0.058823529411764705
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 0.3469141754066811,
+                  "window_f1": 0.19110378912685339
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.65,
+                  "median_delay_s": 4.223174571705499,
+                  "window_f1": 0.20930232558139533
+                }
+              }
+            },
+            "lof": {
+              "false_alarms_per_hour": {
+                "raw": 5152.221412964312,
+                "persist_2of3": 1599.4173343044429
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 1.257673470519535,
+                  "window_f1": 0.2089041095890411
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 2.257673470519535,
+                  "window_f1": 0.4187725631768953
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 1.257673470519535,
+                  "window_f1": 0.2089041095890411
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 2.257673470519535,
+                  "window_f1": 0.4187725631768953
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.3146361477410835,
+                  "window_f1": 0.24201680672268905
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 5.246026366285491,
+                  "window_f1": 0.3970588235294118
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.3469141754066811,
+                  "window_f1": 0.24201680672268905
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 5.292172369333571,
+                  "window_f1": 0.379182156133829
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3206347084233414,
+                  "window_f1": 0.1739130434782609
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.25,
+                  "median_delay_s": 8.300476284286958,
+                  "window_f1": 0.07079646017699115
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3206347084233414,
+                  "window_f1": 0.1896551724137931
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.75,
+                  "median_delay_s": 9.29217236933357,
+                  "window_f1": 0.18257261410788383
+                }
+              }
+            },
+            "hybrid": {
+              "false_alarms_per_hour": {
+                "raw": 5008.011653313911,
+                "persist_2of3": 1586.3073561544063
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 0.4851703210029825,
+                  "window_f1": 0.21630615640599002
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 1.4851703210029825,
+                  "window_f1": 0.43010752688172044
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 0.4851703210029825,
+                  "window_f1": 0.21630615640599002
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 1.4851703210029825,
+                  "window_f1": 0.43010752688172044
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.8270586886305296,
+                  "window_f1": 0.24469820554649266
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.51372256953033,
+                  "window_f1": 0.48299319727891166
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.8270586886305296,
+                  "window_f1": 0.24469820554649266
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.51372256953033,
+                  "window_f1": 0.48275862068965514
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3206347084233414,
+                  "window_f1": 0.16891891891891894
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.35,
+                  "median_delay_s": 9.490935833857634,
+                  "window_f1": 0.0782608695652174
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3206347084233414,
+                  "window_f1": 0.19933554817275748
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.7,
+                  "median_delay_s": 7.733959436118255,
+                  "window_f1": 0.20967741935483872
+                }
+              }
+            },
+            "hybrid_plus": {
+              "false_alarms_per_hour": {
+                "raw": 5099.781500364166,
+                "persist_2of3": 1546.977421704297
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 0.4851703210029825,
+                  "window_f1": 0.21666666666666665
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 1.4851703210029825,
+                  "window_f1": 0.43795620437956206
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 0.4851703210029825,
+                  "window_f1": 0.21666666666666665
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 1.4851703210029825,
+                  "window_f1": 0.43795620437956206
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.4736300967766738,
+                  "window_f1": 0.24390243902439024
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.175611508780719,
+                  "window_f1": 0.4788732394366197
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.4736300967766738,
+                  "window_f1": 0.24390243902439024
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.175611508780719,
+                  "window_f1": 0.48056537102473496
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3206347084233414,
+                  "window_f1": 0.16582064297800336
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.3,
+                  "median_delay_s": 9.391554101595602,
+                  "window_f1": 0.07207207207207207
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.3206347084233414,
+                  "window_f1": 0.1933333333333333
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.7,
+                  "median_delay_s": 9.296324326810264,
+                  "window_f1": 0.21576763485477177
+                }
+              }
+            }
+          }
+        },
+        {
+          "seed": 7,
+          "detectors": {
+            "forest": {
+              "false_alarms_per_hour": {
+                "raw": 4745.812090313183,
+                "persist_2of3": 1560.0873998543336
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5753423193380343,
+                  "window_f1": 0.23885350318471338
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.625708900439946,
+                  "window_f1": 0.4625850340136054
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5753423193380343,
+                  "window_f1": 0.23923444976076552
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.640725642654047,
+                  "window_f1": 0.45733788395904434
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.8364705414168441,
+                  "window_f1": 0.2341772151898734
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 3.1465360821967465,
+                  "window_f1": 0.4827586206896552
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.8364705414168441,
+                  "window_f1": 0.23756019261637237
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.820055389893753,
+                  "window_f1": 0.49146757679180886
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 0.5236394797849471,
+                  "window_f1": 0.1490066225165563
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.3,
+                  "median_delay_s": 10.252643341540477,
+                  "window_f1": 0.07860262008733623
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 0.6531124055875352,
+                  "window_f1": 0.18800648298217182
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.8,
+                  "median_delay_s": 7.638095663373434,
+                  "window_f1": 0.2677165354330709
+                }
+              }
+            },
+            "lof": {
+              "false_alarms_per_hour": {
+                "raw": 5152.221412964312,
+                "persist_2of3": 1599.4173343044429
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.379409661043269,
+                  "window_f1": 0.23509369676320271
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.379409661043269,
+                  "window_f1": 0.48763250883392223
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.379409661043269,
+                  "window_f1": 0.23509369676320271
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.379409661043269,
+                  "window_f1": 0.48763250883392223
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.640725642654047,
+                  "window_f1": 0.2470389170896785
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 4.004723109709175,
+                  "window_f1": 0.4237918215613383
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.640725642654047,
+                  "window_f1": 0.2470389170896785
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 4.362508925145846,
+                  "window_f1": 0.40601503759398494
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5236394797849471,
+                  "window_f1": 0.1657848324514991
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.45,
+                  "median_delay_s": 8.497661667972466,
+                  "window_f1": 0.10714285714285714
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5236394797849471,
+                  "window_f1": 0.1975736568457539
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.85,
+                  "median_delay_s": 8.497661667972466,
+                  "window_f1": 0.2479338842975207
+                }
+              }
+            },
+            "hybrid": {
+              "false_alarms_per_hour": {
+                "raw": 5322.651128914785,
+                "persist_2of3": 1625.6372906045156
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5753423193380343,
+                  "window_f1": 0.23548387096774193
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.625708900439946,
+                  "window_f1": 0.4693877551020408
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5753423193380343,
+                  "window_f1": 0.2366288492706645
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.625708900439946,
+                  "window_f1": 0.4693877551020408
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.625708900439946,
+                  "window_f1": 0.24271844660194175
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 3.1204639596331276,
+                  "window_f1": 0.4829931972789116
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.625708900439946,
+                  "window_f1": 0.24271844660194175
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 3.3738459638847473,
+                  "window_f1": 0.4761904761904761
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5236394797849471,
+                  "window_f1": 0.15973377703826955
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.45,
+                  "median_delay_s": 8.37363631946289,
+                  "window_f1": 0.11016949152542373
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5236394797849471,
+                  "window_f1": 0.19281045751633988
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.9,
+                  "median_delay_s": 8.935648993717678,
+                  "window_f1": 0.29118773946360155
+                }
+              }
+            },
+            "hybrid_plus": {
+              "false_alarms_per_hour": {
+                "raw": 5230.88128186453,
+                "persist_2of3": 1599.4173343044429
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5753423193380343,
+                  "window_f1": 0.24262295081967214
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.625708900439946,
+                  "window_f1": 0.4859154929577465
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5753423193380343,
+                  "window_f1": 0.24342105263157895
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.625708900439946,
+                  "window_f1": 0.4859154929577465
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.7888830834709211,
+                  "window_f1": 0.24549918166939447
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.8213888813361905,
+                  "window_f1": 0.4982456140350877
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.7888830834709211,
+                  "window_f1": 0.24549918166939447
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.7856993545873365,
+                  "window_f1": 0.4982456140350877
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5236394797849471,
+                  "window_f1": 0.16470588235294117
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.5,
+                  "median_delay_s": 8.935648993717678,
+                  "window_f1": 0.11403508771929824
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.5236394797849471,
+                  "window_f1": 0.19801980198019803
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.85,
+                  "median_delay_s": 8.37363631946289,
+                  "window_f1": 0.28
+                }
+              }
+            }
+          }
+        },
+        {
+          "seed": 8,
+          "detectors": {
+            "forest": {
+              "false_alarms_per_hour": {
+                "raw": 4509.8324836125275,
+                "persist_2of3": 1586.3073561544063
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.38744183509385266,
+                  "window_f1": 0.23300970873786403
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4843324728906282,
+                  "window_f1": 0.42711864406779654
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.38744183509385266,
+                  "window_f1": 0.233387358184765
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4843324728906282,
+                  "window_f1": 0.42711864406779654
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.8941622633634267,
+                  "window_f1": 0.23756019261637243
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.2697505030541265,
+                  "window_f1": 0.46945337620578775
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.076358199352967,
+                  "window_f1": 0.23586429725363486
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.470957714232327,
+                  "window_f1": 0.4755700325732899
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.37403897617383564,
+                  "window_f1": 0.1630615640599002
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.4,
+                  "median_delay_s": 17.378058926841078,
+                  "window_f1": 0.11570247933884298
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.44878906483734227,
+                  "window_f1": 0.19934640522875818
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.8,
+                  "median_delay_s": 11.984332472890628,
+                  "window_f1": 0.2661596958174905
+                }
+              }
+            },
+            "lof": {
+              "false_alarms_per_hour": {
+                "raw": 5152.221412964312,
+                "persist_2of3": 1599.4173343044429
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4843324728906282,
+                  "window_f1": 0.22375215146299482
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.484332472890628,
+                  "window_f1": 0.46209386281588455
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4843324728906282,
+                  "window_f1": 0.22375215146299482
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 2.4722737509125636,
+                  "window_f1": 0.4565217391304348
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.340480641050391,
+                  "window_f1": 0.2328767123287671
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 3.5923361370390694,
+                  "window_f1": 0.4135338345864662
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.340480641050391,
+                  "window_f1": 0.2328767123287671
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.95,
+                  "median_delay_s": 3.5923361370390694,
+                  "window_f1": 0.4135338345864662
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.34019638317280965,
+                  "window_f1": 0.17223198594024608
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.4,
+                  "median_delay_s": 14.116189038111202,
+                  "window_f1": 0.0900900900900901
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.37403897617383564,
+                  "window_f1": 0.19130434782608696
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.7,
+                  "median_delay_s": 11.554841808367712,
+                  "window_f1": 0.18803418803418803
+                }
+              }
+            },
+            "hybrid": {
+              "false_alarms_per_hour": {
+                "raw": 4942.461762563729,
+                "persist_2of3": 1586.3073561544063
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.38744183509385266,
+                  "window_f1": 0.23745819397993312
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4229852431471386,
+                  "window_f1": 0.46975088967971534
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.46084778681540683,
+                  "window_f1": 0.23785594639865998
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.6282477600892662,
+                  "window_f1": 0.4714285714285715
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.8941622633634267,
+                  "window_f1": 0.24422442244224424
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.161301221705429,
+                  "window_f1": 0.4912280701754386
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.0286046032546778,
+                  "window_f1": 0.24462809917355371
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.2791334113069013,
+                  "window_f1": 0.4912280701754386
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.34019638317280965,
+                  "window_f1": 0.1678082191780822
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.4,
+                  "median_delay_s": 15.9015436129163,
+                  "window_f1": 0.10572687224669604
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.44878906483734227,
+                  "window_f1": 0.19865319865319864
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.75,
+                  "median_delay_s": 9.04198801464463,
+                  "window_f1": 0.22950819672131148
+                }
+              }
+            },
+            "hybrid_plus": {
+              "false_alarms_per_hour": {
+                "raw": 5073.561544064093,
+                "persist_2of3": 1573.19737800437
+              },
+              "congestion_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.38744183509385266,
+                  "window_f1": 0.23841059602649006
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4843324728906282,
+                  "window_f1": 0.4782608695652174
+                }
+              },
+              "congestion_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.38744183509385266,
+                  "window_f1": 0.23880597014925373
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 1.4843324728906282,
+                  "window_f1": 0.48
+                }
+              },
+              "replay_stale/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.6826290585715356,
+                  "window_f1": 0.2418300653594771
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.0234134723322654,
+                  "window_f1": 0.5159010600706714
+                }
+              },
+              "replay_stale/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.7717949610083963,
+                  "window_f1": 0.24262295081967214
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 2.1253377729164242,
+                  "window_f1": 0.5159010600706714
+                }
+              },
+              "position_spoof/static": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.34019638317280965,
+                  "window_f1": 0.1694915254237288
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.4,
+                  "median_delay_s": 15.9015436129163,
+                  "window_f1": 0.0990990990990991
+                }
+              },
+              "position_spoof/adaptive": {
+                "raw": {
+                  "episode_detection_rate": 1.0,
+                  "median_delay_s": 0.44878906483734227,
+                  "window_f1": 0.19699499165275458
+                },
+                "persist_2of3": {
+                  "episode_detection_rate": 0.7,
+                  "median_delay_s": 8.429845356391752,
+                  "window_f1": 0.2109704641350211
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

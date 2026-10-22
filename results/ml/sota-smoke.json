@@ -1,0 +1,217 @@
+{
+  "experiment": "sota_baselines",
+  "generated_at": "2026-10-05T18:34:41.105907+00:00",
+  "seeds": [
+    4
+  ],
+  "attacks": [
+    "congestion_spoof",
+    "clear_road_spoof",
+    "drift_congestion",
+    "replay_stale",
+    "stuck_at",
+    "time_shift",
+    "position_spoof",
+    "identity_spoof",
+    "noise_injection",
+    "backdate"
+  ],
+  "attack_mode": "replace",
+  "datasets": {
+    "sumo": {
+      "units": [
+        {
+          "seed": 4,
+          "scores": {
+            "plausibility_knn": {
+              "congestion_spoof": {
+                "static": 0.5349287749287749,
+                "gradient": 0.5489162974494073,
+                "grid": 0.5750142612664004,
+                "worst_case": 0.5349287749287749
+              },
+              "clear_road_spoof": {
+                "static": 0.7454929348708786,
+                "gradient": 0.7145961608113003,
+                "grid": 0.5623081645181093,
+                "worst_case": 0.5623081645181093
+              },
+              "drift_congestion": {
+                "static": 0.5870365128785735,
+                "gradient": 0.5903704814759262,
+                "grid": 0.599434182060243,
+                "worst_case": 0.5870365128785735
+              },
+              "replay_stale": {
+                "static": 0.5658138672599184,
+                "gradient": 0.5376758527654654,
+                "grid": 0.5066285947379155,
+                "worst_case": 0.5066285947379155
+              },
+              "stuck_at": {
+                "static": 0.416780665754674,
+                "gradient": 0.41194029850746267,
+                "grid": 0.3870814533364996,
+                "worst_case": 0.3870814533364996
+              },
+              "time_shift": {
+                "static": 0.3870337188467177,
+                "gradient": 0.3870337188467177,
+                "grid": 0.3621310295176386,
+                "worst_case": 0.3621310295176386
+              },
+              "position_spoof": {
+                "static": 0.5900223380491437,
+                "gradient": 0.5900223380491437,
+                "grid": 0.5550646375388644,
+                "worst_case": 0.5550646375388644
+              },
+              "identity_spoof": {
+                "static": 0.7010486505071343,
+                "gradient": 0.7010486505071343,
+                "grid": 0.6313622754491018,
+                "worst_case": 0.6313622754491018
+              },
+              "noise_injection": {
+                "static": 0.6798548094373865,
+                "gradient": 0.656396255850234,
+                "grid": 0.6004132231404958,
+                "worst_case": 0.6004132231404958
+              },
+              "backdate": {
+                "static": 0.5650048875855328,
+                "gradient": 0.5650048875855328,
+                "grid": 0.5319565604415168,
+                "worst_case": 0.5319565604415168
+              }
+            },
+            "gradient_boosting": {
+              "congestion_spoof": {
+                "static": 0.5188503988635121,
+                "gradient": 0.5288863764838893,
+                "grid": 0.47396630934150075,
+                "worst_case": 0.47396630934150075
+              },
+              "clear_road_spoof": {
+                "static": 0.6963812886142984,
+                "gradient": 0.6992014196983141,
+                "grid": 0.4594953519256308,
+                "worst_case": 0.4594953519256308
+              },
+              "drift_congestion": {
+                "static": 0.6072036673215455,
+                "gradient": 0.6231962973046556,
+                "grid": 0.509449135504624,
+                "worst_case": 0.509449135504624
+              },
+              "replay_stale": {
+                "static": 0.646994874980587,
+                "gradient": 0.6564762670957361,
+                "grid": 0.4809709936227114,
+                "worst_case": 0.4809709936227114
+              },
+              "stuck_at": {
+                "static": 0.558636940366141,
+                "gradient": 0.5588897224306076,
+                "grid": 0.3439397619625941,
+                "worst_case": 0.3439397619625941
+              },
+              "time_shift": {
+                "static": 0.3790130251330031,
+                "gradient": 0.3790130251330031,
+                "grid": 0.3357293868921776,
+                "worst_case": 0.3357293868921776
+              },
+              "position_spoof": {
+                "static": 0.5601109741060419,
+                "gradient": 0.5601109741060419,
+                "grid": 0.5008077544426495,
+                "worst_case": 0.5008077544426495
+              },
+              "identity_spoof": {
+                "static": 0.6362038664323374,
+                "gradient": 0.6362038664323374,
+                "grid": 0.533816425120773,
+                "worst_case": 0.533816425120773
+              },
+              "noise_injection": {
+                "static": 0.7329726288987906,
+                "gradient": 0.738456518192201,
+                "grid": 0.4862678305301256,
+                "worst_case": 0.4862678305301256
+              },
+              "backdate": {
+                "static": 0.40597667638483964,
+                "gradient": 0.40597667638483964,
+                "grid": 0.357423897287223,
+                "worst_case": 0.357423897287223
+              }
+            },
+            "kalman_chi2": {
+              "congestion_spoof": {
+                "static": 0.5800696864111499,
+                "gradient": 0.5800696864111499,
+                "grid": 0.5825133539499578,
+                "worst_case": 0.5800696864111499
+              },
+              "clear_road_spoof": {
+                "static": 0.17235396182764604,
+                "gradient": 0.17235396182764604,
+                "grid": 0.16102683780630106,
+                "worst_case": 0.16102683780630106
+              },
+              "drift_congestion": {
+                "static": 0.48013685611100554,
+                "gradient": 0.48013685611100554,
+                "grid": 0.48392619364656647,
+                "worst_case": 0.48013685611100554
+              },
+              "replay_stale": {
+                "static": 0.44102148358329957,
+                "gradient": 0.44102148358329957,
+                "grid": 0.4363044363044363,
+                "worst_case": 0.4363044363044363
+              },
+              "stuck_at": {
+                "static": 0.33021664766248576,
+                "gradient": 0.33021664766248576,
+                "grid": 0.3224621038125861,
+                "worst_case": 0.3224621038125861
+              },
+              "time_shift": {
+                "static": 0.20787801778907242,
+                "gradient": 0.20787801778907242,
+                "grid": 0.20940504027020004,
+                "worst_case": 0.20787801778907242
+              },
+              "position_spoof": {
+                "static": 0.08498759305210918,
+                "gradient": 0.08498759305210918,
+                "grid": 0.08498759305210918,
+                "worst_case": 0.08498759305210918
+              },
+              "identity_spoof": {
+                "static": 0.4844494892167991,
+                "gradient": 0.4844494892167991,
+                "grid": 0.4698017519594283,
+                "worst_case": 0.4698017519594283
+              },
+              "noise_injection": {
+                "static": 0.3878787878787879,
+                "gradient": 0.3878787878787879,
+                "grid": 0.3828600405679513,
+                "worst_case": 0.3828600405679513
+              },
+              "backdate": {
+                "static": 0.28419989904088844,
+                "gradient": 0.28419989904088844,
+                "grid": 0.27934392619169657,
+                "worst_case": 0.27934392619169657
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

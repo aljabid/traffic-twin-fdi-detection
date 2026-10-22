@@ -1,0 +1,5552 @@
+{
+  "experiment": "avds_divergence_selection",
+  "generated_at": "2026-10-03T15:28:17.485476+00:00",
+  "seeds": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "models": [
+    "isolation_forest",
+    "autoencoder",
+    "lof",
+    "mahalanobis",
+    "ewma_residual"
+  ],
+  "attacks": [
+    "stuck_at",
+    "time_shift",
+    "position_spoof"
+  ],
+  "strength": 0.6,
+  "calibrated": true,
+  "inner_fraction": 0.45,
+  "train_fraction": 0.6,
+  "twin": "window",
+  "target_fpr": 0.05,
+  "attack_ratio": 0.15,
+  "attacker_steps": 8,
+  "divergence_transform": "none",
+  "feature_history": 1,
+  "attack_mode": "replace",
+  "attacker_search": "grid",
+  "selection_rule": "keep divergence iff mean worst-case (min of static, adaptive) validation F1 over the rehearsed attacks is strictly higher; avds rehearses all attacks, avds_novel all but the tested one",
+  "datasets": {
+    "ngsim": {
+      "units": [
+        {
+          "model": "isolation_forest",
+          "seed": 4,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.04146100691016782,
+                "adaptive": 0.04146100691016782
+              },
+              "time_shift": {
+                "static": 0.025925925925925925,
+                "adaptive": 0.025925925925925925
+              },
+              "position_spoof": {
+                "static": 0.033663366336633666,
+                "adaptive": 0.033663366336633666
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.03732809430255403,
+                "adaptive": 0.03732809430255403
+              },
+              "time_shift": {
+                "static": 0.0375,
+                "adaptive": 0.0375
+              },
+              "position_spoof": {
+                "static": 0.03725490196078431,
+                "adaptive": 0.03725490196078431
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.09632224168126094,
+                  "adaptive": 0.09632224168126094,
+                  "worst_case": 0.09632224168126094
+                },
+                "always": {
+                  "static": 0.09655578451574919,
+                  "adaptive": 0.09655578451574919,
+                  "worst_case": 0.09655578451574919
+                },
+                "avds": {
+                  "static": 0.09655578451574919,
+                  "adaptive": 0.09655578451574919,
+                  "worst_case": 0.09655578451574919
+                },
+                "avds_novel": {
+                  "static": 0.09655578451574919,
+                  "adaptive": 0.09655578451574919,
+                  "worst_case": 0.09655578451574919
+                },
+                "oracle": {
+                  "static": 0.09655578451574919,
+                  "adaptive": 0.09655578451574919,
+                  "worst_case": 0.09655578451574919
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07666666666666666,
+                  "adaptive": 0.07666666666666666,
+                  "worst_case": 0.07666666666666666
+                },
+                "always": {
+                  "static": 0.07685834502103787,
+                  "adaptive": 0.07685834502103787,
+                  "worst_case": 0.07685834502103787
+                },
+                "avds": {
+                  "static": 0.07685834502103787,
+                  "adaptive": 0.07685834502103787,
+                  "worst_case": 0.07685834502103787
+                },
+                "avds_novel": {
+                  "static": 0.07666666666666666,
+                  "adaptive": 0.07666666666666666,
+                  "worst_case": 0.07666666666666666
+                },
+                "oracle": {
+                  "static": 0.07685834502103787,
+                  "adaptive": 0.07685834502103787,
+                  "worst_case": 0.07685834502103787
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.09612044006948466,
+                  "adaptive": 0.09612044006948466,
+                  "worst_case": 0.09612044006948466
+                },
+                "always": {
+                  "static": 0.09470914937152879,
+                  "adaptive": 0.09470914937152879,
+                  "worst_case": 0.09470914937152879
+                },
+                "avds": {
+                  "static": 0.09470914937152879,
+                  "adaptive": 0.09470914937152879,
+                  "worst_case": 0.09470914937152879
+                },
+                "avds_novel": {
+                  "static": 0.09470914937152879,
+                  "adaptive": 0.09470914937152879,
+                  "worst_case": 0.09470914937152879
+                },
+                "oracle": {
+                  "static": 0.09612044006948466,
+                  "adaptive": 0.09612044006948466,
+                  "worst_case": 0.09612044006948466
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 5,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.03525954946131244,
+                "adaptive": 0.03525954946131244
+              },
+              "time_shift": {
+                "static": 0.060240963855421686,
+                "adaptive": 0.060240963855421686
+              },
+              "position_spoof": {
+                "static": 0.04854368932038835,
+                "adaptive": 0.04854368932038835
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.029239766081871343,
+                "adaptive": 0.029239766081871343
+              },
+              "time_shift": {
+                "static": 0.07426597582037997,
+                "adaptive": 0.07426597582037997
+              },
+              "position_spoof": {
+                "static": 0.050241545893719805,
+                "adaptive": 0.050241545893719805
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.07988505747126437,
+                  "adaptive": 0.07988505747126437,
+                  "worst_case": 0.07988505747126437
+                },
+                "always": {
+                  "static": 0.07413893753648569,
+                  "adaptive": 0.07413893753648569,
+                  "worst_case": 0.07413893753648569
+                },
+                "avds": {
+                  "static": 0.07413893753648569,
+                  "adaptive": 0.07413893753648569,
+                  "worst_case": 0.07413893753648569
+                },
+                "avds_novel": {
+                  "static": 0.07413893753648569,
+                  "adaptive": 0.07413893753648569,
+                  "worst_case": 0.07413893753648569
+                },
+                "oracle": {
+                  "static": 0.07988505747126437,
+                  "adaptive": 0.07988505747126437,
+                  "worst_case": 0.07988505747126437
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.06591031874662345,
+                  "adaptive": 0.06591031874662345,
+                  "worst_case": 0.06591031874662345
+                },
+                "always": {
+                  "static": 0.07989130434782608,
+                  "adaptive": 0.07989130434782608,
+                  "worst_case": 0.07989130434782608
+                },
+                "avds": {
+                  "static": 0.07989130434782608,
+                  "adaptive": 0.07989130434782608,
+                  "worst_case": 0.07989130434782608
+                },
+                "avds_novel": {
+                  "static": 0.06591031874662345,
+                  "adaptive": 0.06591031874662345,
+                  "worst_case": 0.06591031874662345
+                },
+                "oracle": {
+                  "static": 0.07989130434782608,
+                  "adaptive": 0.07989130434782608,
+                  "worst_case": 0.07989130434782608
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07654676258992806,
+                  "adaptive": 0.07654676258992806,
+                  "worst_case": 0.07654676258992806
+                },
+                "always": {
+                  "static": 0.07937427578215528,
+                  "adaptive": 0.07937427578215528,
+                  "worst_case": 0.07937427578215528
+                },
+                "avds": {
+                  "static": 0.07937427578215528,
+                  "adaptive": 0.07937427578215528,
+                  "worst_case": 0.07937427578215528
+                },
+                "avds_novel": {
+                  "static": 0.07937427578215528,
+                  "adaptive": 0.07937427578215528,
+                  "worst_case": 0.07937427578215528
+                },
+                "oracle": {
+                  "static": 0.07937427578215528,
+                  "adaptive": 0.07937427578215528,
+                  "worst_case": 0.07937427578215528
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 6,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.0446168768186227,
+                "adaptive": 0.0446168768186227
+              },
+              "time_shift": {
+                "static": 0.025157232704402517,
+                "adaptive": 0.025157232704402517
+              },
+              "position_spoof": {
+                "static": 0.021589793915603533,
+                "adaptive": 0.021589793915603533
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.04065827686350436,
+                "adaptive": 0.04065827686350436
+              },
+              "time_shift": {
+                "static": 0.042666666666666665,
+                "adaptive": 0.042666666666666665
+              },
+              "position_spoof": {
+                "static": 0.03474903474903475,
+                "adaptive": 0.03474903474903475
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.08403851765392471,
+                  "adaptive": 0.08403851765392471,
+                  "worst_case": 0.08403851765392471
+                },
+                "always": {
+                  "static": 0.08275058275058275,
+                  "adaptive": 0.08275058275058275,
+                  "worst_case": 0.08275058275058275
+                },
+                "avds": {
+                  "static": 0.08275058275058275,
+                  "adaptive": 0.08275058275058275,
+                  "worst_case": 0.08275058275058275
+                },
+                "avds_novel": {
+                  "static": 0.08275058275058275,
+                  "adaptive": 0.08275058275058275,
+                  "worst_case": 0.08275058275058275
+                },
+                "oracle": {
+                  "static": 0.08403851765392471,
+                  "adaptive": 0.08403851765392471,
+                  "worst_case": 0.08403851765392471
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07692307692307693,
+                  "adaptive": 0.07692307692307693,
+                  "worst_case": 0.07692307692307693
+                },
+                "always": {
+                  "static": 0.096,
+                  "adaptive": 0.096,
+                  "worst_case": 0.096
+                },
+                "avds": {
+                  "static": 0.096,
+                  "adaptive": 0.096,
+                  "worst_case": 0.096
+                },
+                "avds_novel": {
+                  "static": 0.096,
+                  "adaptive": 0.096,
+                  "worst_case": 0.096
+                },
+                "oracle": {
+                  "static": 0.096,
+                  "adaptive": 0.096,
+                  "worst_case": 0.096
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.0962536023054755,
+                  "adaptive": 0.0962536023054755,
+                  "worst_case": 0.0962536023054755
+                },
+                "always": {
+                  "static": 0.10112036771042804,
+                  "adaptive": 0.10112036771042804,
+                  "worst_case": 0.10112036771042804
+                },
+                "avds": {
+                  "static": 0.10112036771042804,
+                  "adaptive": 0.10112036771042804,
+                  "worst_case": 0.10112036771042804
+                },
+                "avds_novel": {
+                  "static": 0.10112036771042804,
+                  "adaptive": 0.10112036771042804,
+                  "worst_case": 0.10112036771042804
+                },
+                "oracle": {
+                  "static": 0.10112036771042804,
+                  "adaptive": 0.10112036771042804,
+                  "worst_case": 0.10112036771042804
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 7,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.043264503441494594,
+                "adaptive": 0.043264503441494594
+              },
+              "time_shift": {
+                "static": 0.031135531135531136,
+                "adaptive": 0.031135531135531136
+              },
+              "position_spoof": {
+                "static": 0.045098039215686274,
+                "adaptive": 0.045098039215686274
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.03736479842674533,
+                "adaptive": 0.03736479842674533
+              },
+              "time_shift": {
+                "static": 0.049700085689802914,
+                "adaptive": 0.049700085689802914
+              },
+              "position_spoof": {
+                "static": 0.05808325266214908,
+                "adaptive": 0.05808325266214908
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.07728894173602854,
+                  "adaptive": 0.07728894173602854,
+                  "worst_case": 0.07728894173602854
+                },
+                "always": {
+                  "static": 0.07862550960978451,
+                  "adaptive": 0.07582385535141441,
+                  "worst_case": 0.07582385535141441
+                },
+                "avds": {
+                  "static": 0.07862550960978451,
+                  "adaptive": 0.07582385535141441,
+                  "worst_case": 0.07582385535141441
+                },
+                "avds_novel": {
+                  "static": 0.07862550960978451,
+                  "adaptive": 0.07582385535141441,
+                  "worst_case": 0.07582385535141441
+                },
+                "oracle": {
+                  "static": 0.07728894173602854,
+                  "adaptive": 0.07728894173602854,
+                  "worst_case": 0.07728894173602854
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07355021216407355,
+                  "adaptive": 0.07355021216407355,
+                  "worst_case": 0.07355021216407355
+                },
+                "always": {
+                  "static": 0.09474232170744404,
+                  "adaptive": 0.0947176684881603,
+                  "worst_case": 0.0947176684881603
+                },
+                "avds": {
+                  "static": 0.09474232170744404,
+                  "adaptive": 0.0947176684881603,
+                  "worst_case": 0.0947176684881603
+                },
+                "avds_novel": {
+                  "static": 0.09474232170744404,
+                  "adaptive": 0.0947176684881603,
+                  "worst_case": 0.0947176684881603
+                },
+                "oracle": {
+                  "static": 0.09474232170744404,
+                  "adaptive": 0.0947176684881603,
+                  "worst_case": 0.0947176684881603
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.08490566037735849,
+                  "adaptive": 0.08490566037735849,
+                  "worst_case": 0.08490566037735849
+                },
+                "always": {
+                  "static": 0.08705612829324169,
+                  "adaptive": 0.08705612829324169,
+                  "worst_case": 0.08705612829324169
+                },
+                "avds": {
+                  "static": 0.08705612829324169,
+                  "adaptive": 0.08705612829324169,
+                  "worst_case": 0.08705612829324169
+                },
+                "avds_novel": {
+                  "static": 0.08705612829324169,
+                  "adaptive": 0.08705612829324169,
+                  "worst_case": 0.08705612829324169
+                },
+                "oracle": {
+                  "static": 0.08705612829324169,
+                  "adaptive": 0.08705612829324169,
+                  "worst_case": 0.08705612829324169
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 8,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.06201550387596899,
+                "adaptive": 0.06201550387596899
+              },
+              "time_shift": {
+                "static": 0.041666666666666664,
+                "adaptive": 0.041666666666666664
+              },
+              "position_spoof": {
+                "static": 0.04505386875612145,
+                "adaptive": 0.04505386875612145
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.05078125,
+                "adaptive": 0.05078125
+              },
+              "time_shift": {
+                "static": 0.045774647887323945,
+                "adaptive": 0.045774647887323945
+              },
+              "position_spoof": {
+                "static": 0.03732809430255403,
+                "adaptive": 0.03732809430255403
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07606787595084845,
+                  "adaptive": 0.07606787595084845,
+                  "worst_case": 0.07606787595084845
+                },
+                "always": {
+                  "static": 0.07748325080104865,
+                  "adaptive": 0.07748325080104865,
+                  "worst_case": 0.07748325080104865
+                },
+                "avds": {
+                  "static": 0.07606787595084845,
+                  "adaptive": 0.07606787595084845,
+                  "worst_case": 0.07606787595084845
+                },
+                "avds_novel": {
+                  "static": 0.07606787595084845,
+                  "adaptive": 0.07606787595084845,
+                  "worst_case": 0.07606787595084845
+                },
+                "oracle": {
+                  "static": 0.07748325080104865,
+                  "adaptive": 0.07748325080104865,
+                  "worst_case": 0.07748325080104865
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07275756734240489,
+                  "adaptive": 0.07275756734240489,
+                  "worst_case": 0.07275756734240489
+                },
+                "always": {
+                  "static": 0.08251900108577633,
+                  "adaptive": 0.08251900108577633,
+                  "worst_case": 0.08251900108577633
+                },
+                "avds": {
+                  "static": 0.07275756734240489,
+                  "adaptive": 0.07275756734240489,
+                  "worst_case": 0.07275756734240489
+                },
+                "avds_novel": {
+                  "static": 0.07275756734240489,
+                  "adaptive": 0.07275756734240489,
+                  "worst_case": 0.07275756734240489
+                },
+                "oracle": {
+                  "static": 0.08251900108577633,
+                  "adaptive": 0.08251900108577633,
+                  "worst_case": 0.08251900108577633
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.0841799709724238,
+                  "adaptive": 0.0841799709724238,
+                  "worst_case": 0.0841799709724238
+                },
+                "always": {
+                  "static": 0.08602771362586605,
+                  "adaptive": 0.08602771362586605,
+                  "worst_case": 0.08602771362586605
+                },
+                "avds": {
+                  "static": 0.0841799709724238,
+                  "adaptive": 0.0841799709724238,
+                  "worst_case": 0.0841799709724238
+                },
+                "avds_novel": {
+                  "static": 0.0841799709724238,
+                  "adaptive": 0.0841799709724238,
+                  "worst_case": 0.0841799709724238
+                },
+                "oracle": {
+                  "static": 0.08602771362586605,
+                  "adaptive": 0.08602771362586605,
+                  "worst_case": 0.08602771362586605
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 4,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.06801470588235294,
+                "adaptive": 0.06801470588235294
+              },
+              "time_shift": {
+                "static": 0.0421179302045728,
+                "adaptive": 0.04214328717639976
+              },
+              "position_spoof": {
+                "static": 0.054924242424242424,
+                "adaptive": 0.054924242424242424
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.10292812777284827,
+                "adaptive": 0.09115281501340483
+              },
+              "time_shift": {
+                "static": 0.0392156862745098,
+                "adaptive": 0.04081632653061224
+              },
+              "position_spoof": {
+                "static": 0.04440333024976873,
+                "adaptive": 0.04621072088724584
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": false,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.13101209796400118,
+                  "adaptive": 0.13101209796400118,
+                  "worst_case": 0.13101209796400118
+                },
+                "always": {
+                  "static": 0.16095990635059995,
+                  "adaptive": 0.1253731343283582,
+                  "worst_case": 0.1253731343283582
+                },
+                "avds": {
+                  "static": 0.16095990635059995,
+                  "adaptive": 0.1253731343283582,
+                  "worst_case": 0.1253731343283582
+                },
+                "avds_novel": {
+                  "static": 0.13101209796400118,
+                  "adaptive": 0.13101209796400118,
+                  "worst_case": 0.13101209796400118
+                },
+                "oracle": {
+                  "static": 0.13101209796400118,
+                  "adaptive": 0.13101209796400118,
+                  "worst_case": 0.13101209796400118
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07134316460741331,
+                  "adaptive": 0.07134316460741331,
+                  "worst_case": 0.07134316460741331
+                },
+                "always": {
+                  "static": 0.07573354480570975,
+                  "adaptive": 0.07497507477567299,
+                  "worst_case": 0.07497507477567299
+                },
+                "avds": {
+                  "static": 0.07573354480570975,
+                  "adaptive": 0.07497507477567299,
+                  "worst_case": 0.07497507477567299
+                },
+                "avds_novel": {
+                  "static": 0.07573354480570975,
+                  "adaptive": 0.07497507477567299,
+                  "worst_case": 0.07497507477567299
+                },
+                "oracle": {
+                  "static": 0.07573354480570975,
+                  "adaptive": 0.07497507477567299,
+                  "worst_case": 0.07497507477567299
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.08700906344410876,
+                  "adaptive": 0.08700906344410876,
+                  "worst_case": 0.08700906344410876
+                },
+                "always": {
+                  "static": 0.09526662672258837,
+                  "adaptive": 0.09697695300808142,
+                  "worst_case": 0.09526662672258837
+                },
+                "avds": {
+                  "static": 0.09526662672258837,
+                  "adaptive": 0.09697695300808142,
+                  "worst_case": 0.09526662672258837
+                },
+                "avds_novel": {
+                  "static": 0.09526662672258837,
+                  "adaptive": 0.09697695300808142,
+                  "worst_case": 0.09526662672258837
+                },
+                "oracle": {
+                  "static": 0.09526662672258837,
+                  "adaptive": 0.09697695300808142,
+                  "worst_case": 0.09526662672258837
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 5,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.06832871652816251,
+                "adaptive": 0.06832871652816251
+              },
+              "time_shift": {
+                "static": 0.06347305389221557,
+                "adaptive": 0.06347305389221557
+              },
+              "position_spoof": {
+                "static": 0.04933586337760911,
+                "adaptive": 0.04933586337760911
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.06563354603463993,
+                "adaptive": 0.06563354603463993
+              },
+              "time_shift": {
+                "static": 0.06035502958579882,
+                "adaptive": 0.06639004149377593
+              },
+              "position_spoof": {
+                "static": 0.05405405405405406,
+                "adaptive": 0.05405405405405406
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.12686349020754165,
+                  "adaptive": 0.12686349020754165,
+                  "worst_case": 0.12686349020754165
+                },
+                "always": {
+                  "static": 0.1298472385428907,
+                  "adaptive": 0.10773809523809524,
+                  "worst_case": 0.10773809523809524
+                },
+                "avds": {
+                  "static": 0.12686349020754165,
+                  "adaptive": 0.12686349020754165,
+                  "worst_case": 0.12686349020754165
+                },
+                "avds_novel": {
+                  "static": 0.1298472385428907,
+                  "adaptive": 0.10773809523809524,
+                  "worst_case": 0.10773809523809524
+                },
+                "oracle": {
+                  "static": 0.12686349020754165,
+                  "adaptive": 0.12686349020754165,
+                  "worst_case": 0.12686349020754165
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.06572955850326669,
+                  "adaptive": 0.06572955850326669,
+                  "worst_case": 0.06572955850326669
+                },
+                "always": {
+                  "static": 0.0688836104513064,
+                  "adaptive": 0.06725029844807004,
+                  "worst_case": 0.06725029844807004
+                },
+                "avds": {
+                  "static": 0.06572955850326669,
+                  "adaptive": 0.06572955850326669,
+                  "worst_case": 0.06572955850326669
+                },
+                "avds_novel": {
+                  "static": 0.0688836104513064,
+                  "adaptive": 0.06725029844807004,
+                  "worst_case": 0.06725029844807004
+                },
+                "oracle": {
+                  "static": 0.0688836104513064,
+                  "adaptive": 0.06725029844807004,
+                  "worst_case": 0.06725029844807004
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.06886137118695258,
+                  "adaptive": 0.06886137118695258,
+                  "worst_case": 0.06886137118695258
+                },
+                "always": {
+                  "static": 0.07239819004524888,
+                  "adaptive": 0.07185990338164251,
+                  "worst_case": 0.07185990338164251
+                },
+                "avds": {
+                  "static": 0.06886137118695258,
+                  "adaptive": 0.06886137118695258,
+                  "worst_case": 0.06886137118695258
+                },
+                "avds_novel": {
+                  "static": 0.06886137118695258,
+                  "adaptive": 0.06886137118695258,
+                  "worst_case": 0.06886137118695258
+                },
+                "oracle": {
+                  "static": 0.07239819004524888,
+                  "adaptive": 0.07185990338164251,
+                  "worst_case": 0.07185990338164251
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 6,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.03932584269662921,
+                "adaptive": 0.03932584269662921
+              },
+              "time_shift": {
+                "static": 0.06602641056422569,
+                "adaptive": 0.06602641056422569
+              },
+              "position_spoof": {
+                "static": 0.045714285714285714,
+                "adaptive": 0.045714285714285714
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.08664259927797834,
+                "adaptive": 0.0674567000911577
+              },
+              "time_shift": {
+                "static": 0.06599882144961697,
+                "adaptive": 0.06994665085951393
+              },
+              "position_spoof": {
+                "static": 0.055248618784530384,
+                "adaptive": 0.05703771849126035
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.08562874251497006,
+                  "adaptive": 0.08562874251497006,
+                  "worst_case": 0.08562874251497006
+                },
+                "always": {
+                  "static": 0.14716106604866744,
+                  "adaptive": 0.11058545239503252,
+                  "worst_case": 0.11058545239503252
+                },
+                "avds": {
+                  "static": 0.14716106604866744,
+                  "adaptive": 0.11058545239503252,
+                  "worst_case": 0.11058545239503252
+                },
+                "avds_novel": {
+                  "static": 0.14716106604866744,
+                  "adaptive": 0.11058545239503252,
+                  "worst_case": 0.11058545239503252
+                },
+                "oracle": {
+                  "static": 0.14716106604866744,
+                  "adaptive": 0.11058545239503252,
+                  "worst_case": 0.11058545239503252
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07017543859649122,
+                  "adaptive": 0.07017543859649122,
+                  "worst_case": 0.07017543859649122
+                },
+                "always": {
+                  "static": 0.07363420427553444,
+                  "adaptive": 0.07313195548489666,
+                  "worst_case": 0.07313195548489666
+                },
+                "avds": {
+                  "static": 0.07363420427553444,
+                  "adaptive": 0.07313195548489666,
+                  "worst_case": 0.07313195548489666
+                },
+                "avds_novel": {
+                  "static": 0.07363420427553444,
+                  "adaptive": 0.07313195548489666,
+                  "worst_case": 0.07313195548489666
+                },
+                "oracle": {
+                  "static": 0.07363420427553444,
+                  "adaptive": 0.07313195548489666,
+                  "worst_case": 0.07313195548489666
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07722473604826546,
+                  "adaptive": 0.07722473604826546,
+                  "worst_case": 0.07722473604826546
+                },
+                "always": {
+                  "static": 0.0815347721822542,
+                  "adaptive": 0.08210967935271202,
+                  "worst_case": 0.0815347721822542
+                },
+                "avds": {
+                  "static": 0.0815347721822542,
+                  "adaptive": 0.08210967935271202,
+                  "worst_case": 0.0815347721822542
+                },
+                "avds_novel": {
+                  "static": 0.0815347721822542,
+                  "adaptive": 0.08210967935271202,
+                  "worst_case": 0.0815347721822542
+                },
+                "oracle": {
+                  "static": 0.0815347721822542,
+                  "adaptive": 0.08210967935271202,
+                  "worst_case": 0.0815347721822542
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 7,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.07366482504604052,
+                "adaptive": 0.07366482504604052
+              },
+              "time_shift": {
+                "static": 0.03549571603427173,
+                "adaptive": 0.03549571603427173
+              },
+              "position_spoof": {
+                "static": 0.046021093000958774,
+                "adaptive": 0.046021093000958774
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.06776556776556776,
+                "adaptive": 0.06599450045829514
+              },
+              "time_shift": {
+                "static": 0.03867069486404834,
+                "adaptive": 0.040097205346294046
+              },
+              "position_spoof": {
+                "static": 0.049010367577756835,
+                "adaptive": 0.049010367577756835
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.11117681845062094,
+                  "adaptive": 0.11117681845062094,
+                  "worst_case": 0.11117681845062094
+                },
+                "always": {
+                  "static": 0.09190631485324637,
+                  "adaptive": 0.0885323826500297,
+                  "worst_case": 0.0885323826500297
+                },
+                "avds": {
+                  "static": 0.11117681845062094,
+                  "adaptive": 0.11117681845062094,
+                  "worst_case": 0.11117681845062094
+                },
+                "avds_novel": {
+                  "static": 0.09190631485324637,
+                  "adaptive": 0.0885323826500297,
+                  "worst_case": 0.0885323826500297
+                },
+                "oracle": {
+                  "static": 0.11117681845062094,
+                  "adaptive": 0.11117681845062094,
+                  "worst_case": 0.11117681845062094
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07308838133068521,
+                  "adaptive": 0.07308838133068521,
+                  "worst_case": 0.07308838133068521
+                },
+                "always": {
+                  "static": 0.07485148514851485,
+                  "adaptive": 0.07649623464130004,
+                  "worst_case": 0.07485148514851485
+                },
+                "avds": {
+                  "static": 0.07308838133068521,
+                  "adaptive": 0.07308838133068521,
+                  "worst_case": 0.07308838133068521
+                },
+                "avds_novel": {
+                  "static": 0.07308838133068521,
+                  "adaptive": 0.07308838133068521,
+                  "worst_case": 0.07308838133068521
+                },
+                "oracle": {
+                  "static": 0.07485148514851485,
+                  "adaptive": 0.07649623464130004,
+                  "worst_case": 0.07485148514851485
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.07650273224043716,
+                  "adaptive": 0.07650273224043716,
+                  "worst_case": 0.07650273224043716
+                },
+                "always": {
+                  "static": 0.07490184234370281,
+                  "adaptive": 0.07490184234370281,
+                  "worst_case": 0.07490184234370281
+                },
+                "avds": {
+                  "static": 0.07650273224043716,
+                  "adaptive": 0.07650273224043716,
+                  "worst_case": 0.07650273224043716
+                },
+                "avds_novel": {
+                  "static": 0.07650273224043716,
+                  "adaptive": 0.07650273224043716,
+                  "worst_case": 0.07650273224043716
+                },
+                "oracle": {
+                  "static": 0.07650273224043716,
+                  "adaptive": 0.07650273224043716,
+                  "worst_case": 0.07650273224043716
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 8,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.056232427366447985,
+                "adaptive": 0.056232427366447985
+              },
+              "time_shift": {
+                "static": 0.04972710733778047,
+                "adaptive": 0.04972710733778047
+              },
+              "position_spoof": {
+                "static": 0.045627376425855515,
+                "adaptive": 0.045627376425855515
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.06060606060606061,
+                "adaptive": 0.06060606060606061
+              },
+              "time_shift": {
+                "static": 0.08480565371024736,
+                "adaptive": 0.08505611340815121
+              },
+              "position_spoof": {
+                "static": 0.06499535747446611,
+                "adaptive": 0.06499535747446611
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.10573210573210573,
+                  "adaptive": 0.10573210573210573,
+                  "worst_case": 0.10573210573210573
+                },
+                "always": {
+                  "static": 0.07454162909528103,
+                  "adaptive": 0.07226738934056007,
+                  "worst_case": 0.07226738934056007
+                },
+                "avds": {
+                  "static": 0.07454162909528103,
+                  "adaptive": 0.07226738934056007,
+                  "worst_case": 0.07226738934056007
+                },
+                "avds_novel": {
+                  "static": 0.07454162909528103,
+                  "adaptive": 0.07226738934056007,
+                  "worst_case": 0.07226738934056007
+                },
+                "oracle": {
+                  "static": 0.10573210573210573,
+                  "adaptive": 0.10573210573210573,
+                  "worst_case": 0.10573210573210573
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.0670926517571885,
+                  "adaptive": 0.0670926517571885,
+                  "worst_case": 0.0670926517571885
+                },
+                "always": {
+                  "static": 0.07928994082840236,
+                  "adaptive": 0.080173775671406,
+                  "worst_case": 0.07928994082840236
+                },
+                "avds": {
+                  "static": 0.07928994082840236,
+                  "adaptive": 0.080173775671406,
+                  "worst_case": 0.07928994082840236
+                },
+                "avds_novel": {
+                  "static": 0.07928994082840236,
+                  "adaptive": 0.080173775671406,
+                  "worst_case": 0.07928994082840236
+                },
+                "oracle": {
+                  "static": 0.07928994082840236,
+                  "adaptive": 0.080173775671406,
+                  "worst_case": 0.07928994082840236
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.06808510638297872,
+                  "adaptive": 0.06808510638297872,
+                  "worst_case": 0.06808510638297872
+                },
+                "always": {
+                  "static": 0.06666666666666667,
+                  "adaptive": 0.06666666666666667,
+                  "worst_case": 0.06666666666666667
+                },
+                "avds": {
+                  "static": 0.06666666666666667,
+                  "adaptive": 0.06666666666666667,
+                  "worst_case": 0.06666666666666667
+                },
+                "avds_novel": {
+                  "static": 0.06666666666666667,
+                  "adaptive": 0.06666666666666667,
+                  "worst_case": 0.06666666666666667
+                },
+                "oracle": {
+                  "static": 0.06808510638297872,
+                  "adaptive": 0.06808510638297872,
+                  "worst_case": 0.06808510638297872
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 4,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.07308503162333099,
+                "adaptive": 0.04128113879003559
+              },
+              "time_shift": {
+                "static": 0.2777777777777778,
+                "adaptive": 0.2840366972477064
+              },
+              "position_spoof": {
+                "static": 0.4962235649546828,
+                "adaptive": 0.49269792467332824
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.0890937019969278,
+                "adaptive": 0.09244992295839753
+              },
+              "time_shift": {
+                "static": 0.23194064818430302,
+                "adaptive": 0.23455332546241636
+              },
+              "position_spoof": {
+                "static": 0.5142385472554685,
+                "adaptive": 0.5116472545757071
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07121977145894233,
+                  "adaptive": 0.04994629430719656,
+                  "worst_case": 0.04994629430719656
+                },
+                "always": {
+                  "static": 0.08909194745859508,
+                  "adaptive": 0.06824754193175246,
+                  "worst_case": 0.06824754193175246
+                },
+                "avds": {
+                  "static": 0.08909194745859508,
+                  "adaptive": 0.06824754193175246,
+                  "worst_case": 0.06824754193175246
+                },
+                "avds_novel": {
+                  "static": 0.07121977145894233,
+                  "adaptive": 0.04994629430719656,
+                  "worst_case": 0.04994629430719656
+                },
+                "oracle": {
+                  "static": 0.08909194745859508,
+                  "adaptive": 0.06824754193175246,
+                  "worst_case": 0.06824754193175246
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.23921999450700357,
+                  "adaptive": 0.21651819417182547,
+                  "worst_case": 0.21651819417182547
+                },
+                "always": {
+                  "static": 0.19206071220081727,
+                  "adaptive": 0.19429778247096094,
+                  "worst_case": 0.19206071220081727
+                },
+                "avds": {
+                  "static": 0.19206071220081727,
+                  "adaptive": 0.19429778247096094,
+                  "worst_case": 0.19206071220081727
+                },
+                "avds_novel": {
+                  "static": 0.19206071220081727,
+                  "adaptive": 0.19429778247096094,
+                  "worst_case": 0.19206071220081727
+                },
+                "oracle": {
+                  "static": 0.23921999450700357,
+                  "adaptive": 0.21651819417182547,
+                  "worst_case": 0.21651819417182547
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.48579881656804735,
+                  "adaptive": 0.45448778940691403,
+                  "worst_case": 0.45448778940691403
+                },
+                "always": {
+                  "static": 0.4952440355527834,
+                  "adaptive": 0.4807970432267395,
+                  "worst_case": 0.4807970432267395
+                },
+                "avds": {
+                  "static": 0.4952440355527834,
+                  "adaptive": 0.4807970432267395,
+                  "worst_case": 0.4807970432267395
+                },
+                "avds_novel": {
+                  "static": 0.4952440355527834,
+                  "adaptive": 0.4807970432267395,
+                  "worst_case": 0.4807970432267395
+                },
+                "oracle": {
+                  "static": 0.4952440355527834,
+                  "adaptive": 0.4807970432267395,
+                  "worst_case": 0.4807970432267395
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 5,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.07386759581881533,
+                "adaptive": 0.04529370134465676
+              },
+              "time_shift": {
+                "static": 0.2738528769118718,
+                "adaptive": 0.2835820895522388
+              },
+              "position_spoof": {
+                "static": 0.4904067536454336,
+                "adaptive": 0.4843260188087774
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.1047970479704797,
+                "adaptive": 0.1019202363367799
+              },
+              "time_shift": {
+                "static": 0.2378716744913928,
+                "adaptive": 0.23464130003963535
+              },
+              "position_spoof": {
+                "static": 0.5,
+                "adaptive": 0.4957482993197279
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.06863270777479893,
+                  "adaptive": 0.05557054221742649,
+                  "worst_case": 0.05557054221742649
+                },
+                "always": {
+                  "static": 0.08542141230068337,
+                  "adaptive": 0.06291486291486291,
+                  "worst_case": 0.06291486291486291
+                },
+                "avds": {
+                  "static": 0.08542141230068337,
+                  "adaptive": 0.06291486291486291,
+                  "worst_case": 0.06291486291486291
+                },
+                "avds_novel": {
+                  "static": 0.06863270777479893,
+                  "adaptive": 0.05557054221742649,
+                  "worst_case": 0.05557054221742649
+                },
+                "oracle": {
+                  "static": 0.08542141230068337,
+                  "adaptive": 0.06291486291486291,
+                  "worst_case": 0.06291486291486291
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.2436631234668847,
+                  "adaptive": 0.22346368715083798,
+                  "worst_case": 0.22346368715083798
+                },
+                "always": {
+                  "static": 0.19846887187635417,
+                  "adaptive": 0.20005963029218843,
+                  "worst_case": 0.19846887187635417
+                },
+                "avds": {
+                  "static": 0.19846887187635417,
+                  "adaptive": 0.20005963029218843,
+                  "worst_case": 0.19846887187635417
+                },
+                "avds_novel": {
+                  "static": 0.19846887187635417,
+                  "adaptive": 0.20005963029218843,
+                  "worst_case": 0.19846887187635417
+                },
+                "oracle": {
+                  "static": 0.2436631234668847,
+                  "adaptive": 0.22346368715083798,
+                  "worst_case": 0.22346368715083798
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.5046457607433217,
+                  "adaptive": 0.4682727129585892,
+                  "worst_case": 0.4682727129585892
+                },
+                "always": {
+                  "static": 0.5105335998769799,
+                  "adaptive": 0.49635036496350365,
+                  "worst_case": 0.49635036496350365
+                },
+                "avds": {
+                  "static": 0.5105335998769799,
+                  "adaptive": 0.49635036496350365,
+                  "worst_case": 0.49635036496350365
+                },
+                "avds_novel": {
+                  "static": 0.5105335998769799,
+                  "adaptive": 0.49635036496350365,
+                  "worst_case": 0.49635036496350365
+                },
+                "oracle": {
+                  "static": 0.5105335998769799,
+                  "adaptive": 0.49635036496350365,
+                  "worst_case": 0.49635036496350365
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 6,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.0771881461061337,
+                "adaptive": 0.05156794425087108
+              },
+              "time_shift": {
+                "static": 0.27044711014176664,
+                "adaptive": 0.27391142538146634
+              },
+              "position_spoof": {
+                "static": 0.48494090735798706,
+                "adaptive": 0.47996888370283936
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.10091743119266056,
+                "adaptive": 0.08500772797527048
+              },
+              "time_shift": {
+                "static": 0.2308300395256917,
+                "adaptive": 0.22807017543859648
+              },
+              "position_spoof": {
+                "static": 0.49000425350914506,
+                "adaptive": 0.48671808054841476
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.06733641053489003,
+                  "adaptive": 0.04764512595837897,
+                  "worst_case": 0.04764512595837897
+                },
+                "always": {
+                  "static": 0.09735023041474654,
+                  "adaptive": 0.08137169427492008,
+                  "worst_case": 0.08137169427492008
+                },
+                "avds": {
+                  "static": 0.06733641053489003,
+                  "adaptive": 0.04764512595837897,
+                  "worst_case": 0.04764512595837897
+                },
+                "avds_novel": {
+                  "static": 0.06733641053489003,
+                  "adaptive": 0.04764512595837897,
+                  "worst_case": 0.04764512595837897
+                },
+                "oracle": {
+                  "static": 0.09735023041474654,
+                  "adaptive": 0.08137169427492008,
+                  "worst_case": 0.08137169427492008
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.2389588813512391,
+                  "adaptive": 0.2225949077603293,
+                  "worst_case": 0.2225949077603293
+                },
+                "always": {
+                  "static": 0.19539895165987187,
+                  "adaptive": 0.19641512275945172,
+                  "worst_case": 0.19539895165987187
+                },
+                "avds": {
+                  "static": 0.2389588813512391,
+                  "adaptive": 0.2225949077603293,
+                  "worst_case": 0.2225949077603293
+                },
+                "avds_novel": {
+                  "static": 0.19539895165987187,
+                  "adaptive": 0.19641512275945172,
+                  "worst_case": 0.19539895165987187
+                },
+                "oracle": {
+                  "static": 0.2389588813512391,
+                  "adaptive": 0.2225949077603293,
+                  "worst_case": 0.2225949077603293
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.4923895374612088,
+                  "adaptive": 0.46420066677250355,
+                  "worst_case": 0.46420066677250355
+                },
+                "always": {
+                  "static": 0.5009351620947631,
+                  "adaptive": 0.48331452522972757,
+                  "worst_case": 0.48331452522972757
+                },
+                "avds": {
+                  "static": 0.4923895374612088,
+                  "adaptive": 0.46420066677250355,
+                  "worst_case": 0.46420066677250355
+                },
+                "avds_novel": {
+                  "static": 0.4923895374612088,
+                  "adaptive": 0.46420066677250355,
+                  "worst_case": 0.46420066677250355
+                },
+                "oracle": {
+                  "static": 0.5009351620947631,
+                  "adaptive": 0.48331452522972757,
+                  "worst_case": 0.48331452522972757
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 7,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.06624383368569416,
+                "adaptive": 0.042704626334519574
+              },
+              "time_shift": {
+                "static": 0.29163636363636364,
+                "adaptive": 0.2942271880819367
+              },
+              "position_spoof": {
+                "static": 0.49750096116878123,
+                "adaptive": 0.49411764705882355
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.10636704119850188,
+                "adaptive": 0.10310841546626232
+              },
+              "time_shift": {
+                "static": 0.23186119873817035,
+                "adaptive": 0.23018717642373557
+              },
+              "position_spoof": {
+                "static": 0.5102984447246742,
+                "adaptive": 0.5069826491747779
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07050092764378478,
+                  "adaptive": 0.047172339855266684,
+                  "worst_case": 0.047172339855266684
+                },
+                "always": {
+                  "static": 0.09216589861751152,
+                  "adaptive": 0.07331975560081466,
+                  "worst_case": 0.07331975560081466
+                },
+                "avds": {
+                  "static": 0.09216589861751152,
+                  "adaptive": 0.07331975560081466,
+                  "worst_case": 0.07331975560081466
+                },
+                "avds_novel": {
+                  "static": 0.07050092764378478,
+                  "adaptive": 0.047172339855266684,
+                  "worst_case": 0.047172339855266684
+                },
+                "oracle": {
+                  "static": 0.09216589861751152,
+                  "adaptive": 0.07331975560081466,
+                  "worst_case": 0.07331975560081466
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.24230821824148777,
+                  "adaptive": 0.21730565237157146,
+                  "worst_case": 0.21730565237157146
+                },
+                "always": {
+                  "static": 0.20318840579710146,
+                  "adaptive": 0.20394736842105263,
+                  "worst_case": 0.20318840579710146
+                },
+                "avds": {
+                  "static": 0.20318840579710146,
+                  "adaptive": 0.20394736842105263,
+                  "worst_case": 0.20318840579710146
+                },
+                "avds_novel": {
+                  "static": 0.20318840579710146,
+                  "adaptive": 0.20394736842105263,
+                  "worst_case": 0.20318840579710146
+                },
+                "oracle": {
+                  "static": 0.24230821824148777,
+                  "adaptive": 0.21730565237157146,
+                  "worst_case": 0.21730565237157146
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.49139690871974334,
+                  "adaptive": 0.4589030331604589,
+                  "worst_case": 0.4589030331604589
+                },
+                "always": {
+                  "static": 0.5001554243083618,
+                  "adaptive": 0.489769820971867,
+                  "worst_case": 0.489769820971867
+                },
+                "avds": {
+                  "static": 0.5001554243083618,
+                  "adaptive": 0.489769820971867,
+                  "worst_case": 0.489769820971867
+                },
+                "avds_novel": {
+                  "static": 0.49139690871974334,
+                  "adaptive": 0.4589030331604589,
+                  "worst_case": 0.4589030331604589
+                },
+                "oracle": {
+                  "static": 0.5001554243083618,
+                  "adaptive": 0.489769820971867,
+                  "worst_case": 0.489769820971867
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 8,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.09449929478138223,
+                "adaptive": 0.06290207290922087
+              },
+              "time_shift": {
+                "static": 0.2924699890869407,
+                "adaptive": 0.2948148148148148
+              },
+              "position_spoof": {
+                "static": 0.5044556373498644,
+                "adaptive": 0.4960567823343849
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.09111617312072894,
+                "adaptive": 0.07963246554364471
+              },
+              "time_shift": {
+                "static": 0.2356164383561644,
+                "adaptive": 0.23226317875544986
+              },
+              "position_spoof": {
+                "static": 0.49555273189326554,
+                "adaptive": 0.4910333048676345
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.06903933636606904,
+                  "adaptive": 0.04860923575479341,
+                  "worst_case": 0.04860923575479341
+                },
+                "always": {
+                  "static": 0.09088310945984567,
+                  "adaptive": 0.07360185453491741,
+                  "worst_case": 0.07360185453491741
+                },
+                "avds": {
+                  "static": 0.06903933636606904,
+                  "adaptive": 0.04860923575479341,
+                  "worst_case": 0.04860923575479341
+                },
+                "avds_novel": {
+                  "static": 0.06903933636606904,
+                  "adaptive": 0.04860923575479341,
+                  "worst_case": 0.04860923575479341
+                },
+                "oracle": {
+                  "static": 0.09088310945984567,
+                  "adaptive": 0.07360185453491741,
+                  "worst_case": 0.07360185453491741
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.24458459007403346,
+                  "adaptive": 0.22313797313797315,
+                  "worst_case": 0.22313797313797315
+                },
+                "always": {
+                  "static": 0.1994531587278745,
+                  "adaptive": 0.20389359488779907,
+                  "worst_case": 0.1994531587278745
+                },
+                "avds": {
+                  "static": 0.24458459007403346,
+                  "adaptive": 0.22313797313797315,
+                  "worst_case": 0.22313797313797315
+                },
+                "avds_novel": {
+                  "static": 0.1994531587278745,
+                  "adaptive": 0.20389359488779907,
+                  "worst_case": 0.1994531587278745
+                },
+                "oracle": {
+                  "static": 0.24458459007403346,
+                  "adaptive": 0.22313797313797315,
+                  "worst_case": 0.22313797313797315
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.49306989088764375,
+                  "adaptive": 0.4606099110546379,
+                  "worst_case": 0.4606099110546379
+                },
+                "always": {
+                  "static": 0.5065339141257,
+                  "adaptive": 0.4901173067652258,
+                  "worst_case": 0.4901173067652258
+                },
+                "avds": {
+                  "static": 0.49306989088764375,
+                  "adaptive": 0.4606099110546379,
+                  "worst_case": 0.4606099110546379
+                },
+                "avds_novel": {
+                  "static": 0.49306989088764375,
+                  "adaptive": 0.4606099110546379,
+                  "worst_case": 0.4606099110546379
+                },
+                "oracle": {
+                  "static": 0.5065339141257,
+                  "adaptive": 0.4901173067652258,
+                  "worst_case": 0.4901173067652258
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 4,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.06473594548551959,
+                "adaptive": 0.06473594548551959
+              },
+              "time_shift": {
+                "static": 0.03619381202568593,
+                "adaptive": 0.03619381202568593
+              },
+              "position_spoof": {
+                "static": 0.056555269922879174,
+                "adaptive": 0.056555269922879174
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.06621392190152801,
+                "adaptive": 0.06621392190152801
+              },
+              "time_shift": {
+                "static": 0.037252619324796274,
+                "adaptive": 0.037252619324796274
+              },
+              "position_spoof": {
+                "static": 0.059726962457337884,
+                "adaptive": 0.059726962457337884
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.07568590350047304,
+                  "adaptive": 0.07568590350047304,
+                  "worst_case": 0.07568590350047304
+                },
+                "always": {
+                  "static": 0.07568590350047304,
+                  "adaptive": 0.07568590350047304,
+                  "worst_case": 0.07568590350047304
+                },
+                "avds": {
+                  "static": 0.07568590350047304,
+                  "adaptive": 0.07568590350047304,
+                  "worst_case": 0.07568590350047304
+                },
+                "avds_novel": {
+                  "static": 0.07568590350047304,
+                  "adaptive": 0.07568590350047304,
+                  "worst_case": 0.07568590350047304
+                },
+                "oracle": {
+                  "static": 0.07568590350047304,
+                  "adaptive": 0.07568590350047304,
+                  "worst_case": 0.07568590350047304
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.05894039735099338,
+                  "adaptive": 0.05894039735099338,
+                  "worst_case": 0.05894039735099338
+                },
+                "always": {
+                  "static": 0.05958291956305859,
+                  "adaptive": 0.05958291956305859,
+                  "worst_case": 0.05958291956305859
+                },
+                "avds": {
+                  "static": 0.05958291956305859,
+                  "adaptive": 0.05958291956305859,
+                  "worst_case": 0.05958291956305859
+                },
+                "avds_novel": {
+                  "static": 0.05958291956305859,
+                  "adaptive": 0.05958291956305859,
+                  "worst_case": 0.05958291956305859
+                },
+                "oracle": {
+                  "static": 0.05958291956305859,
+                  "adaptive": 0.05958291956305859,
+                  "worst_case": 0.05958291956305859
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.07969877627863194,
+                  "adaptive": 0.07969877627863194,
+                  "worst_case": 0.07969877627863194
+                },
+                "always": {
+                  "static": 0.07969877627863194,
+                  "adaptive": 0.07969877627863194,
+                  "worst_case": 0.07969877627863194
+                },
+                "avds": {
+                  "static": 0.07969877627863194,
+                  "adaptive": 0.07969877627863194,
+                  "worst_case": 0.07969877627863194
+                },
+                "avds_novel": {
+                  "static": 0.07969877627863194,
+                  "adaptive": 0.07969877627863194,
+                  "worst_case": 0.07969877627863194
+                },
+                "oracle": {
+                  "static": 0.07969877627863194,
+                  "adaptive": 0.07969877627863194,
+                  "worst_case": 0.07969877627863194
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 5,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.06820119352088662,
+                "adaptive": 0.06820119352088662
+              },
+              "time_shift": {
+                "static": 0.040840140023337225,
+                "adaptive": 0.040840140023337225
+              },
+              "position_spoof": {
+                "static": 0.06831767719897523,
+                "adaptive": 0.06831767719897523
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.06966864910790145,
+                "adaptive": 0.06966864910790145
+              },
+              "time_shift": {
+                "static": 0.04304828388598022,
+                "adaptive": 0.04304828388598022
+              },
+              "position_spoof": {
+                "static": 0.0730050933786078,
+                "adaptive": 0.0730050933786078
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.06242118537200504,
+                  "adaptive": 0.06242118537200504,
+                  "worst_case": 0.06242118537200504
+                },
+                "always": {
+                  "static": 0.06242118537200504,
+                  "adaptive": 0.06242118537200504,
+                  "worst_case": 0.06242118537200504
+                },
+                "avds": {
+                  "static": 0.06242118537200504,
+                  "adaptive": 0.06242118537200504,
+                  "worst_case": 0.06242118537200504
+                },
+                "avds_novel": {
+                  "static": 0.06242118537200504,
+                  "adaptive": 0.06242118537200504,
+                  "worst_case": 0.06242118537200504
+                },
+                "oracle": {
+                  "static": 0.06242118537200504,
+                  "adaptive": 0.06242118537200504,
+                  "worst_case": 0.06242118537200504
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.06074461136512083,
+                  "adaptive": 0.06074461136512083,
+                  "worst_case": 0.06074461136512083
+                },
+                "always": {
+                  "static": 0.06074461136512083,
+                  "adaptive": 0.06074461136512083,
+                  "worst_case": 0.06074461136512083
+                },
+                "avds": {
+                  "static": 0.06074461136512083,
+                  "adaptive": 0.06074461136512083,
+                  "worst_case": 0.06074461136512083
+                },
+                "avds_novel": {
+                  "static": 0.06074461136512083,
+                  "adaptive": 0.06074461136512083,
+                  "worst_case": 0.06074461136512083
+                },
+                "oracle": {
+                  "static": 0.06074461136512083,
+                  "adaptive": 0.06074461136512083,
+                  "worst_case": 0.06074461136512083
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.07483629560336763,
+                  "adaptive": 0.07483629560336763,
+                  "worst_case": 0.07483629560336763
+                },
+                "always": {
+                  "static": 0.07483629560336763,
+                  "adaptive": 0.07483629560336763,
+                  "worst_case": 0.07483629560336763
+                },
+                "avds": {
+                  "static": 0.07483629560336763,
+                  "adaptive": 0.07483629560336763,
+                  "worst_case": 0.07483629560336763
+                },
+                "avds_novel": {
+                  "static": 0.07483629560336763,
+                  "adaptive": 0.07483629560336763,
+                  "worst_case": 0.07483629560336763
+                },
+                "oracle": {
+                  "static": 0.07483629560336763,
+                  "adaptive": 0.07483629560336763,
+                  "worst_case": 0.07483629560336763
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 6,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.08006814310051108,
+                "adaptive": 0.08006814310051108
+              },
+              "time_shift": {
+                "static": 0.044837758112094395,
+                "adaptive": 0.044837758112094395
+              },
+              "position_spoof": {
+                "static": 0.07725321888412018,
+                "adaptive": 0.07725321888412018
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.08149405772495756,
+                "adaptive": 0.08149405772495756
+              },
+              "time_shift": {
+                "static": 0.04812206572769953,
+                "adaptive": 0.04812206572769953
+              },
+              "position_spoof": {
+                "static": 0.07705479452054795,
+                "adaptive": 0.07705479452054795
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.07631661936297698,
+                  "adaptive": 0.07631661936297698,
+                  "worst_case": 0.07631661936297698
+                },
+                "always": {
+                  "static": 0.07631661936297698,
+                  "adaptive": 0.07631661936297698,
+                  "worst_case": 0.07631661936297698
+                },
+                "avds": {
+                  "static": 0.07631661936297698,
+                  "adaptive": 0.07631661936297698,
+                  "worst_case": 0.07631661936297698
+                },
+                "avds_novel": {
+                  "static": 0.07631661936297698,
+                  "adaptive": 0.07631661936297698,
+                  "worst_case": 0.07631661936297698
+                },
+                "oracle": {
+                  "static": 0.07631661936297698,
+                  "adaptive": 0.07631661936297698,
+                  "worst_case": 0.07631661936297698
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.06750496360026473,
+                  "adaptive": 0.06750496360026473,
+                  "worst_case": 0.06750496360026473
+                },
+                "always": {
+                  "static": 0.06750496360026473,
+                  "adaptive": 0.06750496360026473,
+                  "worst_case": 0.06750496360026473
+                },
+                "avds": {
+                  "static": 0.06750496360026473,
+                  "adaptive": 0.06750496360026473,
+                  "worst_case": 0.06750496360026473
+                },
+                "avds_novel": {
+                  "static": 0.06750496360026473,
+                  "adaptive": 0.06750496360026473,
+                  "worst_case": 0.06750496360026473
+                },
+                "oracle": {
+                  "static": 0.06750496360026473,
+                  "adaptive": 0.06750496360026473,
+                  "worst_case": 0.06750496360026473
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.08012519561815336,
+                  "adaptive": 0.08012519561815336,
+                  "worst_case": 0.08012519561815336
+                },
+                "always": {
+                  "static": 0.08012519561815336,
+                  "adaptive": 0.08012519561815336,
+                  "worst_case": 0.08012519561815336
+                },
+                "avds": {
+                  "static": 0.08012519561815336,
+                  "adaptive": 0.08012519561815336,
+                  "worst_case": 0.08012519561815336
+                },
+                "avds_novel": {
+                  "static": 0.08012519561815336,
+                  "adaptive": 0.08012519561815336,
+                  "worst_case": 0.08012519561815336
+                },
+                "oracle": {
+                  "static": 0.08012519561815336,
+                  "adaptive": 0.08012519561815336,
+                  "worst_case": 0.08012519561815336
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 7,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.07502131287297528,
+                "adaptive": 0.07502131287297528
+              },
+              "time_shift": {
+                "static": 0.044444444444444446,
+                "adaptive": 0.044444444444444446
+              },
+              "position_spoof": {
+                "static": 0.0702656383890317,
+                "adaptive": 0.0702656383890317
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.07816482582837724,
+                "adaptive": 0.07816482582837724
+              },
+              "time_shift": {
+                "static": 0.04553415061295972,
+                "adaptive": 0.04553415061295972
+              },
+              "position_spoof": {
+                "static": 0.07508532423208192,
+                "adaptive": 0.07508532423208192
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.06429246769618657,
+                  "adaptive": 0.06429246769618657,
+                  "worst_case": 0.06429246769618657
+                },
+                "always": {
+                  "static": 0.06490233144297416,
+                  "adaptive": 0.06490233144297416,
+                  "worst_case": 0.06490233144297416
+                },
+                "avds": {
+                  "static": 0.06490233144297416,
+                  "adaptive": 0.06490233144297416,
+                  "worst_case": 0.06490233144297416
+                },
+                "avds_novel": {
+                  "static": 0.06490233144297416,
+                  "adaptive": 0.06490233144297416,
+                  "worst_case": 0.06490233144297416
+                },
+                "oracle": {
+                  "static": 0.06490233144297416,
+                  "adaptive": 0.06490233144297416,
+                  "worst_case": 0.06490233144297416
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.0635024549918167,
+                  "adaptive": 0.0635024549918167,
+                  "worst_case": 0.0635024549918167
+                },
+                "always": {
+                  "static": 0.0635024549918167,
+                  "adaptive": 0.0635024549918167,
+                  "worst_case": 0.0635024549918167
+                },
+                "avds": {
+                  "static": 0.0635024549918167,
+                  "adaptive": 0.0635024549918167,
+                  "worst_case": 0.0635024549918167
+                },
+                "avds_novel": {
+                  "static": 0.0635024549918167,
+                  "adaptive": 0.0635024549918167,
+                  "worst_case": 0.0635024549918167
+                },
+                "oracle": {
+                  "static": 0.0635024549918167,
+                  "adaptive": 0.0635024549918167,
+                  "worst_case": 0.0635024549918167
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.07118326568841711,
+                  "adaptive": 0.07118326568841711,
+                  "worst_case": 0.07118326568841711
+                },
+                "always": {
+                  "static": 0.07118326568841711,
+                  "adaptive": 0.07118326568841711,
+                  "worst_case": 0.07118326568841711
+                },
+                "avds": {
+                  "static": 0.07118326568841711,
+                  "adaptive": 0.07118326568841711,
+                  "worst_case": 0.07118326568841711
+                },
+                "avds_novel": {
+                  "static": 0.07118326568841711,
+                  "adaptive": 0.07118326568841711,
+                  "worst_case": 0.07118326568841711
+                },
+                "oracle": {
+                  "static": 0.07118326568841711,
+                  "adaptive": 0.07118326568841711,
+                  "worst_case": 0.07118326568841711
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 8,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.07666098807495741,
+                "adaptive": 0.07666098807495741
+              },
+              "time_shift": {
+                "static": 0.04574780058651026,
+                "adaptive": 0.04574780058651026
+              },
+              "position_spoof": {
+                "static": 0.07204116638078903,
+                "adaptive": 0.07204116638078903
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.07809847198641766,
+                "adaptive": 0.07809847198641766
+              },
+              "time_shift": {
+                "static": 0.04786923525977817,
+                "adaptive": 0.04786923525977817
+              },
+              "position_spoof": {
+                "static": 0.07679180887372014,
+                "adaptive": 0.07679180887372014
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07248660573589663,
+                  "adaptive": 0.07248660573589663,
+                  "worst_case": 0.07248660573589663
+                },
+                "always": {
+                  "static": 0.07309388783868935,
+                  "adaptive": 0.07309388783868935,
+                  "worst_case": 0.07309388783868935
+                },
+                "avds": {
+                  "static": 0.07309388783868935,
+                  "adaptive": 0.07309388783868935,
+                  "worst_case": 0.07309388783868935
+                },
+                "avds_novel": {
+                  "static": 0.07309388783868935,
+                  "adaptive": 0.07309388783868935,
+                  "worst_case": 0.07309388783868935
+                },
+                "oracle": {
+                  "static": 0.07309388783868935,
+                  "adaptive": 0.07309388783868935,
+                  "worst_case": 0.07309388783868935
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.07048748353096179,
+                  "adaptive": 0.07048748353096179,
+                  "worst_case": 0.07048748353096179
+                },
+                "always": {
+                  "static": 0.07048748353096179,
+                  "adaptive": 0.07048748353096179,
+                  "worst_case": 0.07048748353096179
+                },
+                "avds": {
+                  "static": 0.07048748353096179,
+                  "adaptive": 0.07048748353096179,
+                  "worst_case": 0.07048748353096179
+                },
+                "avds_novel": {
+                  "static": 0.07048748353096179,
+                  "adaptive": 0.07048748353096179,
+                  "worst_case": 0.07048748353096179
+                },
+                "oracle": {
+                  "static": 0.07048748353096179,
+                  "adaptive": 0.07048748353096179,
+                  "worst_case": 0.07048748353096179
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": true,
+                "avds_novel": true,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.08234560199625701,
+                  "adaptive": 0.08234560199625701,
+                  "worst_case": 0.08234560199625701
+                },
+                "always": {
+                  "static": 0.08234560199625701,
+                  "adaptive": 0.08234560199625701,
+                  "worst_case": 0.08234560199625701
+                },
+                "avds": {
+                  "static": 0.08234560199625701,
+                  "adaptive": 0.08234560199625701,
+                  "worst_case": 0.08234560199625701
+                },
+                "avds_novel": {
+                  "static": 0.08234560199625701,
+                  "adaptive": 0.08234560199625701,
+                  "worst_case": 0.08234560199625701
+                },
+                "oracle": {
+                  "static": 0.08234560199625701,
+                  "adaptive": 0.08234560199625701,
+                  "worst_case": 0.08234560199625701
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 4,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.03481624758220503,
+                "adaptive": 0.03481624758220503
+              },
+              "time_shift": {
+                "static": 0.10575793184488837,
+                "adaptive": 0.10575793184488837
+              },
+              "position_spoof": {
+                "static": 0.03491755577109602,
+                "adaptive": 0.03491755577109602
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.034782608695652174,
+                "adaptive": 0.034782608695652174
+              },
+              "time_shift": {
+                "static": 0.10575793184488837,
+                "adaptive": 0.10575793184488837
+              },
+              "position_spoof": {
+                "static": 0.03491755577109602,
+                "adaptive": 0.03491755577109602
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.0929951690821256,
+                  "adaptive": 0.0929951690821256,
+                  "worst_case": 0.0929951690821256
+                },
+                "always": {
+                  "static": 0.09219644471226272,
+                  "adaptive": 0.09219644471226272,
+                  "worst_case": 0.09219644471226272
+                },
+                "avds": {
+                  "static": 0.0929951690821256,
+                  "adaptive": 0.0929951690821256,
+                  "worst_case": 0.0929951690821256
+                },
+                "avds_novel": {
+                  "static": 0.0929951690821256,
+                  "adaptive": 0.0929951690821256,
+                  "worst_case": 0.0929951690821256
+                },
+                "oracle": {
+                  "static": 0.0929951690821256,
+                  "adaptive": 0.0929951690821256,
+                  "worst_case": 0.0929951690821256
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.08948723025143536,
+                  "adaptive": 0.08948723025143536,
+                  "worst_case": 0.08948723025143536
+                },
+                "always": {
+                  "static": 0.09092706068392963,
+                  "adaptive": 0.09092706068392963,
+                  "worst_case": 0.09092706068392963
+                },
+                "avds": {
+                  "static": 0.08948723025143536,
+                  "adaptive": 0.08948723025143536,
+                  "worst_case": 0.08948723025143536
+                },
+                "avds_novel": {
+                  "static": 0.08948723025143536,
+                  "adaptive": 0.08948723025143536,
+                  "worst_case": 0.08948723025143536
+                },
+                "oracle": {
+                  "static": 0.09092706068392963,
+                  "adaptive": 0.09092706068392963,
+                  "worst_case": 0.09092706068392963
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.08879492600422834,
+                  "adaptive": 0.08879492600422834,
+                  "worst_case": 0.08879492600422834
+                },
+                "always": {
+                  "static": 0.08860759493670886,
+                  "adaptive": 0.08860759493670886,
+                  "worst_case": 0.08860759493670886
+                },
+                "avds": {
+                  "static": 0.08879492600422834,
+                  "adaptive": 0.08879492600422834,
+                  "worst_case": 0.08879492600422834
+                },
+                "avds_novel": {
+                  "static": 0.08879492600422834,
+                  "adaptive": 0.08879492600422834,
+                  "worst_case": 0.08879492600422834
+                },
+                "oracle": {
+                  "static": 0.08879492600422834,
+                  "adaptive": 0.08879492600422834,
+                  "worst_case": 0.08879492600422834
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 5,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.03898635477582846,
+                "adaptive": 0.03898635477582846
+              },
+              "time_shift": {
+                "static": 0.12404016538688718,
+                "adaptive": 0.12404016538688718
+              },
+              "position_spoof": {
+                "static": 0.04113614103819784,
+                "adaptive": 0.04113614103819784
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.03898635477582846,
+                "adaptive": 0.03898635477582846
+              },
+              "time_shift": {
+                "static": 0.12293144208037825,
+                "adaptive": 0.12293144208037825
+              },
+              "position_spoof": {
+                "static": 0.04113614103819784,
+                "adaptive": 0.04113614103819784
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.07179487179487179,
+                  "adaptive": 0.07179487179487179,
+                  "worst_case": 0.07179487179487179
+                },
+                "always": {
+                  "static": 0.07168674698795181,
+                  "adaptive": 0.07168674698795181,
+                  "worst_case": 0.07168674698795181
+                },
+                "avds": {
+                  "static": 0.07179487179487179,
+                  "adaptive": 0.07179487179487179,
+                  "worst_case": 0.07179487179487179
+                },
+                "avds_novel": {
+                  "static": 0.07179487179487179,
+                  "adaptive": 0.07179487179487179,
+                  "worst_case": 0.07179487179487179
+                },
+                "oracle": {
+                  "static": 0.07179487179487179,
+                  "adaptive": 0.07179487179487179,
+                  "worst_case": 0.07179487179487179
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.08724700334053842,
+                  "adaptive": 0.08724700334053842,
+                  "worst_case": 0.08724700334053842
+                },
+                "always": {
+                  "static": 0.08873184138201806,
+                  "adaptive": 0.08873184138201806,
+                  "worst_case": 0.08873184138201806
+                },
+                "avds": {
+                  "static": 0.08724700334053842,
+                  "adaptive": 0.08724700334053842,
+                  "worst_case": 0.08724700334053842
+                },
+                "avds_novel": {
+                  "static": 0.08724700334053842,
+                  "adaptive": 0.08724700334053842,
+                  "worst_case": 0.08724700334053842
+                },
+                "oracle": {
+                  "static": 0.08873184138201806,
+                  "adaptive": 0.08873184138201806,
+                  "worst_case": 0.08873184138201806
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.06840193704600485,
+                  "adaptive": 0.06840193704600485,
+                  "worst_case": 0.06840193704600485
+                },
+                "always": {
+                  "static": 0.06829857963130856,
+                  "adaptive": 0.06829857963130856,
+                  "worst_case": 0.06829857963130856
+                },
+                "avds": {
+                  "static": 0.06840193704600485,
+                  "adaptive": 0.06840193704600485,
+                  "worst_case": 0.06840193704600485
+                },
+                "avds_novel": {
+                  "static": 0.06840193704600485,
+                  "adaptive": 0.06840193704600485,
+                  "worst_case": 0.06840193704600485
+                },
+                "oracle": {
+                  "static": 0.06840193704600485,
+                  "adaptive": 0.06840193704600485,
+                  "worst_case": 0.06840193704600485
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 6,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.04844961240310078,
+                "adaptive": 0.04844961240310078
+              },
+              "time_shift": {
+                "static": 0.10280932456664674,
+                "adaptive": 0.10280932456664674
+              },
+              "position_spoof": {
+                "static": 0.04271844660194175,
+                "adaptive": 0.04271844660194175
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.04844961240310078,
+                "adaptive": 0.04844961240310078
+              },
+              "time_shift": {
+                "static": 0.10280932456664674,
+                "adaptive": 0.10280932456664674
+              },
+              "position_spoof": {
+                "static": 0.04271844660194175,
+                "adaptive": 0.04271844660194175
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.09365558912386707,
+                  "adaptive": 0.09365558912386707,
+                  "worst_case": 0.09365558912386707
+                },
+                "always": {
+                  "static": 0.09342977697408077,
+                  "adaptive": 0.09342977697408077,
+                  "worst_case": 0.09342977697408077
+                },
+                "avds": {
+                  "static": 0.09365558912386707,
+                  "adaptive": 0.09365558912386707,
+                  "worst_case": 0.09365558912386707
+                },
+                "avds_novel": {
+                  "static": 0.09365558912386707,
+                  "adaptive": 0.09365558912386707,
+                  "worst_case": 0.09365558912386707
+                },
+                "oracle": {
+                  "static": 0.09365558912386707,
+                  "adaptive": 0.09365558912386707,
+                  "worst_case": 0.09365558912386707
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.09576793165110273,
+                  "adaptive": 0.09576793165110273,
+                  "worst_case": 0.09576793165110273
+                },
+                "always": {
+                  "static": 0.09642857142857143,
+                  "adaptive": 0.09642857142857143,
+                  "worst_case": 0.09642857142857143
+                },
+                "avds": {
+                  "static": 0.09576793165110273,
+                  "adaptive": 0.09576793165110273,
+                  "worst_case": 0.09576793165110273
+                },
+                "avds_novel": {
+                  "static": 0.09576793165110273,
+                  "adaptive": 0.09576793165110273,
+                  "worst_case": 0.09576793165110273
+                },
+                "oracle": {
+                  "static": 0.09642857142857143,
+                  "adaptive": 0.09642857142857143,
+                  "worst_case": 0.09642857142857143
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.08479709267110842,
+                  "adaptive": 0.08479709267110842,
+                  "worst_case": 0.08479709267110842
+                },
+                "always": {
+                  "static": 0.08451554482342288,
+                  "adaptive": 0.08451554482342288,
+                  "worst_case": 0.08451554482342288
+                },
+                "avds": {
+                  "static": 0.08479709267110842,
+                  "adaptive": 0.08479709267110842,
+                  "worst_case": 0.08479709267110842
+                },
+                "avds_novel": {
+                  "static": 0.08479709267110842,
+                  "adaptive": 0.08479709267110842,
+                  "worst_case": 0.08479709267110842
+                },
+                "oracle": {
+                  "static": 0.08479709267110842,
+                  "adaptive": 0.08479709267110842,
+                  "worst_case": 0.08479709267110842
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 7,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.05242718446601942,
+                "adaptive": 0.05242718446601942
+              },
+              "time_shift": {
+                "static": 0.10125074449076832,
+                "adaptive": 0.10125074449076832
+              },
+              "position_spoof": {
+                "static": 0.04093567251461988,
+                "adaptive": 0.04093567251461988
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.05242718446601942,
+                "adaptive": 0.05242718446601942
+              },
+              "time_shift": {
+                "static": 0.10125074449076832,
+                "adaptive": 0.10125074449076832
+              },
+              "position_spoof": {
+                "static": 0.04093567251461988,
+                "adaptive": 0.04093567251461988
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.08698278465720326,
+                  "adaptive": 0.08698278465720326,
+                  "worst_case": 0.08698278465720326
+                },
+                "always": {
+                  "static": 0.08734939759036145,
+                  "adaptive": 0.08734939759036145,
+                  "worst_case": 0.08734939759036145
+                },
+                "avds": {
+                  "static": 0.08698278465720326,
+                  "adaptive": 0.08698278465720326,
+                  "worst_case": 0.08698278465720326
+                },
+                "avds_novel": {
+                  "static": 0.08698278465720326,
+                  "adaptive": 0.08698278465720326,
+                  "worst_case": 0.08698278465720326
+                },
+                "oracle": {
+                  "static": 0.08734939759036145,
+                  "adaptive": 0.08734939759036145,
+                  "worst_case": 0.08734939759036145
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.09027915264304098,
+                  "adaptive": 0.09027915264304098,
+                  "worst_case": 0.09027915264304098
+                },
+                "always": {
+                  "static": 0.09090909090909091,
+                  "adaptive": 0.09090909090909091,
+                  "worst_case": 0.09090909090909091
+                },
+                "avds": {
+                  "static": 0.09027915264304098,
+                  "adaptive": 0.09027915264304098,
+                  "worst_case": 0.09027915264304098
+                },
+                "avds_novel": {
+                  "static": 0.09027915264304098,
+                  "adaptive": 0.09027915264304098,
+                  "worst_case": 0.09027915264304098
+                },
+                "oracle": {
+                  "static": 0.09090909090909091,
+                  "adaptive": 0.09090909090909091,
+                  "worst_case": 0.09090909090909091
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.07331111784307785,
+                  "adaptive": 0.07331111784307785,
+                  "worst_case": 0.07331111784307785
+                },
+                "always": {
+                  "static": 0.07420814479638009,
+                  "adaptive": 0.07420814479638009,
+                  "worst_case": 0.07420814479638009
+                },
+                "avds": {
+                  "static": 0.07331111784307785,
+                  "adaptive": 0.07331111784307785,
+                  "worst_case": 0.07331111784307785
+                },
+                "avds_novel": {
+                  "static": 0.07331111784307785,
+                  "adaptive": 0.07331111784307785,
+                  "worst_case": 0.07331111784307785
+                },
+                "oracle": {
+                  "static": 0.07420814479638009,
+                  "adaptive": 0.07420814479638009,
+                  "worst_case": 0.07420814479638009
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 8,
+          "validation": {
+            "false": {
+              "stuck_at": {
+                "static": 0.04466019417475728,
+                "adaptive": 0.04466019417475728
+              },
+              "time_shift": {
+                "static": 0.11472501478415138,
+                "adaptive": 0.11472501478415138
+              },
+              "position_spoof": {
+                "static": 0.04093567251461988,
+                "adaptive": 0.04093567251461988
+              }
+            },
+            "true": {
+              "stuck_at": {
+                "static": 0.044573643410852716,
+                "adaptive": 0.044573643410852716
+              },
+              "time_shift": {
+                "static": 0.11472501478415138,
+                "adaptive": 0.11472501478415138
+              },
+              "position_spoof": {
+                "static": 0.04093567251461988,
+                "adaptive": 0.04093567251461988
+              }
+            }
+          },
+          "attacks": {
+            "stuck_at": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": false
+              },
+              "test": {
+                "never": {
+                  "static": 0.08574879227053141,
+                  "adaptive": 0.08574879227053141,
+                  "worst_case": 0.08574879227053141
+                },
+                "always": {
+                  "static": 0.08551641071966275,
+                  "adaptive": 0.08551641071966275,
+                  "worst_case": 0.08551641071966275
+                },
+                "avds": {
+                  "static": 0.08574879227053141,
+                  "adaptive": 0.08574879227053141,
+                  "worst_case": 0.08574879227053141
+                },
+                "avds_novel": {
+                  "static": 0.08574879227053141,
+                  "adaptive": 0.08574879227053141,
+                  "worst_case": 0.08574879227053141
+                },
+                "oracle": {
+                  "static": 0.08574879227053141,
+                  "adaptive": 0.08574879227053141,
+                  "worst_case": 0.08574879227053141
+                }
+              },
+              "validation_attacks": [
+                "time_shift",
+                "position_spoof"
+              ]
+            },
+            "time_shift": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.09909555642941408,
+                  "adaptive": 0.09909555642941408,
+                  "worst_case": 0.09909555642941408
+                },
+                "always": {
+                  "static": 0.09972516686297606,
+                  "adaptive": 0.09972516686297606,
+                  "worst_case": 0.09972516686297606
+                },
+                "avds": {
+                  "static": 0.09909555642941408,
+                  "adaptive": 0.09909555642941408,
+                  "worst_case": 0.09909555642941408
+                },
+                "avds_novel": {
+                  "static": 0.09909555642941408,
+                  "adaptive": 0.09909555642941408,
+                  "worst_case": 0.09909555642941408
+                },
+                "oracle": {
+                  "static": 0.09972516686297606,
+                  "adaptive": 0.09972516686297606,
+                  "worst_case": 0.09972516686297606
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "position_spoof"
+              ]
+            },
+            "position_spoof": {
+              "choices": {
+                "never": false,
+                "always": true,
+                "avds": false,
+                "avds_novel": false,
+                "oracle": true
+              },
+              "test": {
+                "never": {
+                  "static": 0.0768997880714502,
+                  "adaptive": 0.0768997880714502,
+                  "worst_case": 0.0768997880714502
+                },
+                "always": {
+                  "static": 0.07727135526712949,
+                  "adaptive": 0.07727135526712949,
+                  "worst_case": 0.07727135526712949
+                },
+                "avds": {
+                  "static": 0.0768997880714502,
+                  "adaptive": 0.0768997880714502,
+                  "worst_case": 0.0768997880714502
+                },
+                "avds_novel": {
+                  "static": 0.0768997880714502,
+                  "adaptive": 0.0768997880714502,
+                  "worst_case": 0.0768997880714502
+                },
+                "oracle": {
+                  "static": 0.07727135526712949,
+                  "adaptive": 0.07727135526712949,
+                  "worst_case": 0.07727135526712949
+                }
+              },
+              "validation_attacks": [
+                "stuck_at",
+                "time_shift"
+              ]
+            }
+          },
+          "sizes": {
+            "inner_train": 18000,
+            "validation": 6000,
+            "train": 24000,
+            "test": 16000
+          }
+        }
+      ],
+      "summary": {
+        "conditions": {
+          "ngsim/isolation_forest/stuck_at": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.08272052689866541,
+                "adaptive": 0.08272052689866541,
+                "worst_case": 0.08272052689866541
+              },
+              "always": {
+                "static": 0.08191081304273015,
+                "adaptive": 0.08135048219105614,
+                "worst_case": 0.08135048219105614
+              },
+              "avds": {
+                "static": 0.08162773807269011,
+                "adaptive": 0.0810674072210161,
+                "worst_case": 0.0810674072210161
+              },
+              "avds_novel": {
+                "static": 0.08162773807269011,
+                "adaptive": 0.0810674072210161,
+                "worst_case": 0.0810674072210161
+              },
+              "oracle": {
+                "static": 0.0830503104356031,
+                "adaptive": 0.0830503104356031,
+                "worst_case": 0.0830503104356031
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.8,
+              "avds_novel": 0.8,
+              "oracle": 0.4
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.2,
+              "avds_novel": 0.2
+            },
+            "regret": {
+              "avds": 0.001982903214586995,
+              "avds_novel": 0.001982903214586995
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.08272052689866541,
+                "mean_b": 0.0810674072210161,
+                "mean_diff": -0.0016531196776493062,
+                "ci95_low": -0.0037052589415356,
+                "ci95_high": -0.00015289157622987992,
+                "wilcoxon_statistic": 1.0,
+                "wilcoxon_p": 0.25,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.08135048219105614,
+                "mean_b": 0.0810674072210161,
+                "mean_diff": -0.0002830749700400398,
+                "ci95_low": -0.0008492249101201193,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 1.0,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.08272052689866541,
+                "mean_b": 0.0810674072210161,
+                "mean_diff": -0.0016531196776493062,
+                "ci95_low": -0.0037052589415356,
+                "ci95_high": -0.00015289157622987992,
+                "wilcoxon_statistic": 1.0,
+                "wilcoxon_p": 0.25,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.08135048219105614,
+                "mean_b": 0.0810674072210161,
+                "mean_diff": -0.0002830749700400398,
+                "ci95_low": -0.0008492249101201193,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 1.0,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/isolation_forest/time_shift": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.0731615683685691,
+                "adaptive": 0.0731615683685691,
+                "worst_case": 0.0731615683685691
+              },
+              "always": {
+                "static": 0.08600219443241687,
+                "adaptive": 0.08599726378856012,
+                "worst_case": 0.08599726378856012
+              },
+              "avds": {
+                "static": 0.08404990768374257,
+                "adaptive": 0.08404497703988582,
+                "worst_case": 0.08404497703988582
+              },
+              "avds_novel": {
+                "static": 0.08121537489262781,
+                "adaptive": 0.08121044424877107,
+                "worst_case": 0.08121044424877107
+              },
+              "oracle": {
+                "static": 0.08600219443241687,
+                "adaptive": 0.08599726378856012,
+                "worst_case": 0.08599726378856012
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.8,
+              "avds_novel": 0.4,
+              "oracle": 1.0
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.8,
+              "avds_novel": 0.4
+            },
+            "regret": {
+              "avds": 0.0019522867486742868,
+              "avds_novel": 0.004786819539789056
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0731615683685691,
+                "mean_b": 0.08404497703988582,
+                "mean_diff": 0.010883408671316732,
+                "ci95_low": 0.0028728684619890115,
+                "ci95_high": 0.018893948880644454,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.125,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.08599726378856011,
+                "mean_b": 0.08404497703988582,
+                "mean_diff": -0.0019522867486742868,
+                "ci95_low": -0.00585686024602286,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 1.0,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0731615683685691,
+                "mean_b": 0.08121044424877107,
+                "mean_diff": 0.008048875880201964,
+                "ci95_low": 0.0,
+                "ci95_high": 0.016515858409836662,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.5,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.08599726378856011,
+                "mean_b": 0.08121044424877107,
+                "mean_diff": -0.004786819539789056,
+                "ci95_low": -0.010340878109395865,
+                "ci95_high": -3.833567087424272e-05,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.25,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/isolation_forest/position_spoof": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.0876012872629341,
+                "adaptive": 0.0876012872629341,
+                "worst_case": 0.0876012872629341
+              },
+              "always": {
+                "static": 0.08965752695664397,
+                "adaptive": 0.08965752695664397,
+                "worst_case": 0.08965752695664397
+              },
+              "avds": {
+                "static": 0.08928797842595551,
+                "adaptive": 0.08928797842595551,
+                "worst_case": 0.08928797842595551
+              },
+              "avds_novel": {
+                "static": 0.08928797842595551,
+                "adaptive": 0.08928797842595551,
+                "worst_case": 0.08928797842595551
+              },
+              "oracle": {
+                "static": 0.08993978509623515,
+                "adaptive": 0.08993978509623515,
+                "worst_case": 0.08993978509623515
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.8,
+              "avds_novel": 0.8,
+              "oracle": 0.8
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.6
+            },
+            "regret": {
+              "avds": 0.0006518066702796227,
+              "avds_novel": 0.0006518066702796227
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0876012872629341,
+                "mean_b": 0.08928797842595552,
+                "mean_diff": 0.0016866911630214199,
+                "ci95_low": -0.00028127178032807677,
+                "ci95_high": 0.0035078050220485463,
+                "wilcoxon_statistic": 1.0,
+                "wilcoxon_p": 0.25,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.08965752695664397,
+                "mean_b": 0.08928797842595552,
+                "mean_diff": -0.00036954853068844884,
+                "ci95_low": -0.0011086455920653465,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 1.0,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0876012872629341,
+                "mean_b": 0.08928797842595552,
+                "mean_diff": 0.0016866911630214199,
+                "ci95_low": -0.00028127178032807677,
+                "ci95_high": 0.0035078050220485463,
+                "wilcoxon_statistic": 1.0,
+                "wilcoxon_p": 0.25,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.08965752695664397,
+                "mean_b": 0.08928797842595552,
+                "mean_diff": -0.00036954853068844884,
+                "ci95_low": -0.0011086455920653465,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 1.0,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/autoencoder/stuck_at": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.11208265097384791,
+                "adaptive": 0.11208265097384791,
+                "worst_case": 0.11208265097384791
+              },
+              "always": {
+                "static": 0.1208832309781371,
+                "adaptive": 0.10089929079041515,
+                "worst_case": 0.10089929079041515
+              },
+              "avds": {
+                "static": 0.12414058203054221,
+                "adaptive": 0.10925325694442267,
+                "worst_case": 0.10925325694442267
+              },
+              "avds_novel": {
+                "static": 0.11489366930081735,
+                "adaptive": 0.10202708351754375,
+                "worst_case": 0.10202708351754375
+              },
+              "oracle": {
+                "static": 0.12438911568058739,
+                "adaptive": 0.1170739929498604,
+                "worst_case": 0.1170739929498604
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.8,
+              "oracle": 0.2
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.4
+            },
+            "regret": {
+              "avds": 0.007820736005437728,
+              "avds_novel": 0.01504690943231666
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.11208265097384791,
+                "mean_b": 0.10925325694442267,
+                "mean_diff": -0.0028293940294252364,
+                "ci95_low": -0.020078829834927397,
+                "ci95_high": 0.013846233200908881,
+                "wilcoxon_statistic": 2.0,
+                "wilcoxon_p": 0.75,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.10089929079041515,
+                "mean_b": 0.10925325694442267,
+                "mean_diff": 0.008353966154007528,
+                "ci95_low": 0.0,
+                "ci95_high": 0.01741174047424402,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.5,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.11208265097384791,
+                "mean_b": 0.10202708351754375,
+                "mean_diff": -0.010055567456304168,
+                "ci95_low": -0.02626873987074404,
+                "ci95_high": 0.00832362268228514,
+                "wilcoxon_statistic": 3.0,
+                "wilcoxon_p": 0.625,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.10089929079041515,
+                "mean_b": 0.10202708351754375,
+                "mean_diff": 0.001127792727128596,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0033833781813857877,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 1.0,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/autoencoder/time_shift": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.06948583895900898,
+                "adaptive": 0.06948583895900898,
+                "worst_case": 0.06948583895900898
+              },
+              "always": {
+                "static": 0.07447855710189356,
+                "adaptive": 0.07440546780426914,
+                "worst_case": 0.07389975093711139
+              },
+              "avds": {
+                "static": 0.07349512594871968,
+                "adaptive": 0.07341974915318551,
+                "worst_case": 0.07324298218458478
+              },
+              "avds_novel": {
+                "static": 0.07412593633832763,
+                "adaptive": 0.07372389714214618,
+                "worst_case": 0.07354713017354544
+              },
+              "oracle": {
+                "static": 0.07447855710189356,
+                "adaptive": 0.07440546780426914,
+                "worst_case": 0.07389975093711139
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.8,
+              "oracle": 1.0
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.8
+            },
+            "regret": {
+              "avds": 0.0006567687525265986,
+              "avds_novel": 0.0003526207635659279
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.06948583895900898,
+                "mean_b": 0.07324298218458478,
+                "mean_diff": 0.003757143225575796,
+                "ci95_low": 0.0005913033776810877,
+                "ci95_high": 0.008044755476380255,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.25,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07389975093711137,
+                "mean_b": 0.07324298218458478,
+                "mean_diff": -0.0006567687525265986,
+                "ci95_low": -0.0013620102796584543,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.5,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.06948583895900898,
+                "mean_b": 0.07354713017354544,
+                "mean_diff": 0.004061291214536467,
+                "ci95_low": 0.0011995993556024292,
+                "ci95_high": 0.008348903465340927,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.125,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07389975093711137,
+                "mean_b": 0.07354713017354544,
+                "mean_diff": -0.0003526207635659279,
+                "ci95_low": -0.0010578622906977837,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 1.0,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/autoencoder/position_spoof": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.07553660186054853,
+                "adaptive": 0.07553660186054853,
+                "worst_case": 0.07553660186054853
+              },
+              "always": {
+                "static": 0.07815361959209219,
+                "adaptive": 0.07850300895056109,
+                "worst_case": 0.07804596225937091
+              },
+              "avds": {
+                "static": 0.0777664337997798,
+                "adaptive": 0.07822348049096997,
+                "worst_case": 0.0777664337997798
+              },
+              "avds_novel": {
+                "static": 0.0777664337997798,
+                "adaptive": 0.07822348049096997,
+                "worst_case": 0.0777664337997798
+              },
+              "oracle": {
+                "static": 0.07875748551470146,
+                "adaptive": 0.07910687487317036,
+                "worst_case": 0.0786498281819802
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.6,
+              "oracle": 0.6
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.6
+            },
+            "regret": {
+              "avds": 0.0008833943822003975,
+              "avds_novel": 0.0008833943822003975
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07553660186054853,
+                "mean_b": 0.0777664337997798,
+                "mean_diff": 0.002229831939231258,
+                "ci95_low": -0.0005673758865248236,
+                "ci95_high": 0.00553994944920456,
+                "wilcoxon_statistic": 1.0,
+                "wilcoxon_p": 0.5,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07804596225937091,
+                "mean_b": 0.0777664337997798,
+                "mean_diff": -0.0002795284595911163,
+                "ci95_low": -0.0017991193168139575,
+                "ci95_high": 0.0009605339380406086,
+                "wilcoxon_statistic": 1.0,
+                "wilcoxon_p": 1.0,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07553660186054853,
+                "mean_b": 0.0777664337997798,
+                "mean_diff": 0.002229831939231258,
+                "ci95_low": -0.0005673758865248236,
+                "ci95_high": 0.00553994944920456,
+                "wilcoxon_statistic": 1.0,
+                "wilcoxon_p": 0.5,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07804596225937091,
+                "mean_b": 0.0777664337997798,
+                "mean_diff": -0.0002795284595911163,
+                "ci95_low": -0.0017991193168139575,
+                "ci95_high": 0.0009605339380406086,
+                "wilcoxon_statistic": 1.0,
+                "wilcoxon_p": 1.0,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/lof/stuck_at": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.06934583075569703,
+                "adaptive": 0.04978870761861242,
+                "worst_case": 0.04978870761861242
+              },
+              "always": {
+                "static": 0.09098251965027644,
+                "adaptive": 0.07189114185145351,
+                "worst_case": 0.07189114185145351
+              },
+              "avds": {
+                "static": 0.08061100105554982,
+                "adaptive": 0.060147304432120484,
+                "worst_case": 0.060147304432120484
+              },
+              "avds_novel": {
+                "static": 0.06934583075569703,
+                "adaptive": 0.04978870761861242,
+                "worst_case": 0.04978870761861242
+              },
+              "oracle": {
+                "static": 0.09098251965027644,
+                "adaptive": 0.07189114185145351,
+                "worst_case": 0.07189114185145351
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.0,
+              "oracle": 1.0
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.0
+            },
+            "regret": {
+              "avds": 0.011743837419333023,
+              "avds_novel": 0.022102434232841084
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.04978870761861243,
+                "mean_b": 0.060147304432120484,
+                "mean_diff": 0.01035859681350806,
+                "ci95_low": 0.0014688641394872844,
+                "ci95_high": 0.019348698972239967,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.25,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07189114185145351,
+                "mean_b": 0.060147304432120484,
+                "mean_diff": -0.011743837419333023,
+                "ci95_low": -0.02523446474594947,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.5,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.04978870761861243,
+                "mean_b": 0.04978870761861243,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07189114185145351,
+                "mean_b": 0.04978870761861243,
+                "mean_diff": -0.02210243423284108,
+                "ci95_low": -0.029125673663945438,
+                "ci95_high": -0.014403639930511452,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.0625,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/lof/time_shift": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.24174696152812972,
+                "adaptive": 0.22060408291850747,
+                "worst_case": 0.22060408291850747
+              },
+              "always": {
+                "static": 0.19771402005240385,
+                "adaptive": 0.19972269976629056,
+                "worst_case": 0.19771402005240385
+              },
+              "avds": {
+                "static": 0.21545229225990908,
+                "adaptive": 0.2088075324165009,
+                "worst_case": 0.20789017415451508
+              },
+              "avds_novel": {
+                "static": 0.19771402005240385,
+                "adaptive": 0.19972269976629056,
+                "worst_case": 0.19771402005240385
+              },
+              "oracle": {
+                "static": 0.24174696152812972,
+                "adaptive": 0.22060408291850747,
+                "worst_case": 0.22060408291850747
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.6,
+              "avds_novel": 1.0,
+              "oracle": 0.0
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.4,
+              "avds_novel": 0.0
+            },
+            "regret": {
+              "avds": 0.012713908763992398,
+              "avds_novel": 0.022890062866103615
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.2206040829185075,
+                "mean_b": 0.20789017415451508,
+                "mean_diff": -0.012713908763992398,
+                "ci95_low": -0.022604368213090798,
+                "ci95_high": -0.0028234493148939998,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.25,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.19771402005240385,
+                "mean_b": 0.20789017415451508,
+                "mean_diff": 0.010176154102111219,
+                "ci95_low": 0.0,
+                "ci95_high": 0.021054536542294194,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.5,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.2206040829185075,
+                "mean_b": 0.19771402005240385,
+                "mean_diff": -0.022890062866103615,
+                "ci95_low": -0.025946032936495833,
+                "ci95_high": -0.018253340733085276,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.0625,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.19771402005240385,
+                "mean_b": 0.19771402005240385,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/lof/position_spoof": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.49346018287599297,
+                "adaptive": 0.4612948226706207,
+                "worst_case": 0.4612948226706207
+              },
+              "always": {
+                "static": 0.5026804271917176,
+                "adaptive": 0.48806981223141277,
+                "worst_case": 0.48806981223141277
+              },
+              "avds": {
+                "static": 0.49827849761739557,
+                "adaptive": 0.47834556139785034,
+                "worst_case": 0.47834556139785034
+              },
+              "avds_novel": {
+                "static": 0.4965267944996718,
+                "adaptive": 0.47217220383556874,
+                "worst_case": 0.47217220383556874
+              },
+              "oracle": {
+                "static": 0.5026804271917176,
+                "adaptive": 0.48806981223141277,
+                "worst_case": 0.48806981223141277
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.4,
+              "oracle": 1.0
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.4
+            },
+            "regret": {
+              "avds": 0.009724250833562386,
+              "avds_novel": 0.01589760839584401
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.4612948226706207,
+                "mean_b": 0.47834556139785034,
+                "mean_diff": 0.01705073872722961,
+                "ci95_low": 0.005261850763965093,
+                "ci95_high": 0.028485947053476325,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.25,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.48806981223141277,
+                "mean_b": 0.47834556139785034,
+                "mean_diff": -0.009724250833562386,
+                "ci95_low": -0.02152720911779755,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.5,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.4612948226706207,
+                "mean_b": 0.47217220383556874,
+                "mean_diff": 0.010877381164947986,
+                "ci95_low": 0.0,
+                "ci95_high": 0.02210844196691377,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.5,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.48806981223141277,
+                "mean_b": 0.47217220383556874,
+                "mean_diff": -0.01589760839584401,
+                "ci95_low": -0.027972445100243215,
+                "ci95_high": -0.003822771691444804,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.25,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/mahalanobis/stuck_at": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.07024055633350765,
+                "adaptive": 0.07024055633350765,
+                "worst_case": 0.07024055633350765
+              },
+              "always": {
+                "static": 0.07048398550342372,
+                "adaptive": 0.07048398550342372,
+                "worst_case": 0.07048398550342372
+              },
+              "avds": {
+                "static": 0.07048398550342372,
+                "adaptive": 0.07048398550342372,
+                "worst_case": 0.07048398550342372
+              },
+              "avds_novel": {
+                "static": 0.07048398550342372,
+                "adaptive": 0.07048398550342372,
+                "worst_case": 0.07048398550342372
+              },
+              "oracle": {
+                "static": 0.07048398550342372,
+                "adaptive": 0.07048398550342372,
+                "worst_case": 0.07048398550342372
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 1.0,
+              "avds_novel": 1.0,
+              "oracle": 0.4
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.4,
+              "avds_novel": 0.4
+            },
+            "regret": {
+              "avds": 0.0,
+              "avds_novel": 0.0
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07024055633350765,
+                "mean_b": 0.07048398550342372,
+                "mean_diff": 0.00024342916991606234,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0004873746686310992,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.5,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07048398550342372,
+                "mean_b": 0.07048398550342372,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07024055633350765,
+                "mean_b": 0.07048398550342372,
+                "mean_diff": 0.00024342916991606234,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0004873746686310992,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.5,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07048398550342372,
+                "mean_b": 0.07048398550342372,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/mahalanobis/time_shift": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.06423598216783148,
+                "adaptive": 0.06423598216783148,
+                "worst_case": 0.06423598216783148
+              },
+              "always": {
+                "static": 0.06436448661024453,
+                "adaptive": 0.06436448661024453,
+                "worst_case": 0.06436448661024453
+              },
+              "avds": {
+                "static": 0.06436448661024453,
+                "adaptive": 0.06436448661024453,
+                "worst_case": 0.06436448661024453
+              },
+              "avds_novel": {
+                "static": 0.06436448661024453,
+                "adaptive": 0.06436448661024453,
+                "worst_case": 0.06436448661024453
+              },
+              "oracle": {
+                "static": 0.06436448661024453,
+                "adaptive": 0.06436448661024453,
+                "worst_case": 0.06436448661024453
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 1.0,
+              "avds_novel": 1.0,
+              "oracle": 0.2
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.2,
+              "avds_novel": 0.2
+            },
+            "regret": {
+              "avds": 0.0,
+              "avds_novel": 0.0
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.06423598216783148,
+                "mean_b": 0.06436448661024452,
+                "mean_diff": 0.00012850444241304244,
+                "ci95_low": 0.0,
+                "ci95_high": 0.00038551332723912727,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 1.0,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.06436448661024452,
+                "mean_b": 0.06436448661024452,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.06423598216783148,
+                "mean_b": 0.06436448661024452,
+                "mean_diff": 0.00012850444241304244,
+                "ci95_low": 0.0,
+                "ci95_high": 0.00038551332723912727,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 1.0,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.06436448661024452,
+                "mean_b": 0.06436448661024452,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/mahalanobis/position_spoof": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.07763782703696541,
+                "adaptive": 0.07763782703696541,
+                "worst_case": 0.07763782703696541
+              },
+              "always": {
+                "static": 0.07763782703696541,
+                "adaptive": 0.07763782703696541,
+                "worst_case": 0.07763782703696541
+              },
+              "avds": {
+                "static": 0.07763782703696541,
+                "adaptive": 0.07763782703696541,
+                "worst_case": 0.07763782703696541
+              },
+              "avds_novel": {
+                "static": 0.07763782703696541,
+                "adaptive": 0.07763782703696541,
+                "worst_case": 0.07763782703696541
+              },
+              "oracle": {
+                "static": 0.07763782703696541,
+                "adaptive": 0.07763782703696541,
+                "worst_case": 0.07763782703696541
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 1.0,
+              "avds_novel": 1.0,
+              "oracle": 0.0
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.0,
+              "avds_novel": 0.0
+            },
+            "regret": {
+              "avds": 0.0,
+              "avds_novel": 0.0
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0776378270369654,
+                "mean_b": 0.0776378270369654,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0776378270369654,
+                "mean_b": 0.0776378270369654,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0776378270369654,
+                "mean_b": 0.0776378270369654,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0776378270369654,
+                "mean_b": 0.0776378270369654,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/ewma_residual/stuck_at": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.08623544138571983,
+                "adaptive": 0.08623544138571983,
+                "worst_case": 0.08623544138571983
+              },
+              "always": {
+                "static": 0.0860357553968639,
+                "adaptive": 0.0860357553968639,
+                "worst_case": 0.0860357553968639
+              },
+              "avds": {
+                "static": 0.08623544138571983,
+                "adaptive": 0.08623544138571983,
+                "worst_case": 0.08623544138571983
+              },
+              "avds_novel": {
+                "static": 0.08623544138571983,
+                "adaptive": 0.08623544138571983,
+                "worst_case": 0.08623544138571983
+              },
+              "oracle": {
+                "static": 0.08630876397235146,
+                "adaptive": 0.08630876397235146,
+                "worst_case": 0.08630876397235146
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.0,
+              "avds_novel": 0.0,
+              "oracle": 0.2
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.8,
+              "avds_novel": 0.8
+            },
+            "regret": {
+              "avds": 7.332258663163838e-05,
+              "avds_novel": 7.332258663163838e-05
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.08623544138571983,
+                "mean_b": 0.08623544138571983,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0860357553968639,
+                "mean_b": 0.08623544138571983,
+                "mean_diff": 0.00019968598885592437,
+                "ci95_low": -0.00012832901976392308,
+                "ci95_high": 0.0005473358934754535,
+                "wilcoxon_statistic": 4.0,
+                "wilcoxon_p": 0.4375,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.08623544138571983,
+                "mean_b": 0.08623544138571983,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0860357553968639,
+                "mean_b": 0.08623544138571983,
+                "mean_diff": 0.00019968598885592437,
+                "ci95_low": -0.00012832901976392308,
+                "ci95_high": 0.0005473358934754535,
+                "wilcoxon_statistic": 4.0,
+                "wilcoxon_p": 0.4375,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/ewma_residual/time_shift": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.09237537486310632,
+                "adaptive": 0.09237537486310632,
+                "worst_case": 0.09237537486310632
+              },
+              "always": {
+                "static": 0.09334434625331722,
+                "adaptive": 0.09334434625331722,
+                "worst_case": 0.09334434625331722
+              },
+              "avds": {
+                "static": 0.09237537486310632,
+                "adaptive": 0.09237537486310632,
+                "worst_case": 0.09237537486310632
+              },
+              "avds_novel": {
+                "static": 0.09237537486310632,
+                "adaptive": 0.09237537486310632,
+                "worst_case": 0.09237537486310632
+              },
+              "oracle": {
+                "static": 0.09334434625331722,
+                "adaptive": 0.09334434625331722,
+                "worst_case": 0.09334434625331722
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.0,
+              "avds_novel": 0.0,
+              "oracle": 1.0
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.0,
+              "avds_novel": 0.0
+            },
+            "regret": {
+              "avds": 0.0009689713902109043,
+              "avds_novel": 0.0009689713902109043
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0923753748631063,
+                "mean_b": 0.0923753748631063,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.09334434625331722,
+                "mean_b": 0.0923753748631063,
+                "mean_diff": -0.0009689713902109043,
+                "ci95_low": -0.0013048565645966236,
+                "ci95_high": -0.0006359474353385047,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.0625,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.0923753748631063,
+                "mean_b": 0.0923753748631063,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.09334434625331722,
+                "mean_b": 0.0923753748631063,
+                "mean_diff": -0.0009689713902109043,
+                "ci95_low": -0.0013048565645966236,
+                "ci95_high": -0.0006359474353385047,
+                "wilcoxon_statistic": 0.0,
+                "wilcoxon_p": 0.0625,
+                "significant_at_05": false
+              }
+            }
+          },
+          "ngsim/ewma_residual/position_spoof": {
+            "n_seeds": 5,
+            "mean": {
+              "never": {
+                "static": 0.07844097232717392,
+                "adaptive": 0.07844097232717392,
+                "worst_case": 0.07844097232717392
+              },
+              "always": {
+                "static": 0.07858024389098997,
+                "adaptive": 0.07858024389098997,
+                "worst_case": 0.07858024389098997
+              },
+              "avds": {
+                "static": 0.07844097232717392,
+                "adaptive": 0.07844097232717392,
+                "worst_case": 0.07844097232717392
+              },
+              "avds_novel": {
+                "static": 0.07844097232717392,
+                "adaptive": 0.07844097232717392,
+                "worst_case": 0.07844097232717392
+              },
+              "oracle": {
+                "static": 0.07869469115697023,
+                "adaptive": 0.07869469115697023,
+                "worst_case": 0.07869469115697023
+              }
+            },
+            "keeps_divergence_rate": {
+              "avds": 0.0,
+              "avds_novel": 0.0,
+              "oracle": 0.4
+            },
+            "agrees_with_oracle_rate": {
+              "avds": 0.6,
+              "avds_novel": 0.6
+            },
+            "regret": {
+              "avds": 0.0002537188297963039,
+              "avds_novel": 0.0002537188297963039
+            },
+            "significance": {
+              "avds_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07844097232717392,
+                "mean_b": 0.07844097232717392,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07858024389098997,
+                "mean_b": 0.07844097232717392,
+                "mean_diff": -0.000139271563816043,
+                "ci95_low": -0.000575063397613304,
+                "ci95_high": 0.00020822304902126388,
+                "wilcoxon_statistic": 6.0,
+                "wilcoxon_p": 0.8125,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_never": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07844097232717392,
+                "mean_b": 0.07844097232717392,
+                "mean_diff": 0.0,
+                "ci95_low": 0.0,
+                "ci95_high": 0.0,
+                "wilcoxon_statistic": null,
+                "wilcoxon_p": null,
+                "significant_at_05": false
+              },
+              "avds_novel_vs_always": {
+                "metric": "worst_case_f1",
+                "n_pairs": 5,
+                "mean_a": 0.07858024389098997,
+                "mean_b": 0.07844097232717392,
+                "mean_diff": -0.000139271563816043,
+                "ci95_low": -0.000575063397613304,
+                "ci95_high": 0.00020822304902126388,
+                "wilcoxon_statistic": 6.0,
+                "wilcoxon_p": 0.8125,
+                "significant_at_05": false
+              }
+            }
+          }
+        },
+        "pooled": {
+          "n_units": 75,
+          "mean_worst_case_f1": {
+            "never": 0.11342948277637462,
+            "always": 0.11586479305001549,
+            "avds": 0.11537227755511763,
+            "avds_novel": 0.11294129977465535,
+            "oracle": 0.11866733792826643
+          },
+          "significance": {
+            "avds_vs_never": {
+              "metric": "worst_case_f1",
+              "n_pairs": 75,
+              "mean_a": 0.11342948277637462,
+              "mean_b": 0.11537227755511763,
+              "mean_diff": 0.0019427947787430027,
+              "ci95_low": -0.0003860441607217216,
+              "ci95_high": 0.004342946337110298,
+              "wilcoxon_statistic": 172.0,
+              "wilcoxon_p": 0.05254281785706896,
+              "significant_at_05": false
+            },
+            "avds_vs_always": {
+              "metric": "worst_case_f1",
+              "n_pairs": 75,
+              "mean_a": 0.11586479305001551,
+              "mean_b": 0.11537227755511763,
+              "mean_diff": -0.0004925154948978784,
+              "ci95_low": -0.0024626647280044196,
+              "ci95_high": 0.0013700341197063481,
+              "wilcoxon_statistic": 154.0,
+              "wilcoxon_p": 0.10639417319061394,
+              "significant_at_05": false
+            },
+            "avds_novel_vs_never": {
+              "metric": "worst_case_f1",
+              "n_pairs": 75,
+              "mean_a": 0.11342948277637462,
+              "mean_b": 0.11294129977465535,
+              "mean_diff": -0.00048818300171925934,
+              "ci95_low": -0.0027972478434130643,
+              "ci95_high": 0.0018419169185327601,
+              "wilcoxon_statistic": 241.0,
+              "wilcoxon_p": 0.8908918267813407,
+              "significant_at_05": false
+            },
+            "avds_novel_vs_always": {
+              "metric": "worst_case_f1",
+              "n_pairs": 75,
+              "mean_a": 0.11586479305001551,
+              "mean_b": 0.11294129977465535,
+              "mean_diff": -0.0029234932753601397,
+              "ci95_low": -0.004872883197737344,
+              "ci95_high": -0.0013063594890651011,
+              "wilcoxon_statistic": 77.0,
+              "wilcoxon_p": 0.00047104816720881256,
+              "significant_at_05": true
+            }
+          },
+          "note": "pooled over (model, attack, seed) units, which are not independent; per-condition tests are the primary evidence"
+        }
+      }
+    }
+  }
+}

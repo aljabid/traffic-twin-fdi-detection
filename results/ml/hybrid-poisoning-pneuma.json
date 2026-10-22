@@ -1,0 +1,302 @@
+{
+  "experiment": "hybrid_robustness_poisoning",
+  "generated_at": "2026-10-04T01:01:32.238309+00:00",
+  "seeds": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "attacks": [
+    "congestion_spoof",
+    "replay_stale",
+    "position_spoof"
+  ],
+  "datasets": {
+    "pneuma": {
+      "units": [
+        {
+          "seed": 4,
+          "poisoning": {
+            "0.0": {
+              "forest": {
+                "congestion_spoof": 0.5705128205128205,
+                "replay_stale": 0.5203488372093024,
+                "position_spoof": 0.5126519881695695
+              },
+              "lof": {
+                "congestion_spoof": 0.3675328154299491,
+                "replay_stale": 0.3473658888621602,
+                "position_spoof": 0.5737656157049376
+              },
+              "hybrid": {
+                "congestion_spoof": 0.5964368706429125,
+                "replay_stale": 0.5240023134759977,
+                "position_spoof": 0.5572275421796625
+              }
+            },
+            "0.05": {
+              "forest": {
+                "congestion_spoof": 0.5816038944401742,
+                "replay_stale": 0.5423808405729045,
+                "position_spoof": 0.5254054054054054
+              },
+              "lof": {
+                "congestion_spoof": 0.2247596153846154,
+                "replay_stale": 0.32152028762198254,
+                "position_spoof": 0.5782118707738543
+              },
+              "hybrid": {
+                "congestion_spoof": 0.44082519001085774,
+                "replay_stale": 0.48209688743271706,
+                "position_spoof": 0.5861911294010059
+              }
+            },
+            "0.1": {
+              "forest": {
+                "congestion_spoof": 0.35644171779141104,
+                "replay_stale": 0.507649862051668,
+                "position_spoof": 0.3697234352256186
+              },
+              "lof": {
+                "congestion_spoof": 0.15428937259923176,
+                "replay_stale": 0.29746328437917224,
+                "position_spoof": 0.5823975720789074
+              },
+              "hybrid": {
+                "congestion_spoof": 0.26646341463414636,
+                "replay_stale": 0.46183857595708366,
+                "position_spoof": 0.5822002472187886
+              }
+            }
+          }
+        },
+        {
+          "seed": 5,
+          "poisoning": {
+            "0.0": {
+              "forest": {
+                "congestion_spoof": 0.595853971748303,
+                "replay_stale": 0.5478228507629327,
+                "position_spoof": 0.5386614684860299
+              },
+              "lof": {
+                "congestion_spoof": 0.3909933774834437,
+                "replay_stale": 0.35707456978967494,
+                "position_spoof": 0.5688756515264334
+              },
+              "hybrid": {
+                "congestion_spoof": 0.6296593186372745,
+                "replay_stale": 0.5457712405651248,
+                "position_spoof": 0.5618046029568663
+              }
+            },
+            "0.05": {
+              "forest": {
+                "congestion_spoof": 0.630346232179226,
+                "replay_stale": 0.5682451253481894,
+                "position_spoof": 0.5590361445783133
+              },
+              "lof": {
+                "congestion_spoof": 0.24761336515513127,
+                "replay_stale": 0.35297079556898286,
+                "position_spoof": 0.579233323271959
+              },
+              "hybrid": {
+                "congestion_spoof": 0.4909922022048938,
+                "replay_stale": 0.5071659731853907,
+                "position_spoof": 0.586687306501548
+              }
+            },
+            "0.1": {
+              "forest": {
+                "congestion_spoof": 0.4003673094582185,
+                "replay_stale": 0.5284147557328016,
+                "position_spoof": 0.49250449730161905
+              },
+              "lof": {
+                "congestion_spoof": 0.17883096366508688,
+                "replay_stale": 0.3404255319148936,
+                "position_spoof": 0.5817241903603466
+              },
+              "hybrid": {
+                "congestion_spoof": 0.3037196434060867,
+                "replay_stale": 0.4775617950563955,
+                "position_spoof": 0.5899503722084367
+              }
+            }
+          }
+        },
+        {
+          "seed": 6,
+          "poisoning": {
+            "0.0": {
+              "forest": {
+                "congestion_spoof": 0.5947406340057637,
+                "replay_stale": 0.5206967596928264,
+                "position_spoof": 0.5415472779369628
+              },
+              "lof": {
+                "congestion_spoof": 0.38113207547169814,
+                "replay_stale": 0.34822729480330256,
+                "position_spoof": 0.5789551576143259
+              },
+              "hybrid": {
+                "congestion_spoof": 0.6206491982792335,
+                "replay_stale": 0.5252133436772692,
+                "position_spoof": 0.570266606416629
+              }
+            },
+            "0.05": {
+              "forest": {
+                "congestion_spoof": 0.6106754363774348,
+                "replay_stale": 0.5341288782816229,
+                "position_spoof": 0.5386090291092905
+              },
+              "lof": {
+                "congestion_spoof": 0.2187120291616039,
+                "replay_stale": 0.3446862996158771,
+                "position_spoof": 0.5847533632286995
+              },
+              "hybrid": {
+                "congestion_spoof": 0.46889432219505567,
+                "replay_stale": 0.4779904306220096,
+                "position_spoof": 0.592165198906772
+              }
+            },
+            "0.1": {
+              "forest": {
+                "congestion_spoof": 0.38994853163790494,
+                "replay_stale": 0.5052301255230126,
+                "position_spoof": 0.4269005847953216
+              },
+              "lof": {
+                "congestion_spoof": 0.17943805874840357,
+                "replay_stale": 0.3341213553979511,
+                "position_spoof": 0.5896006028636022
+              },
+              "hybrid": {
+                "congestion_spoof": 0.281786941580756,
+                "replay_stale": 0.46018145161290325,
+                "position_spoof": 0.5962656871747781
+              }
+            }
+          }
+        },
+        {
+          "seed": 7,
+          "poisoning": {
+            "0.0": {
+              "forest": {
+                "congestion_spoof": 0.5748353799608471,
+                "replay_stale": 0.5308004426410918,
+                "position_spoof": 0.5270380656755432
+              },
+              "lof": {
+                "congestion_spoof": 0.39505523408732246,
+                "replay_stale": 0.3353614018009248,
+                "position_spoof": 0.5733452593917711
+              },
+              "hybrid": {
+                "congestion_spoof": 0.5950226244343891,
+                "replay_stale": 0.5319431279620853,
+                "position_spoof": 0.5595870654319114
+              }
+            },
+            "0.05": {
+              "forest": {
+                "congestion_spoof": 0.597330647192143,
+                "replay_stale": 0.5376443418013857,
+                "position_spoof": 0.5060375255433773
+              },
+              "lof": {
+                "congestion_spoof": 0.24925816023738873,
+                "replay_stale": 0.3631865413161801,
+                "position_spoof": 0.5774033398525651
+              },
+              "hybrid": {
+                "congestion_spoof": 0.46328908154971554,
+                "replay_stale": 0.4841860465116279,
+                "position_spoof": 0.5833590138674885
+              }
+            },
+            "0.1": {
+              "forest": {
+                "congestion_spoof": 0.3870771106370009,
+                "replay_stale": 0.5006214267959235,
+                "position_spoof": 0.47404343329886245
+              },
+              "lof": {
+                "congestion_spoof": 0.212406015037594,
+                "replay_stale": 0.335221421215242,
+                "position_spoof": 0.5847560975609756
+              },
+              "hybrid": {
+                "congestion_spoof": 0.29558778154890464,
+                "replay_stale": 0.455665619714907,
+                "position_spoof": 0.5847352024922119
+              }
+            }
+          }
+        },
+        {
+          "seed": 8,
+          "poisoning": {
+            "0.0": {
+              "forest": {
+                "congestion_spoof": 0.5767671426053235,
+                "replay_stale": 0.5209720972097209,
+                "position_spoof": 0.5240728692257645
+              },
+              "lof": {
+                "congestion_spoof": 0.3781914893617021,
+                "replay_stale": 0.3559077809798271,
+                "position_spoof": 0.5811564426181391
+              },
+              "hybrid": {
+                "congestion_spoof": 0.6051065463620656,
+                "replay_stale": 0.5322793148880105,
+                "position_spoof": 0.562917933130699
+              }
+            },
+            "0.05": {
+              "forest": {
+                "congestion_spoof": 0.6161282116509794,
+                "replay_stale": 0.5434985968194574,
+                "position_spoof": 0.5343867839827617
+              },
+              "lof": {
+                "congestion_spoof": 0.22993361496680748,
+                "replay_stale": 0.36259920634920634,
+                "position_spoof": 0.5875353264911498
+              },
+              "hybrid": {
+                "congestion_spoof": 0.48966442953020134,
+                "replay_stale": 0.49499417927823053,
+                "position_spoof": 0.5882532418001526
+              }
+            },
+            "0.1": {
+              "forest": {
+                "congestion_spoof": 0.41199400299850075,
+                "replay_stale": 0.5140163731084099,
+                "position_spoof": 0.47972284491542694
+              },
+              "lof": {
+                "congestion_spoof": 0.18492716909436352,
+                "replay_stale": 0.35714285714285715,
+                "position_spoof": 0.5903992821893226
+              },
+              "hybrid": {
+                "congestion_spoof": 0.306605222734255,
+                "replay_stale": 0.4695817490494297,
+                "position_spoof": 0.5946193824518495
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

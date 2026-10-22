@@ -1,0 +1,287 @@
+{
+  "experiment": "divergence_ablation_contamination_tuned",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "contamination_grid": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3
+  ],
+  "results": {
+    "isolation_forest/divergence=false": {
+      "grid": [
+        {
+          "contamination": 0.05,
+          "accuracy": 0.9430110413313878,
+          "precision": 0.8207454416800939,
+          "recall": 0.9636416249304396,
+          "f1": 0.886468582581014,
+          "false_positive_rate": 0.06318232370172097
+        },
+        {
+          "contamination": 0.1,
+          "accuracy": 0.9105133345485228,
+          "precision": 0.7230870097062807,
+          "recall": 0.9929977740678909,
+          "f1": 0.8367729644868683,
+          "false_positive_rate": 0.11424696837811446
+        },
+        {
+          "contamination": 0.15,
+          "accuracy": 0.8682321451099826,
+          "precision": 0.6369523948580493,
+          "recall": 0.9986666666666666,
+          "f1": 0.777790532749216,
+          "false_positive_rate": 0.17092208301706557
+        },
+        {
+          "contamination": 0.2,
+          "accuracy": 0.826107885565049,
+          "precision": 0.570723538140347,
+          "recall": 0.9993333333333334,
+          "f1": 0.7264411302378623,
+          "false_positive_rate": 0.22589258763683215
+        },
+        {
+          "contamination": 0.25,
+          "accuracy": 0.7887545415242054,
+          "precision": 0.5225557143682457,
+          "recall": 0.9993333333333334,
+          "f1": 0.6861630804338186,
+          "false_positive_rate": 0.2744611475002059
+        },
+        {
+          "contamination": 0.3,
+          "accuracy": 0.7535618613192034,
+          "precision": 0.48405548847987473,
+          "recall": 0.9996666666666666,
+          "f1": 0.6521646221038363,
+          "false_positive_rate": 0.3203179805088718
+        }
+      ],
+      "tuned": {
+        "contamination": 0.05,
+        "accuracy": 0.9430110413313878,
+        "precision": 0.8207454416800939,
+        "recall": 0.9636416249304396,
+        "f1": 0.886468582581014,
+        "false_positive_rate": 0.06318232370172097
+      }
+    },
+    "isolation_forest/divergence=true": {
+      "grid": [
+        {
+          "contamination": 0.05,
+          "accuracy": 0.9469381168604691,
+          "precision": 0.8433250037756899,
+          "recall": 0.9466282693377852,
+          "f1": 0.8917806673830112,
+          "false_positive_rate": 0.05297100827763007
+        },
+        {
+          "contamination": 0.1,
+          "accuracy": 0.8541384843494312,
+          "precision": 0.613388294128807,
+          "recall": 0.9996666666666666,
+          "f1": 0.7601275087824346,
+          "false_positive_rate": 0.18954872408458237
+        },
+        {
+          "contamination": 0.15,
+          "accuracy": 0.7629560143147066,
+          "precision": 0.49382557662823706,
+          "recall": 1.0,
+          "f1": 0.6610347017467983,
+          "false_positive_rate": 0.30820490904167264
+        },
+        {
+          "contamination": 0.2,
+          "accuracy": 0.7028125607724048,
+          "precision": 0.43754065787764,
+          "recall": 1.0,
+          "f1": 0.6086425988880153,
+          "false_positive_rate": 0.38640260445590224
+        },
+        {
+          "contamination": 0.25,
+          "accuracy": 0.6544498592816914,
+          "precision": 0.4007438347069908,
+          "recall": 1.0,
+          "f1": 0.5721265275394177,
+          "false_positive_rate": 0.4492815217471561
+        },
+        {
+          "contamination": 0.3,
+          "accuracy": 0.6144800069596309,
+          "precision": 0.37487608018820706,
+          "recall": 1.0,
+          "f1": 0.5452336111242557,
+          "false_positive_rate": 0.5012517311315821
+        }
+      ],
+      "tuned": {
+        "contamination": 0.05,
+        "accuracy": 0.9469381168604691,
+        "precision": 0.8433250037756899,
+        "recall": 0.9466282693377852,
+        "f1": 0.8917806673830112,
+        "false_positive_rate": 0.05297100827763007
+      }
+    },
+    "autoencoder/divergence=false": {
+      "grid": [
+        {
+          "contamination": 0.05,
+          "accuracy": 0.9412413675851858,
+          "precision": 0.7989219007226142,
+          "recall": 0.998,
+          "f1": 0.8871784389107866,
+          "false_positive_rate": 0.07579413626601239
+        },
+        {
+          "contamination": 0.1,
+          "accuracy": 0.9047388322212685,
+          "precision": 0.7088413954807006,
+          "recall": 0.9996666666666666,
+          "f1": 0.8292664910213301,
+          "false_positive_rate": 0.12375647843859901
+        },
+        {
+          "contamination": 0.15,
+          "accuracy": 0.8692360582092388,
+          "precision": 0.6390944923032041,
+          "recall": 0.9996666666666666,
+          "f1": 0.7795383028025664,
+          "false_positive_rate": 0.16991832357211395
+        },
+        {
+          "contamination": 0.2,
+          "accuracy": 0.8306528954916732,
+          "precision": 0.5773363840561514,
+          "recall": 0.9996666666666666,
+          "f1": 0.731822858231501,
+          "false_positive_rate": 0.22008482689667302
+        },
+        {
+          "contamination": 0.25,
+          "accuracy": 0.791994440575118,
+          "precision": 0.5266628033788587,
+          "recall": 0.9996666666666666,
+          "f1": 0.689695717569726,
+          "false_positive_rate": 0.2703475188950263
+        },
+        {
+          "contamination": 0.3,
+          "accuracy": 0.758185544000379,
+          "precision": 0.4887127658002018,
+          "recall": 0.9996666666666666,
+          "f1": 0.6564018621857627,
+          "false_positive_rate": 0.31430535566025125
+        }
+      ],
+      "tuned": {
+        "contamination": 0.05,
+        "accuracy": 0.9412413675851858,
+        "precision": 0.7989219007226142,
+        "recall": 0.998,
+        "f1": 0.8871784389107866,
+        "false_positive_rate": 0.07579413626601239
+      }
+    },
+    "autoencoder/divergence=true": {
+      "grid": [
+        {
+          "contamination": 0.05,
+          "accuracy": 0.8073962666278748,
+          "precision": 0.546523125672729,
+          "recall": 1.0,
+          "f1": 0.7063710511322115,
+          "false_positive_rate": 0.25041946759256745
+        },
+        {
+          "contamination": 0.1,
+          "accuracy": 0.7526391717834908,
+          "precision": 0.48317808848111576,
+          "recall": 1.0,
+          "f1": 0.6514188417628437,
+          "false_positive_rate": 0.32161381323606847
+        },
+        {
+          "contamination": 0.15,
+          "accuracy": 0.7024285694385316,
+          "precision": 0.4374192916994669,
+          "recall": 1.0,
+          "f1": 0.6084600293639559,
+          "false_positive_rate": 0.38689803743450235
+        },
+        {
+          "contamination": 0.2,
+          "accuracy": 0.6665389859048669,
+          "precision": 0.40922400733395775,
+          "recall": 1.0,
+          "f1": 0.5807475851155908,
+          "false_positive_rate": 0.4335629910875842
+        },
+        {
+          "contamination": 0.25,
+          "accuracy": 0.6288818936668095,
+          "precision": 0.383619131867038,
+          "recall": 1.0,
+          "f1": 0.5544885870469162,
+          "false_positive_rate": 0.4825246829385475
+        },
+        {
+          "contamination": 0.3,
+          "accuracy": 0.5976920555428358,
+          "precision": 0.3646834319930185,
+          "recall": 1.0,
+          "f1": 0.5344439183718036,
+          "false_positive_rate": 0.5230765105904029
+        }
+      ],
+      "tuned": {
+        "contamination": 0.05,
+        "accuracy": 0.8073962666278748,
+        "precision": 0.546523125672729,
+        "recall": 1.0,
+        "f1": 0.7063710511322115,
+        "false_positive_rate": 0.25041946759256745
+      }
+    }
+  },
+  "effects": {
+    "isolation_forest": {
+      "tuned_contamination_without": 0.05,
+      "tuned_contamination_with": 0.05,
+      "delta_at_tuned": {
+        "accuracy": 0.003927075529081336,
+        "precision": 0.022579562095595973,
+        "recall": -0.017013355592654378,
+        "f1": 0.005312084801997186,
+        "false_positive_rate": -0.0102113154240909
+      },
+      "divergence_helps_f1": true
+    },
+    "autoencoder": {
+      "tuned_contamination_without": 0.05,
+      "tuned_contamination_with": 0.05,
+      "delta_at_tuned": {
+        "accuracy": -0.13384510095731106,
+        "precision": -0.25239877504988517,
+        "recall": 0.0020000000000000018,
+        "f1": -0.18080738777857508,
+        "false_positive_rate": 0.17462533132655506
+      },
+      "divergence_helps_f1": false
+    }
+  },
+  "generated_at": "2026-09-10T08:37:39.390439+00:00"
+}

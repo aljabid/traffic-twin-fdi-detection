@@ -1,0 +1,3448 @@
+{
+  "experiment": "network_impairment",
+  "generated_at": "2026-10-02T20:02:55.729565+00:00",
+  "presets": {
+    "ideal": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "hrllc": [
+      1e-05,
+      0.01,
+      0.0
+    ],
+    "lossy": [
+      0.01,
+      0.5,
+      0.005
+    ],
+    "degraded": [
+      0.05,
+      2.0,
+      0.01
+    ],
+    "severe": [
+      0.1,
+      5.0,
+      0.02
+    ]
+  },
+  "seeds": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "attacks": [
+    "congestion_spoof",
+    "replay_stale"
+  ],
+  "datasets": {
+    "ngsim": {
+      "units": [
+        {
+          "model": "isolation_forest",
+          "seed": 4,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.0644375,
+              "congestion_spoof": {
+                "static": 0.10901681100356597,
+                "adaptive": 0.10901681100356597,
+                "worst_case": 0.10901681100356597
+              },
+              "replay_stale": {
+                "static": 0.09844054580896686,
+                "adaptive": 0.09844054580896686,
+                "worst_case": 0.09844054580896686
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.0644375,
+              "congestion_spoof": {
+                "static": 0.202,
+                "adaptive": 0.202,
+                "worst_case": 0.202
+              },
+              "replay_stale": {
+                "static": 0.297185048454084,
+                "adaptive": 0.297185048454084,
+                "worst_case": 0.297185048454084
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06249214922748399,
+              "congestion_spoof": {
+                "static": 0.2128198631872308,
+                "adaptive": 0.2128198631872308,
+                "worst_case": 0.2128198631872308
+              },
+              "replay_stale": {
+                "static": 0.3041431261770245,
+                "adaptive": 0.3041431261770245,
+                "worst_case": 0.3041431261770245
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.053983739837398376,
+              "congestion_spoof": {
+                "static": 0.19630548662806727,
+                "adaptive": 0.19630548662806727,
+                "worst_case": 0.19630548662806727
+              },
+              "replay_stale": {
+                "static": 0.2812339331619537,
+                "adaptive": 0.2812339331619537,
+                "worst_case": 0.2812339331619537
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.08099646065886197,
+              "congestion_spoof": {
+                "static": 0.18863049095607234,
+                "adaptive": 0.18863049095607234,
+                "worst_case": 0.18863049095607234
+              },
+              "replay_stale": {
+                "static": 0.2623351245725452,
+                "adaptive": 0.2623351245725452,
+                "worst_case": 0.2623351245725452
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.06325,
+              "congestion_spoof": {
+                "static": 0.11661506707946337,
+                "adaptive": 0.11661506707946337,
+                "worst_case": 0.11661506707946337
+              },
+              "replay_stale": {
+                "static": 0.1037593984962406,
+                "adaptive": 0.1037593984962406,
+                "worst_case": 0.1037593984962406
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0648125,
+              "congestion_spoof": {
+                "static": 0.19745547073791347,
+                "adaptive": 0.19745547073791347,
+                "worst_case": 0.19745547073791347
+              },
+              "replay_stale": {
+                "static": 0.29817492296752784,
+                "adaptive": 0.29817492296752784,
+                "worst_case": 0.29817492296752784
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06060796382364025,
+              "congestion_spoof": {
+                "static": 0.20303263942431252,
+                "adaptive": 0.20303263942431252,
+                "worst_case": 0.20303263942431252
+              },
+              "replay_stale": {
+                "static": 0.3039499036608863,
+                "adaptive": 0.3039499036608863,
+                "worst_case": 0.3039499036608863
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.0495609756097561,
+              "congestion_spoof": {
+                "static": 0.19704158526374546,
+                "adaptive": 0.19704158526374546,
+                "worst_case": 0.19704158526374546
+              },
+              "replay_stale": {
+                "static": 0.2717101758124667,
+                "adaptive": 0.2717101758124667,
+                "worst_case": 0.2717101758124667
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.07221617206643072,
+              "congestion_spoof": {
+                "static": 0.1858854860186418,
+                "adaptive": 0.1858854860186418,
+                "worst_case": 0.1858854860186418
+              },
+              "replay_stale": {
+                "static": 0.2525122391136305,
+                "adaptive": 0.2525122391136305,
+                "worst_case": 0.2525122391136305
+              }
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 5,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.066625,
+              "congestion_spoof": {
+                "static": 0.08363448631905007,
+                "adaptive": 0.08363448631905007,
+                "worst_case": 0.08363448631905007
+              },
+              "replay_stale": {
+                "static": 0.08635164307987526,
+                "adaptive": 0.08635164307987526,
+                "worst_case": 0.08635164307987526
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.066625,
+              "congestion_spoof": {
+                "static": 0.3212775951150775,
+                "adaptive": 0.3212775951150775,
+                "worst_case": 0.3212775951150775
+              },
+              "replay_stale": {
+                "static": 0.28439306358381505,
+                "adaptive": 0.28439306358381505,
+                "worst_case": 0.28439306358381505
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06376829804611421,
+              "congestion_spoof": {
+                "static": 0.3298872180451128,
+                "adaptive": 0.3298872180451128,
+                "worst_case": 0.3298872180451128
+              },
+              "replay_stale": {
+                "static": 0.28637627432808155,
+                "adaptive": 0.28637627432808155,
+                "worst_case": 0.28637627432808155
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.05881587508132726,
+              "congestion_spoof": {
+                "static": 0.2911682361924154,
+                "adaptive": 0.2911682361924154,
+                "worst_case": 0.2911682361924154
+              },
+              "replay_stale": {
+                "static": 0.26343414146463384,
+                "adaptive": 0.26343414146463384,
+                "worst_case": 0.26343414146463384
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.09148329258353709,
+              "congestion_spoof": {
+                "static": 0.2713710632251954,
+                "adaptive": 0.2713710632251954,
+                "worst_case": 0.2713710632251954
+              },
+              "replay_stale": {
+                "static": 0.23941674506114768,
+                "adaptive": 0.23941674506114768,
+                "worst_case": 0.23941674506114768
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0650625,
+              "congestion_spoof": {
+                "static": 0.11108240764660295,
+                "adaptive": 0.11108240764660295,
+                "worst_case": 0.11108240764660295
+              },
+              "replay_stale": {
+                "static": 0.08691333498882543,
+                "adaptive": 0.08693492300049677,
+                "worst_case": 0.08691333498882543
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0668125,
+              "congestion_spoof": {
+                "static": 0.25591030952961247,
+                "adaptive": 0.25591030952961247,
+                "worst_case": 0.25591030952961247
+              },
+              "replay_stale": {
+                "static": 0.2727272727272727,
+                "adaptive": 0.27231825716315416,
+                "worst_case": 0.27231825716315416
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06515046805302507,
+              "congestion_spoof": {
+                "static": 0.2753939393939394,
+                "adaptive": 0.2753939393939394,
+                "worst_case": 0.2753939393939394
+              },
+              "replay_stale": {
+                "static": 0.2791030534351145,
+                "adaptive": 0.27869243617275113,
+                "worst_case": 0.27869243617275113
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.05569290826284971,
+              "congestion_spoof": {
+                "static": 0.24006317451961043,
+                "adaptive": 0.24006317451961043,
+                "worst_case": 0.24006317451961043
+              },
+              "replay_stale": {
+                "static": 0.2450348207376838,
+                "adaptive": 0.24458204334365324,
+                "worst_case": 0.24458204334365324
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.08183917413746264,
+              "congestion_spoof": {
+                "static": 0.2272385252069225,
+                "adaptive": 0.2272385252069225,
+                "worst_case": 0.2272385252069225
+              },
+              "replay_stale": {
+                "static": 0.22027094831911692,
+                "adaptive": 0.21982434127979925,
+                "worst_case": 0.21982434127979925
+              }
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 6,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.06525,
+              "congestion_spoof": {
+                "static": 0.10345672959058592,
+                "adaptive": 0.10345672959058592,
+                "worst_case": 0.10345672959058592
+              },
+              "replay_stale": {
+                "static": 0.09400921658986175,
+                "adaptive": 0.09400921658986175,
+                "worst_case": 0.09400921658986175
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.06525,
+              "congestion_spoof": {
+                "static": 0.24256951102588686,
+                "adaptive": 0.24256951102588686,
+                "worst_case": 0.24256951102588686
+              },
+              "replay_stale": {
+                "static": 0.2942497753818509,
+                "adaptive": 0.2942497753818509,
+                "worst_case": 0.2942497753818509
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06328478151682572,
+              "congestion_spoof": {
+                "static": 0.23994183228308288,
+                "adaptive": 0.23994183228308288,
+                "worst_case": 0.23994183228308288
+              },
+              "replay_stale": {
+                "static": 0.29407760381211706,
+                "adaptive": 0.29407760381211706,
+                "worst_case": 0.29407760381211706
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.06319702602230483,
+              "congestion_spoof": {
+                "static": 0.2360655737704918,
+                "adaptive": 0.2360655737704918,
+                "worst_case": 0.2360655737704918
+              },
+              "replay_stale": {
+                "static": 0.2765396597172298,
+                "adaptive": 0.2765396597172298,
+                "worst_case": 0.2765396597172298
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.10670025874982977,
+              "congestion_spoof": {
+                "static": 0.21622878400372006,
+                "adaptive": 0.21622878400372006,
+                "worst_case": 0.21622878400372006
+              },
+              "replay_stale": {
+                "static": 0.2520633504349766,
+                "adaptive": 0.2520633504349766,
+                "worst_case": 0.2520633504349766
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.065625,
+              "congestion_spoof": {
+                "static": 0.11856474258970359,
+                "adaptive": 0.11856474258970359,
+                "worst_case": 0.11856474258970359
+              },
+              "replay_stale": {
+                "static": 0.10369246332827517,
+                "adaptive": 0.10369246332827517,
+                "worst_case": 0.10369246332827517
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.066875,
+              "congestion_spoof": {
+                "static": 0.2101030409650666,
+                "adaptive": 0.2101030409650666,
+                "worst_case": 0.2101030409650666
+              },
+              "replay_stale": {
+                "static": 0.26049204052098407,
+                "adaptive": 0.26049204052098407,
+                "worst_case": 0.26049204052098407
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06221747865394274,
+              "congestion_spoof": {
+                "static": 0.21795855717574827,
+                "adaptive": 0.21795855717574827,
+                "worst_case": 0.21795855717574827
+              },
+              "replay_stale": {
+                "static": 0.2667656520663202,
+                "adaptive": 0.2667656520663202,
+                "worst_case": 0.2667656520663202
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.05184895323811387,
+              "congestion_spoof": {
+                "static": 0.2191855698278218,
+                "adaptive": 0.2191855698278218,
+                "worst_case": 0.2191855698278218
+              },
+              "replay_stale": {
+                "static": 0.24558587479935795,
+                "adaptive": 0.24558587479935795,
+                "worst_case": 0.24558587479935795
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.07953152662399564,
+              "congestion_spoof": {
+                "static": 0.2062992125984252,
+                "adaptive": 0.2062992125984252,
+                "worst_case": 0.2062992125984252
+              },
+              "replay_stale": {
+                "static": 0.2274733835367437,
+                "adaptive": 0.2274733835367437,
+                "worst_case": 0.2274733835367437
+              }
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 7,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.061125,
+              "congestion_spoof": {
+                "static": 0.0937335439705108,
+                "adaptive": 0.0937335439705108,
+                "worst_case": 0.0937335439705108
+              },
+              "replay_stale": {
+                "static": 0.08184143222506395,
+                "adaptive": 0.08184143222506395,
+                "worst_case": 0.08184143222506395
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.061125,
+              "congestion_spoof": {
+                "static": 0.19356499356499357,
+                "adaptive": 0.19356499356499357,
+                "worst_case": 0.19356499356499357
+              },
+              "replay_stale": {
+                "static": 0.29056965055050266,
+                "adaptive": 0.29056965055050266,
+                "worst_case": 0.29056965055050266
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.05845459106874059,
+              "congestion_spoof": {
+                "static": 0.1878597592883307,
+                "adaptive": 0.1878597592883307,
+                "worst_case": 0.1878597592883307
+              },
+              "replay_stale": {
+                "static": 0.3011322572874006,
+                "adaptive": 0.3011322572874006,
+                "worst_case": 0.3011322572874006
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.05212192110222916,
+              "congestion_spoof": {
+                "static": 0.17892976588628762,
+                "adaptive": 0.17892976588628762,
+                "worst_case": 0.17892976588628762
+              },
+              "replay_stale": {
+                "static": 0.2749284040614423,
+                "adaptive": 0.2749284040614423,
+                "worst_case": 0.2749284040614423
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.07466340269277846,
+              "congestion_spoof": {
+                "static": 0.17384196185286105,
+                "adaptive": 0.17384196185286105,
+                "worst_case": 0.17384196185286105
+              },
+              "replay_stale": {
+                "static": 0.24832560535806286,
+                "adaptive": 0.24832560535806286,
+                "worst_case": 0.24832560535806286
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0675,
+              "congestion_spoof": {
+                "static": 0.11871030776746458,
+                "adaptive": 0.11871030776746458,
+                "worst_case": 0.11871030776746458
+              },
+              "replay_stale": {
+                "static": 0.09658421672555949,
+                "adaptive": 0.09620372553643008,
+                "worst_case": 0.09620372553643008
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0669375,
+              "congestion_spoof": {
+                "static": 0.27019433387965347,
+                "adaptive": 0.27019433387965347,
+                "worst_case": 0.27019433387965347
+              },
+              "replay_stale": {
+                "static": 0.30013580805794476,
+                "adaptive": 0.29995468962392385,
+                "worst_case": 0.29995468962392385
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06453838434520823,
+              "congestion_spoof": {
+                "static": 0.282899366643209,
+                "adaptive": 0.282899366643209,
+                "worst_case": 0.282899366643209
+              },
+              "replay_stale": {
+                "static": 0.30842607313195547,
+                "adaptive": 0.3058716431497497,
+                "worst_case": 0.3058716431497497
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.06408006758952363,
+              "congestion_spoof": {
+                "static": 0.2474074074074074,
+                "adaptive": 0.2474074074074074,
+                "worst_case": 0.2474074074074074
+              },
+              "replay_stale": {
+                "static": 0.2741974414675356,
+                "adaptive": 0.2726613488034808,
+                "worst_case": 0.2726613488034808
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.1005031959744322,
+              "congestion_spoof": {
+                "static": 0.23444753946146704,
+                "adaptive": 0.23444753946146704,
+                "worst_case": 0.23444753946146704
+              },
+              "replay_stale": {
+                "static": 0.24709897610921502,
+                "adaptive": 0.24390243902439024,
+                "worst_case": 0.24390243902439024
+              }
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 8,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.064375,
+              "congestion_spoof": {
+                "static": 0.09797208322359757,
+                "adaptive": 0.09797208322359757,
+                "worst_case": 0.09797208322359757
+              },
+              "replay_stale": {
+                "static": 0.08993788819875777,
+                "adaptive": 0.08993788819875777,
+                "worst_case": 0.08993788819875777
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.064375,
+              "congestion_spoof": {
+                "static": 0.19286996665811745,
+                "adaptive": 0.19286996665811745,
+                "worst_case": 0.19286996665811745
+              },
+              "replay_stale": {
+                "static": 0.29127579737335835,
+                "adaptive": 0.29127579737335835,
+                "worst_case": 0.29127579737335835
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06231884057971015,
+              "congestion_spoof": {
+                "static": 0.20161922172891095,
+                "adaptive": 0.20161922172891095,
+                "worst_case": 0.20161922172891095
+              },
+              "replay_stale": {
+                "static": 0.2906641000962464,
+                "adaptive": 0.2906641000962464,
+                "worst_case": 0.2906641000962464
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.05259057265290222,
+              "congestion_spoof": {
+                "static": 0.1932259855635758,
+                "adaptive": 0.1932259855635758,
+                "worst_case": 0.1932259855635758
+              },
+              "replay_stale": {
+                "static": 0.2684251357641583,
+                "adaptive": 0.2684251357641583,
+                "worst_case": 0.2684251357641583
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.07626830098740212,
+              "congestion_spoof": {
+                "static": 0.193446088794926,
+                "adaptive": 0.193446088794926,
+                "worst_case": 0.193446088794926
+              },
+              "replay_stale": {
+                "static": 0.26514399205561073,
+                "adaptive": 0.26514399205561073,
+                "worst_case": 0.26514399205561073
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.066125,
+              "congestion_spoof": {
+                "static": 0.09687034277198212,
+                "adaptive": 0.09687034277198212,
+                "worst_case": 0.09687034277198212
+              },
+              "replay_stale": {
+                "static": 0.08900523560209424,
+                "adaptive": 0.08900523560209424,
+                "worst_case": 0.08900523560209424
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0656875,
+              "congestion_spoof": {
+                "static": 0.2074913750616067,
+                "adaptive": 0.2074913750616067,
+                "worst_case": 0.2074913750616067
+              },
+              "replay_stale": {
+                "static": 0.2912264584290308,
+                "adaptive": 0.2912264584290308,
+                "worst_case": 0.2912264584290308
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06288594833018274,
+              "congestion_spoof": {
+                "static": 0.21621621621621623,
+                "adaptive": 0.21621621621621623,
+                "worst_case": 0.21621621621621623
+              },
+              "replay_stale": {
+                "static": 0.29493521790341576,
+                "adaptive": 0.29493521790341576,
+                "worst_case": 0.29493521790341576
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.05687573042462018,
+              "congestion_spoof": {
+                "static": 0.19788359788359788,
+                "adaptive": 0.19788359788359788,
+                "worst_case": 0.19788359788359788
+              },
+              "replay_stale": {
+                "static": 0.2620897018291155,
+                "adaptive": 0.2620897018291155,
+                "worst_case": 0.2620897018291155
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.08661899897854954,
+              "congestion_spoof": {
+                "static": 0.18370883882149047,
+                "adaptive": 0.18370883882149047,
+                "worst_case": 0.18370883882149047
+              },
+              "replay_stale": {
+                "static": 0.24301279014684984,
+                "adaptive": 0.24301279014684984,
+                "worst_case": 0.24301279014684984
+              }
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 4,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.0575625,
+              "congestion_spoof": {
+                "static": 0.06683982683982684,
+                "adaptive": 0.06683982683982684,
+                "worst_case": 0.06683982683982684
+              },
+              "replay_stale": {
+                "static": 0.1113178819150736,
+                "adaptive": 0.1113178819150736,
+                "worst_case": 0.1113178819150736
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.0575625,
+              "congestion_spoof": {
+                "static": 0.4425858163443109,
+                "adaptive": 0.4425858163443109,
+                "worst_case": 0.4425858163443109
+              },
+              "replay_stale": {
+                "static": 0.4608263329333105,
+                "adaptive": 0.4608263329333105,
+                "worst_case": 0.4608263329333105
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.0638110790101746,
+              "congestion_spoof": {
+                "static": 0.4491349480968858,
+                "adaptive": 0.4491349480968858,
+                "worst_case": 0.4491349480968858
+              },
+              "replay_stale": {
+                "static": 0.4644808743169399,
+                "adaptive": 0.4644808743169399,
+                "worst_case": 0.4644808743169399
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.18321951219512195,
+              "congestion_spoof": {
+                "static": 0.3099073414112616,
+                "adaptive": 0.3099073414112616,
+                "worst_case": 0.3099073414112616
+              },
+              "replay_stale": {
+                "static": 0.328425185808442,
+                "adaptive": 0.328425185808442,
+                "worst_case": 0.328425185808442
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.3511434794445957,
+              "congestion_spoof": {
+                "static": 0.23882603338187522,
+                "adaptive": 0.23882603338187522,
+                "worst_case": 0.23882603338187522
+              },
+              "replay_stale": {
+                "static": 0.24536059562173576,
+                "adaptive": 0.24536059562173576,
+                "worst_case": 0.24536059562173576
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0583125,
+              "congestion_spoof": {
+                "static": 0.07636738906088751,
+                "adaptive": 0.07307824887969666,
+                "worst_case": 0.07307824887969666
+              },
+              "replay_stale": {
+                "static": 0.13795412690440315,
+                "adaptive": 0.09284001370332305,
+                "worst_case": 0.09284001370332305
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0590625,
+              "congestion_spoof": {
+                "static": 0.44222490098157397,
+                "adaptive": 0.4396135265700483,
+                "worst_case": 0.4396135265700483
+              },
+              "replay_stale": {
+                "static": 0.46737273659036555,
+                "adaptive": 0.449438202247191,
+                "worst_case": 0.449438202247191
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06632332621529959,
+              "congestion_spoof": {
+                "static": 0.4472327260226882,
+                "adaptive": 0.4449415003441156,
+                "worst_case": 0.4449415003441156
+              },
+              "replay_stale": {
+                "static": 0.4720942140296979,
+                "adaptive": 0.456237077877326,
+                "worst_case": 0.456237077877326
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.1872520325203252,
+              "congestion_spoof": {
+                "static": 0.3073005093378608,
+                "adaptive": 0.3055358912643353,
+                "worst_case": 0.3055358912643353
+              },
+              "replay_stale": {
+                "static": 0.3335659455687369,
+                "adaptive": 0.3186936936936937,
+                "worst_case": 0.3186936936936937
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.35291315001361284,
+              "congestion_spoof": {
+                "static": 0.2352147515178772,
+                "adaptive": 0.23439433134630525,
+                "worst_case": 0.23439433134630525
+              },
+              "replay_stale": {
+                "static": 0.25467497773820125,
+                "adaptive": 0.2414721723518851,
+                "worst_case": 0.2414721723518851
+              }
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 5,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.058125,
+              "congestion_spoof": {
+                "static": 0.05141566788257773,
+                "adaptive": 0.05141566788257773,
+                "worst_case": 0.05141566788257773
+              },
+              "replay_stale": {
+                "static": 0.11144781144781145,
+                "adaptive": 0.11144781144781145,
+                "worst_case": 0.11144781144781145
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.058125,
+              "congestion_spoof": {
+                "static": 0.4454102920723227,
+                "adaptive": 0.4454102920723227,
+                "worst_case": 0.4454102920723227
+              },
+              "replay_stale": {
+                "static": 0.4669964182159304,
+                "adaptive": 0.4669964182159304,
+                "worst_case": 0.4669964182159304
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06408242759313941,
+              "congestion_spoof": {
+                "static": 0.4525043177892919,
+                "adaptive": 0.4525043177892919,
+                "worst_case": 0.4525043177892919
+              },
+              "replay_stale": {
+                "static": 0.4752710027100271,
+                "adaptive": 0.4752710027100271,
+                "worst_case": 0.4752710027100271
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.1801561483409239,
+              "congestion_spoof": {
+                "static": 0.31387586990484306,
+                "adaptive": 0.31387586990484306,
+                "worst_case": 0.31387586990484306
+              },
+              "replay_stale": {
+                "static": 0.33370566880759567,
+                "adaptive": 0.33370566880759567,
+                "worst_case": 0.33370566880759567
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.35601738657973375,
+              "congestion_spoof": {
+                "static": 0.22782570227825702,
+                "adaptive": 0.22782570227825702,
+                "worst_case": 0.22782570227825702
+              },
+              "replay_stale": {
+                "static": 0.2358222027589227,
+                "adaptive": 0.2358222027589227,
+                "worst_case": 0.2358222027589227
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.058,
+              "congestion_spoof": {
+                "static": 0.05390366892714311,
+                "adaptive": 0.05187119234116623,
+                "worst_case": 0.05187119234116623
+              },
+              "replay_stale": {
+                "static": 0.11581968596994766,
+                "adaptive": 0.08639012684264656,
+                "worst_case": 0.08639012684264656
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.058125,
+              "congestion_spoof": {
+                "static": 0.44290177021867405,
+                "adaptive": 0.4415494180997047,
+                "worst_case": 0.4415494180997047
+              },
+              "replay_stale": {
+                "static": 0.4672961373390558,
+                "adaptive": 0.45677731673582295,
+                "worst_case": 0.45677731673582295
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06395677577432933,
+              "congestion_spoof": {
+                "static": 0.4518582541054451,
+                "adaptive": 0.45108883511925335,
+                "worst_case": 0.45108883511925335
+              },
+              "replay_stale": {
+                "static": 0.4756055953599454,
+                "adaptive": 0.46381296200790784,
+                "worst_case": 0.46381296200790784
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.18275862068965518,
+              "congestion_spoof": {
+                "static": 0.3118279569892473,
+                "adaptive": 0.3123055162659123,
+                "worst_case": 0.3118279569892473
+              },
+              "replay_stale": {
+                "static": 0.330121491411814,
+                "adaptive": 0.3203037120359955,
+                "worst_case": 0.3203037120359955
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.3588698723173051,
+              "congestion_spoof": {
+                "static": 0.22325068870523415,
+                "adaptive": 0.22305488208067004,
+                "worst_case": 0.22305488208067004
+              },
+              "replay_stale": {
+                "static": 0.23337707786526685,
+                "adaptive": 0.2271279516749039,
+                "worst_case": 0.2271279516749039
+              }
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 6,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.0580625,
+              "congestion_spoof": {
+                "static": 0.0463899546564353,
+                "adaptive": 0.0463899546564353,
+                "worst_case": 0.0463899546564353
+              },
+              "replay_stale": {
+                "static": 0.05958773601247185,
+                "adaptive": 0.05958773601247185,
+                "worst_case": 0.05958773601247185
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.0580625,
+              "congestion_spoof": {
+                "static": 0.439937051932156,
+                "adaptive": 0.439937051932156,
+                "worst_case": 0.439937051932156
+              },
+              "replay_stale": {
+                "static": 0.4459130434782609,
+                "adaptive": 0.4459130434782609,
+                "worst_case": 0.4459130434782609
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06403817177297841,
+              "congestion_spoof": {
+                "static": 0.42656005562315313,
+                "adaptive": 0.42656005562315313,
+                "worst_case": 0.42656005562315313
+              },
+              "replay_stale": {
+                "static": 0.43200276481769484,
+                "adaptive": 0.43200276481769484,
+                "worst_case": 0.43200276481769484
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.181764820974369,
+              "congestion_spoof": {
+                "static": 0.3180585296216988,
+                "adaptive": 0.3180585296216988,
+                "worst_case": 0.3180585296216988
+              },
+              "replay_stale": {
+                "static": 0.32270859895169285,
+                "adaptive": 0.32270859895169285,
+                "worst_case": 0.32270859895169285
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.37123791365926734,
+              "congestion_spoof": {
+                "static": 0.24245067044587376,
+                "adaptive": 0.24245067044587376,
+                "worst_case": 0.24245067044587376
+              },
+              "replay_stale": {
+                "static": 0.2373764795308937,
+                "adaptive": 0.2373764795308937,
+                "worst_case": 0.2373764795308937
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0594375,
+              "congestion_spoof": {
+                "static": 0.06781411359724612,
+                "adaptive": 0.06483876530436282,
+                "worst_case": 0.06483876530436282
+              },
+              "replay_stale": {
+                "static": 0.11671445437679204,
+                "adaptive": 0.08373369938229239,
+                "worst_case": 0.08373369938229239
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0611875,
+              "congestion_spoof": {
+                "static": 0.44402211472011055,
+                "adaptive": 0.4430226526024555,
+                "worst_case": 0.4430226526024555
+              },
+              "replay_stale": {
+                "static": 0.4657958061189412,
+                "adaptive": 0.452987012987013,
+                "worst_case": 0.452987012987013
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06585886489201406,
+              "congestion_spoof": {
+                "static": 0.42955563210471925,
+                "adaptive": 0.4282758620689655,
+                "worst_case": 0.4282758620689655
+              },
+              "replay_stale": {
+                "static": 0.44976076555023925,
+                "adaptive": 0.4364326375711575,
+                "worst_case": 0.4364326375711575
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.18600404356616448,
+              "congestion_spoof": {
+                "static": 0.3185740557363135,
+                "adaptive": 0.317428854594365,
+                "worst_case": 0.317428854594365
+              },
+              "replay_stale": {
+                "static": 0.33496846531184304,
+                "adaptive": 0.32415643089086543,
+                "worst_case": 0.32415643089086543
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.35918561895682966,
+              "congestion_spoof": {
+                "static": 0.23752650965509545,
+                "adaptive": 0.2371859296482412,
+                "worst_case": 0.2371859296482412
+              },
+              "replay_stale": {
+                "static": 0.24833997343957503,
+                "adaptive": 0.23999110320284697,
+                "worst_case": 0.23999110320284697
+              }
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 7,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.0579375,
+              "congestion_spoof": {
+                "static": 0.05400696864111498,
+                "adaptive": 0.05400696864111498,
+                "worst_case": 0.05400696864111498
+              },
+              "replay_stale": {
+                "static": 0.10098605916354982,
+                "adaptive": 0.10098605916354982,
+                "worst_case": 0.10098605916354982
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.0579375,
+              "congestion_spoof": {
+                "static": 0.45010467550593164,
+                "adaptive": 0.45010467550593164,
+                "worst_case": 0.45010467550593164
+              },
+              "replay_stale": {
+                "static": 0.4662766689607708,
+                "adaptive": 0.4662766689607708,
+                "worst_case": 0.4662766689607708
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06547917711991971,
+              "congestion_spoof": {
+                "static": 0.44536652835408025,
+                "adaptive": 0.44536652835408025,
+                "worst_case": 0.44536652835408025
+              },
+              "replay_stale": {
+                "static": 0.45962944076151624,
+                "adaptive": 0.45962944076151624,
+                "worst_case": 0.45962944076151624
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.1845713914343277,
+              "congestion_spoof": {
+                "static": 0.3171145685997171,
+                "adaptive": 0.3171145685997171,
+                "worst_case": 0.3171145685997171
+              },
+              "replay_stale": {
+                "static": 0.33244866601480655,
+                "adaptive": 0.33244866601480655,
+                "worst_case": 0.33244866601480655
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.3581531347749218,
+              "congestion_spoof": {
+                "static": 0.2416435313714603,
+                "adaptive": 0.2416435313714603,
+                "worst_case": 0.2416435313714603
+              },
+              "replay_stale": {
+                "static": 0.24920268338282195,
+                "adaptive": 0.24920268338282195,
+                "worst_case": 0.24920268338282195
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.058125,
+              "congestion_spoof": {
+                "static": 0.05521791977773919,
+                "adaptive": 0.05525629887054735,
+                "worst_case": 0.05521791977773919
+              },
+              "replay_stale": {
+                "static": 0.08206008583690987,
+                "adaptive": 0.07710843373493977,
+                "worst_case": 0.07710843373493977
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.05925,
+              "congestion_spoof": {
+                "static": 0.44652452764777256,
+                "adaptive": 0.44675685050294833,
+                "worst_case": 0.44652452764777256
+              },
+              "replay_stale": {
+                "static": 0.45371487674538874,
+                "adaptive": 0.45346226903816267,
+                "worst_case": 0.45346226903816267
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06673356748620171,
+              "congestion_spoof": {
+                "static": 0.44082332761578047,
+                "adaptive": 0.4407070533722327,
+                "worst_case": 0.4407070533722327
+              },
+              "replay_stale": {
+                "static": 0.4481993514251579,
+                "adaptive": 0.447444881216886,
+                "worst_case": 0.447444881216886
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.18704100864366024,
+              "congestion_spoof": {
+                "static": 0.31386861313868614,
+                "adaptive": 0.3133951137320977,
+                "worst_case": 0.3133951137320977
+              },
+              "replay_stale": {
+                "static": 0.3238042114070562,
+                "adaptive": 0.32230135455941905,
+                "worst_case": 0.32230135455941905
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.37379300965592277,
+              "congestion_spoof": {
+                "static": 0.23849236434528323,
+                "adaptive": 0.2377804270076948,
+                "worst_case": 0.2377804270076948
+              },
+              "replay_stale": {
+                "static": 0.2426525998492841,
+                "adaptive": 0.24156152270031273,
+                "worst_case": 0.24156152270031273
+              }
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 8,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.0576875,
+              "congestion_spoof": {
+                "static": 0.04609743321110529,
+                "adaptive": 0.04609743321110529,
+                "worst_case": 0.04609743321110529
+              },
+              "replay_stale": {
+                "static": 0.08913934426229508,
+                "adaptive": 0.08913934426229508,
+                "worst_case": 0.08913934426229508
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.0576875,
+              "congestion_spoof": {
+                "static": 0.4409861863962231,
+                "adaptive": 0.4409861863962231,
+                "worst_case": 0.4409861863962231
+              },
+              "replay_stale": {
+                "static": 0.4567986230636833,
+                "adaptive": 0.4567986230636833,
+                "worst_case": 0.4567986230636833
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06339004410838059,
+              "congestion_spoof": {
+                "static": 0.4343380927199013,
+                "adaptive": 0.4343380927199013,
+                "worst_case": 0.4343380927199013
+              },
+              "replay_stale": {
+                "static": 0.4505475404136972,
+                "adaptive": 0.4505475404136972,
+                "worst_case": 0.4505475404136972
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.18575509674068302,
+              "congestion_spoof": {
+                "static": 0.30708215297450425,
+                "adaptive": 0.30708215297450425,
+                "worst_case": 0.30708215297450425
+              },
+              "replay_stale": {
+                "static": 0.3224188379545771,
+                "adaptive": 0.3224188379545771,
+                "worst_case": 0.3224188379545771
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.3602315287708546,
+              "congestion_spoof": {
+                "static": 0.2416629613161405,
+                "adaptive": 0.2416629613161405,
+                "worst_case": 0.2416629613161405
+              },
+              "replay_stale": {
+                "static": 0.2498900131984162,
+                "adaptive": 0.2498900131984162,
+                "worst_case": 0.2498900131984162
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0583125,
+              "congestion_spoof": {
+                "static": 0.04523312456506611,
+                "adaptive": 0.04523312456506611,
+                "worst_case": 0.04523312456506611
+              },
+              "replay_stale": {
+                "static": 0.05756892665163863,
+                "adaptive": 0.05756892665163863,
+                "worst_case": 0.05756892665163863
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0585,
+              "congestion_spoof": {
+                "static": 0.4376740947075209,
+                "adaptive": 0.4376740947075209,
+                "worst_case": 0.4376740947075209
+              },
+              "replay_stale": {
+                "static": 0.44136976824628155,
+                "adaptive": 0.44171566931857487,
+                "worst_case": 0.44136976824628155
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06332703213610585,
+              "congestion_spoof": {
+                "static": 0.4321096082908835,
+                "adaptive": 0.4321096082908835,
+                "worst_case": 0.4321096082908835
+              },
+              "replay_stale": {
+                "static": 0.43545279383429675,
+                "adaptive": 0.43580311788404275,
+                "worst_case": 0.43545279383429675
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.18919620828463835,
+              "congestion_spoof": {
+                "static": 0.30527055516514406,
+                "adaptive": 0.30527055516514406,
+                "worst_case": 0.30527055516514406
+              },
+              "replay_stale": {
+                "static": 0.3088954056695992,
+                "adaptive": 0.30874545962559374,
+                "worst_case": 0.30874545962559374
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.4062648961525366,
+              "congestion_spoof": {
+                "static": 0.2408946342464348,
+                "adaptive": 0.2407141391340037,
+                "worst_case": 0.2407141391340037
+              },
+              "replay_stale": {
+                "static": 0.24107689169895982,
+                "adaptive": 0.24056315037747397,
+                "worst_case": 0.24056315037747397
+              }
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 4,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.093875,
+              "congestion_spoof": {
+                "static": 0.19520142180094788,
+                "adaptive": 0.18633725256734632,
+                "worst_case": 0.18633725256734632
+              },
+              "replay_stale": {
+                "static": 0.09890795631825273,
+                "adaptive": 0.06140629971364938,
+                "worst_case": 0.06140629971364938
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.093875,
+              "congestion_spoof": {
+                "static": 0.4619142115707526,
+                "adaptive": 0.45744029393753827,
+                "worst_case": 0.45744029393753827
+              },
+              "replay_stale": {
+                "static": 0.4189723320158103,
+                "adaptive": 0.4031304903370069,
+                "worst_case": 0.4031304903370069
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.11097852028639618,
+              "congestion_spoof": {
+                "static": 0.45695561513255883,
+                "adaptive": 0.4530386740331492,
+                "worst_case": 0.4530386740331492
+              },
+              "replay_stale": {
+                "static": 0.42433553541250574,
+                "adaptive": 0.40621600621600623,
+                "worst_case": 0.40621600621600623
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.42861788617886176,
+              "congestion_spoof": {
+                "static": 0.2931937172774869,
+                "adaptive": 0.2910832053482699,
+                "worst_case": 0.2910832053482699
+              },
+              "replay_stale": {
+                "static": 0.2669983416252073,
+                "adaptive": 0.25876908838500695,
+                "worst_case": 0.25876908838500695
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.7491832289681459,
+              "congestion_spoof": {
+                "static": 0.23985703885101595,
+                "adaptive": 0.23935923743959753,
+                "worst_case": 0.23935923743959753
+              },
+              "replay_stale": {
+                "static": 0.23142590369481125,
+                "adaptive": 0.22891485809682804,
+                "worst_case": 0.22891485809682804
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0709375,
+              "congestion_spoof": {
+                "static": 0.2890111364551187,
+                "adaptive": 0.19932580976110215,
+                "worst_case": 0.19932580976110215
+              },
+              "replay_stale": {
+                "static": 0.10815071732618635,
+                "adaptive": 0.08183568677792041,
+                "worst_case": 0.08183568677792041
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.075875,
+              "congestion_spoof": {
+                "static": 0.4893253629376601,
+                "adaptive": 0.46060606060606063,
+                "worst_case": 0.46060606060606063
+              },
+              "replay_stale": {
+                "static": 0.42843419788664744,
+                "adaptive": 0.41786232468160567,
+                "worst_case": 0.41786232468160567
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.09201105388770255,
+              "congestion_spoof": {
+                "static": 0.4891441378344306,
+                "adaptive": 0.4610139341832197,
+                "worst_case": 0.4610139341832197
+              },
+              "replay_stale": {
+                "static": 0.4316118935837246,
+                "adaptive": 0.4211523283346488,
+                "worst_case": 0.4211523283346488
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.41385365853658534,
+              "congestion_spoof": {
+                "static": 0.314438878636084,
+                "adaptive": 0.2958089229382605,
+                "worst_case": 0.2958089229382605
+              },
+              "replay_stale": {
+                "static": 0.27095101398277616,
+                "adaptive": 0.2653914012443124,
+                "worst_case": 0.2653914012443124
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.7486387149469099,
+              "congestion_spoof": {
+                "static": 0.24900489396411093,
+                "adaptive": 0.24117298967716483,
+                "worst_case": 0.24117298967716483
+              },
+              "replay_stale": {
+                "static": 0.2331540861714134,
+                "adaptive": 0.23030383618110498,
+                "worst_case": 0.23030383618110498
+              }
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 5,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.093875,
+              "congestion_spoof": {
+                "static": 0.1977468129261785,
+                "adaptive": 0.19104299955363785,
+                "worst_case": 0.19104299955363785
+              },
+              "replay_stale": {
+                "static": 0.10740971357409713,
+                "adaptive": 0.06432096799872632,
+                "worst_case": 0.06432096799872632
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.093875,
+              "congestion_spoof": {
+                "static": 0.469403326720586,
+                "adaptive": 0.46636085626911317,
+                "worst_case": 0.46636085626911317
+              },
+              "replay_stale": {
+                "static": 0.42845824750435746,
+                "adaptive": 0.4121697357886309,
+                "worst_case": 0.4121697357886309
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.11013381918703273,
+              "congestion_spoof": {
+                "static": 0.46946393907719874,
+                "adaptive": 0.4669458570146575,
+                "worst_case": 0.4669458570146575
+              },
+              "replay_stale": {
+                "static": 0.43093580819798916,
+                "adaptive": 0.41679675304402125,
+                "worst_case": 0.41679675304402125
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.4216005204944697,
+              "congestion_spoof": {
+                "static": 0.2911036546658203,
+                "adaptive": 0.2893709721339748,
+                "worst_case": 0.2893709721339748
+              },
+              "replay_stale": {
+                "static": 0.27161862527716185,
+                "adaptive": 0.262444279346211,
+                "worst_case": 0.262444279346211
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.7548220592230372,
+              "congestion_spoof": {
+                "static": 0.23767136638295108,
+                "adaptive": 0.23718240301514068,
+                "worst_case": 0.23718240301514068
+              },
+              "replay_stale": {
+                "static": 0.227994227994228,
+                "adaptive": 0.22458768644457586,
+                "worst_case": 0.22458768644457586
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0709375,
+              "congestion_spoof": {
+                "static": 0.2938643702906351,
+                "adaptive": 0.20180284966560047,
+                "worst_case": 0.20180284966560047
+              },
+              "replay_stale": {
+                "static": 0.1167608286252354,
+                "adaptive": 0.08763793379177995,
+                "worst_case": 0.08763793379177995
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.077875,
+              "congestion_spoof": {
+                "static": 0.5012890289315383,
+                "adaptive": 0.47211727368898293,
+                "worst_case": 0.47211727368898293
+              },
+              "replay_stale": {
+                "static": 0.4346306592533757,
+                "adaptive": 0.4231325301204819,
+                "worst_case": 0.4231325301204819
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.08852170635169944,
+              "congestion_spoof": {
+                "static": 0.49571929824561406,
+                "adaptive": 0.46687324774974176,
+                "worst_case": 0.46687324774974176
+              },
+              "replay_stale": {
+                "static": 0.43627298223745714,
+                "adaptive": 0.42857142857142855,
+                "worst_case": 0.42857142857142855
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.4092387768379961,
+              "congestion_spoof": {
+                "static": 0.31494110353378796,
+                "adaptive": 0.29665851670741644,
+                "worst_case": 0.29665851670741644
+              },
+              "replay_stale": {
+                "static": 0.2738604651162791,
+                "adaptive": 0.26815850815850817,
+                "worst_case": 0.26815850815850817
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.7532599837000815,
+              "congestion_spoof": {
+                "static": 0.2468565563253785,
+                "adaptive": 0.23913323874629175,
+                "worst_case": 0.23913323874629175
+              },
+              "replay_stale": {
+                "static": 0.2285079696890515,
+                "adaptive": 0.2266544598482867,
+                "worst_case": 0.2266544598482867
+              }
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 6,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.093875,
+              "congestion_spoof": {
+                "static": 0.19374068554396423,
+                "adaptive": 0.18454164170161774,
+                "worst_case": 0.18454164170161774
+              },
+              "replay_stale": {
+                "static": 0.10802372775522948,
+                "adaptive": 0.06048967834853577,
+                "worst_case": 0.06048967834853577
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.093875,
+              "congestion_spoof": {
+                "static": 0.4715422276621787,
+                "adaptive": 0.4678631691977297,
+                "worst_case": 0.4678631691977297
+              },
+              "replay_stale": {
+                "static": 0.43564983378185845,
+                "adaptive": 0.41646644241550534,
+                "worst_case": 0.41646644241550534
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.11143897538925163,
+              "congestion_spoof": {
+                "static": 0.4529863985807215,
+                "adaptive": 0.4488585828639194,
+                "worst_case": 0.4488585828639194
+              },
+              "replay_stale": {
+                "static": 0.41544117647058826,
+                "adaptive": 0.39503491078355313,
+                "worst_case": 0.39503491078355313
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.42261788299745645,
+              "congestion_spoof": {
+                "static": 0.2975297346752059,
+                "adaptive": 0.29547536178787326,
+                "worst_case": 0.29547536178787326
+              },
+              "replay_stale": {
+                "static": 0.2806136680613668,
+                "adaptive": 0.2717249112315455,
+                "worst_case": 0.2717249112315455
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.7626991692768623,
+              "congestion_spoof": {
+                "static": 0.23888633528137107,
+                "adaptive": 0.23819220915719636,
+                "worst_case": 0.23819220915719636
+              },
+              "replay_stale": {
+                "static": 0.23070814030443415,
+                "adaptive": 0.2280108702856764,
+                "worst_case": 0.2280108702856764
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0709375,
+              "congestion_spoof": {
+                "static": 0.2947198275862069,
+                "adaptive": 0.20615563298490128,
+                "worst_case": 0.20615563298490128
+              },
+              "replay_stale": {
+                "static": 0.11545682102628285,
+                "adaptive": 0.0891921917156007,
+                "worst_case": 0.0891921917156007
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0771875,
+              "congestion_spoof": {
+                "static": 0.5037015945330297,
+                "adaptive": 0.476892970043655,
+                "worst_case": 0.476892970043655
+              },
+              "replay_stale": {
+                "static": 0.4406941569813724,
+                "adaptive": 0.4338862940892253,
+                "worst_case": 0.4338862940892253
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.09021848317428428,
+              "congestion_spoof": {
+                "static": 0.482989403234802,
+                "adaptive": 0.4552008238928939,
+                "worst_case": 0.4552008238928939
+              },
+              "replay_stale": {
+                "static": 0.41936985876144656,
+                "adaptive": 0.4126388237134366,
+                "worst_case": 0.4126388237134366
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.4111393725950564,
+              "congestion_spoof": {
+                "static": 0.32128227960819233,
+                "adaptive": 0.30392870134594396,
+                "worst_case": 0.30392870134594396
+              },
+              "replay_stale": {
+                "static": 0.28555462419670297,
+                "adaptive": 0.2806656694091249,
+                "worst_case": 0.2806656694091249
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.7609287757047528,
+              "congestion_spoof": {
+                "static": 0.2462710660554013,
+                "adaptive": 0.24158544509421703,
+                "worst_case": 0.24158544509421703
+              },
+              "replay_stale": {
+                "static": 0.2337049180327869,
+                "adaptive": 0.23250016400970938,
+                "worst_case": 0.23250016400970938
+              }
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 7,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.093875,
+              "congestion_spoof": {
+                "static": 0.18435920309247694,
+                "adaptive": 0.1748617545957256,
+                "worst_case": 0.1748617545957256
+              },
+              "replay_stale": {
+                "static": 0.104021114733737,
+                "adaptive": 0.06066380816261712,
+                "worst_case": 0.06066380816261712
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.093875,
+              "congestion_spoof": {
+                "static": 0.4668711656441718,
+                "adaptive": 0.46120689655172414,
+                "worst_case": 0.46120689655172414
+              },
+              "replay_stale": {
+                "static": 0.4369376479873717,
+                "adaptive": 0.4196585288016595,
+                "worst_case": 0.4196585288016595
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.10982187656798796,
+              "congestion_spoof": {
+                "static": 0.45611957969513095,
+                "adaptive": 0.4522926250185487,
+                "worst_case": 0.4522926250185487
+              },
+              "replay_stale": {
+                "static": 0.4211977331903814,
+                "adaptive": 0.40611961057023643,
+                "worst_case": 0.40611961057023643
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.43062325339572366,
+              "congestion_spoof": {
+                "static": 0.29593880896011654,
+                "adaptive": 0.2943857090776522,
+                "worst_case": 0.2943857090776522
+              },
+              "replay_stale": {
+                "static": 0.27847633136094674,
+                "adaptive": 0.2693665242429872,
+                "worst_case": 0.2693665242429872
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.7538419692642458,
+              "congestion_spoof": {
+                "static": 0.23965968586387434,
+                "adaptive": 0.23870629828466675,
+                "worst_case": 0.23870629828466675
+              },
+              "replay_stale": {
+                "static": 0.23371824480369516,
+                "adaptive": 0.22921764433569208,
+                "worst_case": 0.22921764433569208
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0709375,
+              "congestion_spoof": {
+                "static": 0.28540540540540543,
+                "adaptive": 0.1911013858497447,
+                "worst_case": 0.1911013858497447
+              },
+              "replay_stale": {
+                "static": 0.10592885375494071,
+                "adaptive": 0.07915398173369652,
+                "worst_case": 0.07915398173369652
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.075875,
+              "congestion_spoof": {
+                "static": 0.49523538614706303,
+                "adaptive": 0.47240551889622073,
+                "worst_case": 0.47240551889622073
+              },
+              "replay_stale": {
+                "static": 0.4396274887604367,
+                "adaptive": 0.43224034889355517,
+                "worst_case": 0.43224034889355517
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.09163321625689914,
+              "congestion_spoof": {
+                "static": 0.4847807874895281,
+                "adaptive": 0.4557522123893805,
+                "worst_case": 0.4557522123893805
+              },
+              "replay_stale": {
+                "static": 0.4284153005464481,
+                "adaptive": 0.4203240522258927,
+                "worst_case": 0.4203240522258927
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.4195099759537272,
+              "congestion_spoof": {
+                "static": 0.31518166474193837,
+                "adaptive": 0.30044557606619987,
+                "worst_case": 0.30044557606619987
+              },
+              "replay_stale": {
+                "static": 0.2812035661218425,
+                "adaptive": 0.27773641102010427,
+                "worst_case": 0.27773641102010427
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.7510539915680674,
+              "congestion_spoof": {
+                "static": 0.2477431003353108,
+                "adaptive": 0.24119558154645873,
+                "worst_case": 0.24119558154645873
+              },
+              "replay_stale": {
+                "static": 0.23311032401941492,
+                "adaptive": 0.2304661851608667,
+                "worst_case": 0.2304661851608667
+              }
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 8,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.093875,
+              "congestion_spoof": {
+                "static": 0.20567375886524822,
+                "adaptive": 0.1963463537798901,
+                "worst_case": 0.1963463537798901
+              },
+              "replay_stale": {
+                "static": 0.11340686655274196,
+                "adaptive": 0.0616121308858739,
+                "worst_case": 0.0616121308858739
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.093875,
+              "congestion_spoof": {
+                "static": 0.4695997555759242,
+                "adaptive": 0.46467432950191573,
+                "worst_case": 0.46467432950191573
+              },
+              "replay_stale": {
+                "static": 0.430443707563556,
+                "adaptive": 0.41137925523413776,
+                "worst_case": 0.41137925523413776
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.11127914303717706,
+              "congestion_spoof": {
+                "static": 0.45866905401372726,
+                "adaptive": 0.45243445692883894,
+                "worst_case": 0.45243445692883894
+              },
+              "replay_stale": {
+                "static": 0.42016029593094945,
+                "adaptive": 0.3986877050460865,
+                "worst_case": 0.3986877050460865
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.42942475003246333,
+              "congestion_spoof": {
+                "static": 0.2963433445240904,
+                "adaptive": 0.2932460685392237,
+                "worst_case": 0.2932460685392237
+              },
+              "replay_stale": {
+                "static": 0.27546681456831207,
+                "adaptive": 0.260342899739098,
+                "worst_case": 0.260342899739098
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.7541028260129383,
+              "congestion_spoof": {
+                "static": 0.24293042220176247,
+                "adaptive": 0.24188984668026584,
+                "worst_case": 0.24188984668026584
+              },
+              "replay_stale": {
+                "static": 0.23480278422273781,
+                "adaptive": 0.2306210561275324,
+                "worst_case": 0.2306210561275324
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0709375,
+              "congestion_spoof": {
+                "static": 0.3022542350273443,
+                "adaptive": 0.21162185602775369,
+                "worst_case": 0.21162185602775369
+              },
+              "replay_stale": {
+                "static": 0.12276855621672408,
+                "adaptive": 0.09444798978940651,
+                "worst_case": 0.09444798978940651
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0775625,
+              "congestion_spoof": {
+                "static": 0.4981612446958982,
+                "adaptive": 0.46542000593647964,
+                "worst_case": 0.46542000593647964
+              },
+              "replay_stale": {
+                "static": 0.4374704305314619,
+                "adaptive": 0.4298678554370323,
+                "worst_case": 0.4298678554370323
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.09388783868935098,
+              "congestion_spoof": {
+                "static": 0.4829799107142857,
+                "adaptive": 0.4552557865251364,
+                "worst_case": 0.4552557865251364
+              },
+              "replay_stale": {
+                "static": 0.42520667602558104,
+                "adaptive": 0.4138148557009935,
+                "worst_case": 0.4138148557009935
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.4187118556031684,
+              "congestion_spoof": {
+                "static": 0.32284085927224904,
+                "adaptive": 0.30078160093432754,
+                "worst_case": 0.30078160093432754
+              },
+              "replay_stale": {
+                "static": 0.274041133963313,
+                "adaptive": 0.2664308322472538,
+                "worst_case": 0.2664308322472538
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.7534218590398366,
+              "congestion_spoof": {
+                "static": 0.2522487542871934,
+                "adaptive": 0.24451533103313586,
+                "worst_case": 0.24451533103313586
+              },
+              "replay_stale": {
+                "static": 0.23280284098382217,
+                "adaptive": 0.23113393915448438,
+                "worst_case": 0.23113393915448438
+              }
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 4,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.07568590350047304,
+                "adaptive": 0.07568590350047304,
+                "worst_case": 0.07568590350047304
+              },
+              "replay_stale": {
+                "static": 0.07568590350047304,
+                "adaptive": 0.07568590350047304,
+                "worst_case": 0.07568590350047304
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.03658152002522864,
+                "adaptive": 0.03658152002522864,
+                "worst_case": 0.03658152002522864
+              },
+              "replay_stale": {
+                "static": 0.03658152002522864,
+                "adaptive": 0.03658152002522864,
+                "worst_case": 0.03658152002522864
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.04459238789096847,
+              "congestion_spoof": {
+                "static": 0.037881219903691817,
+                "adaptive": 0.037881219903691817,
+                "worst_case": 0.037881219903691817
+              },
+              "replay_stale": {
+                "static": 0.037881219903691817,
+                "adaptive": 0.037881219903691817,
+                "worst_case": 0.037881219903691817
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.03278048780487805,
+              "congestion_spoof": {
+                "static": 0.03748231966053748,
+                "adaptive": 0.03748231966053748,
+                "worst_case": 0.03748231966053748
+              },
+              "replay_stale": {
+                "static": 0.03748231966053748,
+                "adaptive": 0.03748231966053748,
+                "worst_case": 0.03748231966053748
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.030016335420637082,
+              "congestion_spoof": {
+                "static": 0.04391514700409378,
+                "adaptive": 0.04391514700409378,
+                "worst_case": 0.04391514700409378
+              },
+              "replay_stale": {
+                "static": 0.04391514700409378,
+                "adaptive": 0.04391514700409378,
+                "worst_case": 0.04391514700409378
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.07568590350047304,
+                "adaptive": 0.07568590350047304,
+                "worst_case": 0.07568590350047304
+              },
+              "replay_stale": {
+                "static": 0.07568590350047304,
+                "adaptive": 0.07568590350047304,
+                "worst_case": 0.07568590350047304
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.048125,
+              "congestion_spoof": {
+                "static": 0.03658152002522864,
+                "adaptive": 0.03658152002522864,
+                "worst_case": 0.03658152002522864
+              },
+              "replay_stale": {
+                "static": 0.03658152002522864,
+                "adaptive": 0.03658152002522864,
+                "worst_case": 0.03658152002522864
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.04459238789096847,
+              "congestion_spoof": {
+                "static": 0.037881219903691817,
+                "adaptive": 0.037881219903691817,
+                "worst_case": 0.037881219903691817
+              },
+              "replay_stale": {
+                "static": 0.037881219903691817,
+                "adaptive": 0.037881219903691817,
+                "worst_case": 0.037881219903691817
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.03271544715447154,
+              "congestion_spoof": {
+                "static": 0.03748231966053748,
+                "adaptive": 0.03748231966053748,
+                "worst_case": 0.03748231966053748
+              },
+              "replay_stale": {
+                "static": 0.03748231966053748,
+                "adaptive": 0.03748231966053748,
+                "worst_case": 0.03748231966053748
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.030084399673291587,
+              "congestion_spoof": {
+                "static": 0.04389880952380952,
+                "adaptive": 0.04389880952380952,
+                "worst_case": 0.04389880952380952
+              },
+              "replay_stale": {
+                "static": 0.04389880952380952,
+                "adaptive": 0.04389880952380952,
+                "worst_case": 0.04389880952380952
+              }
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 5,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.06242118537200504,
+                "adaptive": 0.06242118537200504,
+                "worst_case": 0.06242118537200504
+              },
+              "replay_stale": {
+                "static": 0.06303183107469272,
+                "adaptive": 0.06303183107469272,
+                "worst_case": 0.06303183107469272
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.03405865657521287,
+                "adaptive": 0.03405865657521287,
+                "worst_case": 0.03405865657521287
+              },
+              "replay_stale": {
+                "static": 0.03467843631778058,
+                "adaptive": 0.03467843631778058,
+                "worst_case": 0.03467843631778058
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.045360306590437896,
+              "congestion_spoof": {
+                "static": 0.0352,
+                "adaptive": 0.0352,
+                "worst_case": 0.0352
+              },
+              "replay_stale": {
+                "static": 0.0352,
+                "adaptive": 0.0352,
+                "worst_case": 0.0352
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.03188028627195836,
+              "congestion_spoof": {
+                "static": 0.0361958836053939,
+                "adaptive": 0.0361958836053939,
+                "worst_case": 0.0361958836053939
+              },
+              "replay_stale": {
+                "static": 0.03689251507626818,
+                "adaptive": 0.03689251507626818,
+                "worst_case": 0.03689251507626818
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.02784569410486281,
+              "congestion_spoof": {
+                "static": 0.04455997029335314,
+                "adaptive": 0.04455997029335314,
+                "worst_case": 0.04455997029335314
+              },
+              "replay_stale": {
+                "static": 0.044543429844097995,
+                "adaptive": 0.044543429844097995,
+                "worst_case": 0.044543429844097995
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.06242118537200504,
+                "adaptive": 0.06242118537200504,
+                "worst_case": 0.06242118537200504
+              },
+              "replay_stale": {
+                "static": 0.06303183107469272,
+                "adaptive": 0.06303183107469272,
+                "worst_case": 0.06303183107469272
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.03405865657521287,
+                "adaptive": 0.03405865657521287,
+                "worst_case": 0.03405865657521287
+              },
+              "replay_stale": {
+                "static": 0.03467843631778058,
+                "adaptive": 0.03467843631778058,
+                "worst_case": 0.03467843631778058
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.045360306590437896,
+              "congestion_spoof": {
+                "static": 0.0352,
+                "adaptive": 0.0352,
+                "worst_case": 0.0352
+              },
+              "replay_stale": {
+                "static": 0.0352,
+                "adaptive": 0.0352,
+                "worst_case": 0.0352
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.03188028627195836,
+              "congestion_spoof": {
+                "static": 0.03689251507626818,
+                "adaptive": 0.03689251507626818,
+                "worst_case": 0.03689251507626818
+              },
+              "replay_stale": {
+                "static": 0.03689251507626818,
+                "adaptive": 0.03689251507626818,
+                "worst_case": 0.03689251507626818
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.02784569410486281,
+              "congestion_spoof": {
+                "static": 0.04452690166975881,
+                "adaptive": 0.04452690166975881,
+                "worst_case": 0.04452690166975881
+              },
+              "replay_stale": {
+                "static": 0.04452690166975881,
+                "adaptive": 0.04452690166975881,
+                "worst_case": 0.04452690166975881
+              }
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 6,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.07692307692307693,
+                "adaptive": 0.07692307692307693,
+                "worst_case": 0.07692307692307693
+              },
+              "replay_stale": {
+                "static": 0.07692307692307693,
+                "adaptive": 0.07692307692307693,
+                "worst_case": 0.07692307692307693
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.03090507726269316,
+                "adaptive": 0.03090507726269316,
+                "worst_case": 0.03090507726269316
+              },
+              "replay_stale": {
+                "static": 0.03090507726269316,
+                "adaptive": 0.03090507726269316,
+                "worst_case": 0.03090507726269316
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.04401054746358614,
+              "congestion_spoof": {
+                "static": 0.03465982028241335,
+                "adaptive": 0.03465982028241335,
+                "worst_case": 0.03465982028241335
+              },
+              "replay_stale": {
+                "static": 0.03529034327879371,
+                "adaptive": 0.03529034327879371,
+                "worst_case": 0.03529034327879371
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.03195721646122742,
+              "congestion_spoof": {
+                "static": 0.04731638418079096,
+                "adaptive": 0.04731638418079096,
+                "worst_case": 0.04731638418079096
+              },
+              "replay_stale": {
+                "static": 0.04662663369833981,
+                "adaptive": 0.04662663369833981,
+                "worst_case": 0.04662663369833981
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.030369058967724363,
+              "congestion_spoof": {
+                "static": 0.04951237809452363,
+                "adaptive": 0.04951237809452363,
+                "worst_case": 0.04951237809452363
+              },
+              "replay_stale": {
+                "static": 0.04878048780487805,
+                "adaptive": 0.04878048780487805,
+                "worst_case": 0.04878048780487805
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.07692307692307693,
+                "adaptive": 0.07692307692307693,
+                "worst_case": 0.07692307692307693
+              },
+              "replay_stale": {
+                "static": 0.07692307692307693,
+                "adaptive": 0.07692307692307693,
+                "worst_case": 0.07692307692307693
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.048125,
+              "congestion_spoof": {
+                "static": 0.03090507726269316,
+                "adaptive": 0.03090507726269316,
+                "worst_case": 0.03090507726269316
+              },
+              "replay_stale": {
+                "static": 0.03090507726269316,
+                "adaptive": 0.03090507726269316,
+                "worst_case": 0.03090507726269316
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.04394776494224008,
+              "congestion_spoof": {
+                "static": 0.03465982028241335,
+                "adaptive": 0.03465982028241335,
+                "worst_case": 0.03465982028241335
+              },
+              "replay_stale": {
+                "static": 0.03529034327879371,
+                "adaptive": 0.03529034327879371,
+                "worst_case": 0.03529034327879371
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.03195721646122742,
+              "congestion_spoof": {
+                "static": 0.047299682315566534,
+                "adaptive": 0.047299682315566534,
+                "worst_case": 0.047299682315566534
+              },
+              "replay_stale": {
+                "static": 0.046610169491525424,
+                "adaptive": 0.046610169491525424,
+                "worst_case": 0.046610169491525424
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.030437151028190113,
+              "congestion_spoof": {
+                "static": 0.04951237809452363,
+                "adaptive": 0.04951237809452363,
+                "worst_case": 0.04951237809452363
+              },
+              "replay_stale": {
+                "static": 0.04878048780487805,
+                "adaptive": 0.04878048780487805,
+                "worst_case": 0.04878048780487805
+              }
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 7,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.06490233144297416,
+                "adaptive": 0.06490233144297416,
+                "worst_case": 0.06490233144297416
+              },
+              "replay_stale": {
+                "static": 0.06429246769618657,
+                "adaptive": 0.06429246769618657,
+                "worst_case": 0.06429246769618657
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.03026481715006305,
+                "adaptive": 0.03026481715006305,
+                "worst_case": 0.03026481715006305
+              },
+              "replay_stale": {
+                "static": 0.029643645537685274,
+                "adaptive": 0.029643645537685274,
+                "worst_case": 0.029643645537685274
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.04459357752132464,
+              "congestion_spoof": {
+                "static": 0.0345378957467221,
+                "adaptive": 0.0345378957467221,
+                "worst_case": 0.0345378957467221
+              },
+              "replay_stale": {
+                "static": 0.03390914907229686,
+                "adaptive": 0.03390914907229686,
+                "worst_case": 0.03390914907229686
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.03236498342756872,
+              "congestion_spoof": {
+                "static": 0.03716690042075736,
+                "adaptive": 0.03716690042075736,
+                "worst_case": 0.03716690042075736
+              },
+              "replay_stale": {
+                "static": 0.03716690042075736,
+                "adaptive": 0.03716690042075736,
+                "worst_case": 0.03716690042075736
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.02801577587379301,
+              "congestion_spoof": {
+                "static": 0.041343669250646,
+                "adaptive": 0.041343669250646,
+                "worst_case": 0.041343669250646
+              },
+              "replay_stale": {
+                "static": 0.041343669250646,
+                "adaptive": 0.041343669250646,
+                "worst_case": 0.041343669250646
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.06490233144297416,
+                "adaptive": 0.06490233144297416,
+                "worst_case": 0.06490233144297416
+              },
+              "replay_stale": {
+                "static": 0.06429246769618657,
+                "adaptive": 0.06429246769618657,
+                "worst_case": 0.06429246769618657
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.048125,
+              "congestion_spoof": {
+                "static": 0.03026481715006305,
+                "adaptive": 0.03026481715006305,
+                "worst_case": 0.03026481715006305
+              },
+              "replay_stale": {
+                "static": 0.02965299684542587,
+                "adaptive": 0.02965299684542587,
+                "worst_case": 0.02965299684542587
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.04459357752132464,
+              "congestion_spoof": {
+                "static": 0.0345378957467221,
+                "adaptive": 0.0345378957467221,
+                "worst_case": 0.0345378957467221
+              },
+              "replay_stale": {
+                "static": 0.03390914907229686,
+                "adaptive": 0.03390914907229686,
+                "worst_case": 0.03390914907229686
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.03236498342756872,
+              "congestion_spoof": {
+                "static": 0.03716690042075736,
+                "adaptive": 0.03716690042075736,
+                "worst_case": 0.03716690042075736
+              },
+              "replay_stale": {
+                "static": 0.03716690042075736,
+                "adaptive": 0.03716690042075736,
+                "worst_case": 0.03716690042075736
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.02801577587379301,
+              "congestion_spoof": {
+                "static": 0.041343669250646,
+                "adaptive": 0.041343669250646,
+                "worst_case": 0.041343669250646
+              },
+              "replay_stale": {
+                "static": 0.041328413284132844,
+                "adaptive": 0.041328413284132844,
+                "worst_case": 0.041328413284132844
+              }
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 8,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.07248660573589663,
+                "adaptive": 0.07248660573589663,
+                "worst_case": 0.07248660573589663
+              },
+              "replay_stale": {
+                "static": 0.07187894073139975,
+                "adaptive": 0.07187894073139975,
+                "worst_case": 0.07187894073139975
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.039104383475244406,
+                "adaptive": 0.039104383475244406,
+                "worst_case": 0.039104383475244406
+              },
+              "replay_stale": {
+                "static": 0.039104383475244406,
+                "adaptive": 0.039104383475244406,
+                "worst_case": 0.039104383475244406
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.04492753623188406,
+              "congestion_spoof": {
+                "static": 0.03745560219567323,
+                "adaptive": 0.03745560219567323,
+                "worst_case": 0.03745560219567323
+              },
+              "replay_stale": {
+                "static": 0.03682170542635659,
+                "adaptive": 0.03682170542635659,
+                "worst_case": 0.03682170542635659
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.031684196857550966,
+              "congestion_spoof": {
+                "static": 0.04341736694677871,
+                "adaptive": 0.04341736694677871,
+                "worst_case": 0.04341736694677871
+              },
+              "replay_stale": {
+                "static": 0.04341736694677871,
+                "adaptive": 0.04341736694677871,
+                "worst_case": 0.04341736694677871
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.029077289751447053,
+              "congestion_spoof": {
+                "static": 0.046892445106066244,
+                "adaptive": 0.046892445106066244,
+                "worst_case": 0.046892445106066244
+              },
+              "replay_stale": {
+                "static": 0.046875,
+                "adaptive": 0.046875,
+                "worst_case": 0.046875
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.07248660573589663,
+                "adaptive": 0.07248660573589663,
+                "worst_case": 0.07248660573589663
+              },
+              "replay_stale": {
+                "static": 0.07248660573589663,
+                "adaptive": 0.07248660573589663,
+                "worst_case": 0.07248660573589663
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0481875,
+              "congestion_spoof": {
+                "static": 0.039116719242902206,
+                "adaptive": 0.039116719242902206,
+                "worst_case": 0.039116719242902206
+              },
+              "replay_stale": {
+                "static": 0.039116719242902206,
+                "adaptive": 0.039116719242902206,
+                "worst_case": 0.039116719242902206
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.04492753623188406,
+              "congestion_spoof": {
+                "static": 0.03745560219567323,
+                "adaptive": 0.03745560219567323,
+                "worst_case": 0.03745560219567323
+              },
+              "replay_stale": {
+                "static": 0.03745560219567323,
+                "adaptive": 0.03745560219567323,
+                "worst_case": 0.03745560219567323
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.031749123490455784,
+              "congestion_spoof": {
+                "static": 0.04341736694677871,
+                "adaptive": 0.04341736694677871,
+                "worst_case": 0.04341736694677871
+              },
+              "replay_stale": {
+                "static": 0.043402170108505424,
+                "adaptive": 0.043402170108505424,
+                "worst_case": 0.043402170108505424
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.029077289751447053,
+              "congestion_spoof": {
+                "static": 0.04685756786909632,
+                "adaptive": 0.04685756786909632,
+                "worst_case": 0.04685756786909632
+              },
+              "replay_stale": {
+                "static": 0.04685756786909632,
+                "adaptive": 0.04685756786909632,
+                "worst_case": 0.04685756786909632
+              }
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 4,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.055625,
+              "congestion_spoof": {
+                "static": 0.05019305019305019,
+                "adaptive": 0.05019305019305019,
+                "worst_case": 0.05019305019305019
+              },
+              "replay_stale": {
+                "static": 0.055652782639131954,
+                "adaptive": 0.055652782639131954,
+                "worst_case": 0.055652782639131954
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.055625,
+              "congestion_spoof": {
+                "static": 0.43675333801827126,
+                "adaptive": 0.43675333801827126,
+                "worst_case": 0.43675333801827126
+              },
+              "replay_stale": {
+                "static": 0.4393912891376596,
+                "adaptive": 0.4393912891376596,
+                "worst_case": 0.4393912891376596
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06324582338902147,
+              "congestion_spoof": {
+                "static": 0.44386331938633194,
+                "adaptive": 0.44386331938633194,
+                "worst_case": 0.44386331938633194
+              },
+              "replay_stale": {
+                "static": 0.4474187380497132,
+                "adaptive": 0.4474187380497132,
+                "worst_case": 0.4474187380497132
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.17333333333333334,
+              "congestion_spoof": {
+                "static": 0.3052232273125182,
+                "adaptive": 0.3052232273125182,
+                "worst_case": 0.3052232273125182
+              },
+              "replay_stale": {
+                "static": 0.3070418428342324,
+                "adaptive": 0.3070418428342324,
+                "worst_case": 0.3070418428342324
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.4631091750612578,
+              "congestion_spoof": {
+                "static": 0.23548387096774193,
+                "adaptive": 0.23548387096774193,
+                "worst_case": 0.23548387096774193
+              },
+              "replay_stale": {
+                "static": 0.24561403508771928,
+                "adaptive": 0.24561403508771928,
+                "worst_case": 0.24561403508771928
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0563125,
+              "congestion_spoof": {
+                "static": 0.05044666316342617,
+                "adaptive": 0.05044666316342617,
+                "worst_case": 0.05044666316342617
+              },
+              "replay_stale": {
+                "static": 0.05624454148471616,
+                "adaptive": 0.05624454148471616,
+                "worst_case": 0.05624454148471616
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.056125,
+              "congestion_spoof": {
+                "static": 0.436140350877193,
+                "adaptive": 0.436140350877193,
+                "worst_case": 0.436140350877193
+              },
+              "replay_stale": {
+                "static": 0.43904994760740484,
+                "adaptive": 0.43904994760740484,
+                "worst_case": 0.43904994760740484
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06368546664991835,
+              "congestion_spoof": {
+                "static": 0.4433995123650296,
+                "adaptive": 0.4433995123650296,
+                "worst_case": 0.4433995123650296
+              },
+              "replay_stale": {
+                "static": 0.446875,
+                "adaptive": 0.446875,
+                "worst_case": 0.446875
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.17346341463414633,
+              "congestion_spoof": {
+                "static": 0.30542590431738625,
+                "adaptive": 0.30542590431738625,
+                "worst_case": 0.30542590431738625
+              },
+              "replay_stale": {
+                "static": 0.30708661417322836,
+                "adaptive": 0.30708661417322836,
+                "worst_case": 0.30708661417322836
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.4631091750612578,
+              "congestion_spoof": {
+                "static": 0.23546153116402618,
+                "adaptive": 0.23546153116402618,
+                "worst_case": 0.23546153116402618
+              },
+              "replay_stale": {
+                "static": 0.2455908705083467,
+                "adaptive": 0.2455908705083467,
+                "worst_case": 0.2455908705083467
+              }
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 5,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.055625,
+              "congestion_spoof": {
+                "static": 0.03828591499824376,
+                "adaptive": 0.03828591499824376,
+                "worst_case": 0.03828591499824376
+              },
+              "replay_stale": {
+                "static": 0.04583624912526242,
+                "adaptive": 0.04583624912526242,
+                "worst_case": 0.04583624912526242
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.055625,
+              "congestion_spoof": {
+                "static": 0.43972626776627477,
+                "adaptive": 0.43972626776627477,
+                "worst_case": 0.43972626776627477
+              },
+              "replay_stale": {
+                "static": 0.4413309982486865,
+                "adaptive": 0.4413309982486865,
+                "worst_case": 0.4413309982486865
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06232330212979833,
+              "congestion_spoof": {
+                "static": 0.4505915100904663,
+                "adaptive": 0.4505915100904663,
+                "worst_case": 0.4505915100904663
+              },
+              "replay_stale": {
+                "static": 0.45293504689128167,
+                "adaptive": 0.45293504689128167,
+                "worst_case": 0.45293504689128167
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.17098243331164606,
+              "congestion_spoof": {
+                "static": 0.31011826544021026,
+                "adaptive": 0.31011826544021026,
+                "worst_case": 0.31011826544021026
+              },
+              "replay_stale": {
+                "static": 0.3131371977861928,
+                "adaptive": 0.3131371977861928,
+                "worst_case": 0.3131371977861928
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.46943765281173594,
+              "congestion_spoof": {
+                "static": 0.22195213163799551,
+                "adaptive": 0.22195213163799551,
+                "worst_case": 0.22195213163799551
+              },
+              "replay_stale": {
+                "static": 0.2331413709827234,
+                "adaptive": 0.2331413709827234,
+                "worst_case": 0.2331413709827234
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0563125,
+              "congestion_spoof": {
+                "static": 0.03896103896103896,
+                "adaptive": 0.03896103896103896,
+                "worst_case": 0.03896103896103896
+              },
+              "replay_stale": {
+                "static": 0.04612965228027258,
+                "adaptive": 0.04612965228027258,
+                "worst_case": 0.04612965228027258
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.056125,
+              "congestion_spoof": {
+                "static": 0.4385626643295355,
+                "adaptive": 0.4385626643295355,
+                "worst_case": 0.4385626643295355
+              },
+              "replay_stale": {
+                "static": 0.4407906244533846,
+                "adaptive": 0.4407906244533846,
+                "worst_case": 0.4407906244533846
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06295156122384872,
+              "congestion_spoof": {
+                "static": 0.45097357440890123,
+                "adaptive": 0.45097357440890123,
+                "worst_case": 0.45097357440890123
+              },
+              "replay_stale": {
+                "static": 0.45243055555555556,
+                "adaptive": 0.45243055555555556,
+                "worst_case": 0.45243055555555556
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.1711776187378009,
+              "congestion_spoof": {
+                "static": 0.31013858497447117,
+                "adaptive": 0.31013858497447117,
+                "worst_case": 0.31013858497447117
+              },
+              "replay_stale": {
+                "static": 0.3129548762736536,
+                "adaptive": 0.3129548762736536,
+                "worst_case": 0.3129548762736536
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.469573485465906,
+              "congestion_spoof": {
+                "static": 0.22195213163799551,
+                "adaptive": 0.22195213163799551,
+                "worst_case": 0.22195213163799551
+              },
+              "replay_stale": {
+                "static": 0.2331413709827234,
+                "adaptive": 0.2331413709827234,
+                "worst_case": 0.2331413709827234
+              }
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 6,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.055625,
+              "congestion_spoof": {
+                "static": 0.05226236408277797,
+                "adaptive": 0.05226236408277797,
+                "worst_case": 0.05226236408277797
+              },
+              "replay_stale": {
+                "static": 0.05567226890756303,
+                "adaptive": 0.05567226890756303,
+                "worst_case": 0.05567226890756303
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.055625,
+              "congestion_spoof": {
+                "static": 0.44339125855713535,
+                "adaptive": 0.44339125855713535,
+                "worst_case": 0.44339125855713535
+              },
+              "replay_stale": {
+                "static": 0.4461942257217848,
+                "adaptive": 0.4461942257217848,
+                "worst_case": 0.4461942257217848
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06309643395278755,
+              "congestion_spoof": {
+                "static": 0.42718109141466803,
+                "adaptive": 0.42718109141466803,
+                "worst_case": 0.42718109141466803
+              },
+              "replay_stale": {
+                "static": 0.4306999306999307,
+                "adaptive": 0.4306999306999307,
+                "worst_case": 0.4306999306999307
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.17165590556316443,
+              "congestion_spoof": {
+                "static": 0.3240863055922501,
+                "adaptive": 0.3240863055922501,
+                "worst_case": 0.3240863055922501
+              },
+              "replay_stale": {
+                "static": 0.3284543325526932,
+                "adaptive": 0.3284543325526932,
+                "worst_case": 0.3284543325526932
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.4739207408416179,
+              "congestion_spoof": {
+                "static": 0.23862029968900197,
+                "adaptive": 0.23862029968900197,
+                "worst_case": 0.23862029968900197
+              },
+              "replay_stale": {
+                "static": 0.2468348494795086,
+                "adaptive": 0.2468348494795086,
+                "worst_case": 0.2468348494795086
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0563125,
+              "congestion_spoof": {
+                "static": 0.05184795936241023,
+                "adaptive": 0.05184795936241023,
+                "worst_case": 0.05184795936241023
+              },
+              "replay_stale": {
+                "static": 0.05592450192240475,
+                "adaptive": 0.05592450192240475,
+                "worst_case": 0.05592450192240475
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.056125,
+              "congestion_spoof": {
+                "static": 0.4430024552788495,
+                "adaptive": 0.4430024552788495,
+                "worst_case": 0.4430024552788495
+              },
+              "replay_stale": {
+                "static": 0.4459979028311779,
+                "adaptive": 0.4459979028311779,
+                "worst_case": 0.4459979028311779
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06366147664490206,
+              "congestion_spoof": {
+                "static": 0.4268102101059212,
+                "adaptive": 0.4268102101059212,
+                "worst_case": 0.4268102101059212
+              },
+              "replay_stale": {
+                "static": 0.4302526825891312,
+                "adaptive": 0.4302526825891312,
+                "worst_case": 0.4302526825891312
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.1717863431813735,
+              "congestion_spoof": {
+                "static": 0.32315820369826825,
+                "adaptive": 0.32315820369826825,
+                "worst_case": 0.32315820369826825
+              },
+              "replay_stale": {
+                "static": 0.32826214160327677,
+                "adaptive": 0.32826214160327677,
+                "worst_case": 0.32826214160327677
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.4739207408416179,
+              "congestion_spoof": {
+                "static": 0.23859781379570297,
+                "adaptive": 0.23859781379570297,
+                "worst_case": 0.23859781379570297
+              },
+              "replay_stale": {
+                "static": 0.2468348494795086,
+                "adaptive": 0.2468348494795086,
+                "worst_case": 0.2468348494795086
+              }
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 7,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.055625,
+              "congestion_spoof": {
+                "static": 0.04602142982610223,
+                "adaptive": 0.04602142982610223,
+                "worst_case": 0.04602142982610223
+              },
+              "replay_stale": {
+                "static": 0.04842105263157895,
+                "adaptive": 0.04842105263157895,
+                "worst_case": 0.04842105263157895
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.055625,
+              "congestion_spoof": {
+                "static": 0.44608359676852827,
+                "adaptive": 0.44608359676852827,
+                "worst_case": 0.44608359676852827
+              },
+              "replay_stale": {
+                "static": 0.44756225885654155,
+                "adaptive": 0.44756225885654155,
+                "worst_case": 0.44756225885654155
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06309583542398395,
+              "congestion_spoof": {
+                "static": 0.44567665915785826,
+                "adaptive": 0.44567665915785826,
+                "worst_case": 0.44567665915785826
+              },
+              "replay_stale": {
+                "static": 0.4467128027681661,
+                "adaptive": 0.4467128027681661,
+                "worst_case": 0.4467128027681661
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.17475791252355885,
+              "congestion_spoof": {
+                "static": 0.3154381892048752,
+                "adaptive": 0.3154381892048752,
+                "worst_case": 0.3154381892048752
+              },
+              "replay_stale": {
+                "static": 0.31783282630740256,
+                "adaptive": 0.31783282630740256,
+                "worst_case": 0.31783282630740256
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.47076023391812866,
+              "congestion_spoof": {
+                "static": 0.2361728278339794,
+                "adaptive": 0.2361728278339794,
+                "worst_case": 0.2361728278339794
+              },
+              "replay_stale": {
+                "static": 0.24378765060240964,
+                "adaptive": 0.24378765060240964,
+                "worst_case": 0.24378765060240964
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0563125,
+              "congestion_spoof": {
+                "static": 0.04593267882187938,
+                "adaptive": 0.04593267882187938,
+                "worst_case": 0.04593267882187938
+              },
+              "replay_stale": {
+                "static": 0.04935246762338117,
+                "adaptive": 0.04935246762338117,
+                "worst_case": 0.04935246762338117
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.0560625,
+              "congestion_spoof": {
+                "static": 0.44565217391304346,
+                "adaptive": 0.44565217391304346,
+                "worst_case": 0.44565217391304346
+              },
+              "replay_stale": {
+                "static": 0.4473223661183059,
+                "adaptive": 0.4473223661183059,
+                "worst_case": 0.4473223661183059
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06322127446061214,
+              "congestion_spoof": {
+                "static": 0.4455222587909233,
+                "adaptive": 0.4455222587909233,
+                "worst_case": 0.4455222587909233
+              },
+              "replay_stale": {
+                "static": 0.4467496542185339,
+                "adaptive": 0.4467496542185339,
+                "worst_case": 0.4467496542185339
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.17482290245012022,
+              "congestion_spoof": {
+                "static": 0.31530094271211023,
+                "adaptive": 0.31530094271211023,
+                "worst_case": 0.31530094271211023
+              },
+              "replay_stale": {
+                "static": 0.31774076755973935,
+                "adaptive": 0.31774076755973935,
+                "worst_case": 0.31774076755973935
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.4709642322861417,
+              "congestion_spoof": {
+                "static": 0.23615050103989413,
+                "adaptive": 0.23615050103989413,
+                "worst_case": 0.23615050103989413
+              },
+              "replay_stale": {
+                "static": 0.24378765060240964,
+                "adaptive": 0.24378765060240964,
+                "worst_case": 0.24378765060240964
+              }
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 8,
+          "results": {
+            "divergence=false/ideal": {
+              "benign_fpr": 0.055625,
+              "congestion_spoof": {
+                "static": 0.04559004032965106,
+                "adaptive": 0.04559004032965106,
+                "worst_case": 0.04559004032965106
+              },
+              "replay_stale": {
+                "static": 0.0510578772512677,
+                "adaptive": 0.0510578772512677,
+                "worst_case": 0.0510578772512677
+              }
+            },
+            "divergence=false/hrllc": {
+              "benign_fpr": 0.055625,
+              "congestion_spoof": {
+                "static": 0.44276685393258425,
+                "adaptive": 0.44276685393258425,
+                "worst_case": 0.44276685393258425
+              },
+              "replay_stale": {
+                "static": 0.4448722436121806,
+                "adaptive": 0.4448722436121806,
+                "worst_case": 0.4448722436121806
+              }
+            },
+            "divergence=false/lossy": {
+              "benign_fpr": 0.06156269691241336,
+              "congestion_spoof": {
+                "static": 0.4375768217734855,
+                "adaptive": 0.4375768217734855,
+                "worst_case": 0.4375768217734855
+              },
+              "replay_stale": {
+                "static": 0.4380150797825706,
+                "adaptive": 0.4380150797825706,
+                "worst_case": 0.4380150797825706
+              }
+            },
+            "divergence=false/degraded": {
+              "benign_fpr": 0.17471756914686404,
+              "congestion_spoof": {
+                "static": 0.30715532286212915,
+                "adaptive": 0.30715532286212915,
+                "worst_case": 0.30715532286212915
+              },
+              "replay_stale": {
+                "static": 0.30854154561301567,
+                "adaptive": 0.30854154561301567,
+                "worst_case": 0.30854154561301567
+              }
+            },
+            "divergence=false/severe": {
+              "benign_fpr": 0.4742254000680967,
+              "congestion_spoof": {
+                "static": 0.23543757621236283,
+                "adaptive": 0.23543757621236283,
+                "worst_case": 0.23543757621236283
+              },
+              "replay_stale": {
+                "static": 0.24676171838598454,
+                "adaptive": 0.24676171838598454,
+                "worst_case": 0.24676171838598454
+              }
+            },
+            "divergence=true/ideal": {
+              "benign_fpr": 0.0563125,
+              "congestion_spoof": {
+                "static": 0.04587637891787778,
+                "adaptive": 0.04587637891787778,
+                "worst_case": 0.04587637891787778
+              },
+              "replay_stale": {
+                "static": 0.05133577789418544,
+                "adaptive": 0.05133577789418544,
+                "worst_case": 0.05133577789418544
+              }
+            },
+            "divergence=true/hrllc": {
+              "benign_fpr": 0.056,
+              "congestion_spoof": {
+                "static": 0.4421458625525947,
+                "adaptive": 0.4421458625525947,
+                "worst_case": 0.4421458625525947
+              },
+              "replay_stale": {
+                "static": 0.44467750393287886,
+                "adaptive": 0.44467750393287886,
+                "worst_case": 0.44467750393287886
+              }
+            },
+            "divergence=true/lossy": {
+              "benign_fpr": 0.06206679269061122,
+              "congestion_spoof": {
+                "static": 0.4373136945467298,
+                "adaptive": 0.4373136945467298,
+                "worst_case": 0.4373136945467298
+              },
+              "replay_stale": {
+                "static": 0.4374015058658729,
+                "adaptive": 0.4374015058658729,
+                "worst_case": 0.4374015058658729
+              }
+            },
+            "divergence=true/degraded": {
+              "benign_fpr": 0.1749123490455785,
+              "congestion_spoof": {
+                "static": 0.30715532286212915,
+                "adaptive": 0.30715532286212915,
+                "worst_case": 0.30715532286212915
+              },
+              "replay_stale": {
+                "static": 0.3086312118570183,
+                "adaptive": 0.3086312118570183,
+                "worst_case": 0.3086312118570183
+              }
+            },
+            "divergence=true/severe": {
+              "benign_fpr": 0.4742254000680967,
+              "congestion_spoof": {
+                "static": 0.2353934164869174,
+                "adaptive": 0.2353934164869174,
+                "worst_case": 0.2353934164869174
+              },
+              "replay_stale": {
+                "static": 0.24655236675363398,
+                "adaptive": 0.24655236675363398,
+                "worst_case": 0.24655236675363398
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

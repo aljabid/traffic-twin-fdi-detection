@@ -1,0 +1,27 @@
+{
+  "isolation_forest": {
+    "train_one_detector_s": 5.70460210001329,
+    "avds_rehearsal_s": 23.050127099995734,
+    "ratio": 4.040619607797367
+  },
+  "lof": {
+    "train_one_detector_s": 33.549193000013474,
+    "avds_rehearsal_s": 69.55330070000491,
+    "ratio": 2.073173584234261
+  },
+  "mahalanobis": {
+    "train_one_detector_s": 7.555101800011471,
+    "avds_rehearsal_s": 16.247703400003957,
+    "ratio": 2.1505604861577496
+  },
+  "autoencoder": {
+    "train_one_detector_s": 13.932635200006189,
+    "avds_rehearsal_s": 34.1083770999976,
+    "ratio": 2.448092310633558
+  },
+  "ewma_residual": {
+    "train_one_detector_s": 0.6905138999863993,
+    "avds_rehearsal_s": 4.784703699988313,
+    "ratio": 6.929192446498984
+  }
+}

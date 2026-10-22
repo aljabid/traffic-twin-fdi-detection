@@ -1,0 +1,2478 @@
+{
+  "experiment": "avds_baselines",
+  "generated_at": "2026-10-02T05:53:03.050933+00:00",
+  "seeds": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "attacks": [
+    "congestion_spoof",
+    "clear_road_spoof",
+    "drift_congestion",
+    "replay_stale"
+  ],
+  "datasets": {
+    "sumo": {
+      "units": [
+        {
+          "model": "isolation_forest",
+          "seed": 4,
+          "clean_validation_fpr": {
+            "false": 0.025235531628532974,
+            "true": 0.02708613728129206
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.6858372456964006,
+              "adaptive": 0.6868369351669941,
+              "worst_case": 0.6858372456964006
+            },
+            "clear_road_spoof": {
+              "static": 0.44186597205777883,
+              "adaptive": 0.39019607843137255,
+              "worst_case": 0.39019607843137255
+            },
+            "drift_congestion": {
+              "static": 0.4448624500352692,
+              "adaptive": 0.4453860640301318,
+              "worst_case": 0.4448624500352692
+            },
+            "replay_stale": {
+              "static": 0.25040042712226374,
+              "adaptive": 0.24638457418318158,
+              "worst_case": 0.24638457418318158
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.6703910614525139,
+              "adaptive": 0.6666666666666666
+            },
+            "clear_road_spoof": {
+              "static": 0.4737192282102462,
+              "adaptive": 0.4750499001996008
+            },
+            "drift_congestion": {
+              "static": 0.4695879659908437,
+              "adaptive": 0.4661851608667104
+            },
+            "replay_stale": {
+              "static": 0.24717407686510928,
+              "adaptive": 0.23805913570887036
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 5,
+          "clean_validation_fpr": {
+            "false": 0.02557200538358008,
+            "true": 0.027759084791386272
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.6738916256157635,
+              "adaptive": 0.6718192627824019,
+              "worst_case": 0.6718192627824019
+            },
+            "clear_road_spoof": {
+              "static": 0.5041589648798521,
+              "adaptive": 0.5018518518518519,
+              "worst_case": 0.5018518518518519
+            },
+            "drift_congestion": {
+              "static": 0.42488038277511964,
+              "adaptive": 0.42204042348411935,
+              "worst_case": 0.42204042348411935
+            },
+            "replay_stale": {
+              "static": 0.25690021231422505,
+              "adaptive": 0.2517333333333333,
+              "worst_case": 0.2517333333333333
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.7002710027100271,
+              "adaptive": 0.6976998904709748
+            },
+            "clear_road_spoof": {
+              "static": 0.5432722678458622,
+              "adaptive": 0.5423514538558787
+            },
+            "drift_congestion": {
+              "static": 0.4544859201047806,
+              "adaptive": 0.44825313117996046
+            },
+            "replay_stale": {
+              "static": 0.2352081811541271,
+              "adaptive": 0.2276064610866373
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 6,
+          "clean_validation_fpr": {
+            "false": 0.028936742934051143,
+            "true": 0.026749663526244954
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.677547770700637,
+              "adaptive": 0.6766947452868031,
+              "worst_case": 0.6766947452868031
+            },
+            "clear_road_spoof": {
+              "static": 0.4433261442607237,
+              "adaptive": 0.44241842610364684,
+              "worst_case": 0.44241842610364684
+            },
+            "drift_congestion": {
+              "static": 0.4321751546882437,
+              "adaptive": 0.43037974683544306,
+              "worst_case": 0.43037974683544306
+            },
+            "replay_stale": {
+              "static": 0.25153538050734314,
+              "adaptive": 0.24886272411024887,
+              "worst_case": 0.24886272411024887
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.6812570145903479,
+              "adaptive": 0.6809712027103332
+            },
+            "clear_road_spoof": {
+              "static": 0.45047489823609227,
+              "adaptive": 0.38075017692852087
+            },
+            "drift_congestion": {
+              "static": 0.4207650273224044,
+              "adaptive": 0.41569167240192706
+            },
+            "replay_stale": {
+              "static": 0.1989121989121989,
+              "adaptive": 0.19751166407465007
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 7,
+          "clean_validation_fpr": {
+            "false": 0.026917900403768506,
+            "true": 0.026749663526244954
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.6419955019423431,
+              "adaptive": 0.64181855416752,
+              "worst_case": 0.64181855416752
+            },
+            "clear_road_spoof": {
+              "static": 0.4702866464693545,
+              "adaptive": 0.4607797087834664,
+              "worst_case": 0.4607797087834664
+            },
+            "drift_congestion": {
+              "static": 0.39023199023199023,
+              "adaptive": 0.3872549019607843,
+              "worst_case": 0.3872549019607843
+            },
+            "replay_stale": {
+              "static": 0.24874038716520816,
+              "adaptive": 0.24807436918990705,
+              "worst_case": 0.24807436918990705
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.6624641833810888,
+              "adaptive": 0.6647432198499712
+            },
+            "clear_road_spoof": {
+              "static": 0.502283105022831,
+              "adaptive": 0.4450474898236092
+            },
+            "drift_congestion": {
+              "static": 0.435723951285521,
+              "adaptive": 0.4388586956521739
+            },
+            "replay_stale": {
+              "static": 0.21011673151750973,
+              "adaptive": 0.20172009382329945
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 8,
+          "clean_validation_fpr": {
+            "false": 0.0265814266487214,
+            "true": 0.027422611036339164
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.62267620020429,
+              "adaptive": 0.6229710293815492,
+              "worst_case": 0.62267620020429
+            },
+            "clear_road_spoof": {
+              "static": 0.45234172746528595,
+              "adaptive": 0.45234172746528595,
+              "worst_case": 0.45234172746528595
+            },
+            "drift_congestion": {
+              "static": 0.3836754643206256,
+              "adaptive": 0.38305167768797455,
+              "worst_case": 0.38305167768797455
+            },
+            "replay_stale": {
+              "static": 0.26109797741003415,
+              "adaptive": 0.25757176718461944,
+              "worst_case": 0.25757176718461944
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.6977509599561162,
+              "adaptive": 0.6962305986696231
+            },
+            "clear_road_spoof": {
+              "static": 0.4737192282102462,
+              "adaptive": 0.37420269312544296
+            },
+            "drift_congestion": {
+              "static": 0.4487094639311714,
+              "adaptive": 0.4469646430953969
+            },
+            "replay_stale": {
+              "static": 0.2287878787878788,
+              "adaptive": 0.22239146991622238
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 9,
+          "clean_validation_fpr": {
+            "false": 0.02860026917900404,
+            "true": 0.02759084791386272
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.6369529983792545,
+              "adaptive": 0.6353805345847786,
+              "worst_case": 0.6353805345847786
+            },
+            "clear_road_spoof": {
+              "static": 0.42535885167464116,
+              "adaptive": 0.4250837721397798,
+              "worst_case": 0.4250837721397798
+            },
+            "drift_congestion": {
+              "static": 0.4018264840182648,
+              "adaptive": 0.39990352146647373,
+              "worst_case": 0.39990352146647373
+            },
+            "replay_stale": {
+              "static": 0.21859094562014467,
+              "adaptive": 0.21493820526598603,
+              "worst_case": 0.21493820526598603
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.6986899563318777,
+              "adaptive": 0.697136563876652
+            },
+            "clear_road_spoof": {
+              "static": 0.4654255319148936,
+              "adaptive": 0.4654255319148936
+            },
+            "drift_congestion": {
+              "static": 0.49165596919127086,
+              "adaptive": 0.4864516129032258
+            },
+            "replay_stale": {
+              "static": 0.18463925523661753,
+              "adaptive": 0.1791277258566978
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 10,
+          "clean_validation_fpr": {
+            "false": 0.02759084791386272,
+            "true": 0.02708613728129206
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.6723522411741373,
+              "adaptive": 0.6742378959952182,
+              "worst_case": 0.6723522411741373
+            },
+            "clear_road_spoof": {
+              "static": 0.5096965548710929,
+              "adaptive": 0.4329649207111965,
+              "worst_case": 0.4329649207111965
+            },
+            "drift_congestion": {
+              "static": 0.4183037853378055,
+              "adaptive": 0.4164462611204616,
+              "worst_case": 0.4164462611204616
+            },
+            "replay_stale": {
+              "static": 0.25563511005038453,
+              "adaptive": 0.24552975713904457,
+              "worst_case": 0.24552975713904457
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.6674298797939324,
+              "adaptive": 0.6655172413793103
+            },
+            "clear_road_spoof": {
+              "static": 0.37259100642398285,
+              "adaptive": 0.34662799129804206
+            },
+            "drift_congestion": {
+              "static": 0.398884239888424,
+              "adaptive": 0.3991625959525471
+            },
+            "replay_stale": {
+              "static": 0.18541996830427893,
+              "adaptive": 0.17965023847376788
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 11,
+          "clean_validation_fpr": {
+            "false": 0.027927321668909825,
+            "true": 0.0265814266487214
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.6534252128090798,
+              "adaptive": 0.6529615306330144,
+              "worst_case": 0.6529615306330144
+            },
+            "clear_road_spoof": {
+              "static": 0.44712562100780695,
+              "adaptive": 0.44696969696969696,
+              "worst_case": 0.44696969696969696
+            },
+            "drift_congestion": {
+              "static": 0.4238346948582412,
+              "adaptive": 0.4230028873917228,
+              "worst_case": 0.4230028873917228
+            },
+            "replay_stale": {
+              "static": 0.27210526315789474,
+              "adaptive": 0.2679324894514768,
+              "worst_case": 0.2679324894514768
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.6823529411764706,
+              "adaptive": 0.6794582392776524
+            },
+            "clear_road_spoof": {
+              "static": 0.47074468085106386,
+              "adaptive": 0.4697272122421823
+            },
+            "drift_congestion": {
+              "static": 0.4126113776559287,
+              "adaptive": 0.4088093599449415
+            },
+            "replay_stale": {
+              "static": 0.2084942084942085,
+              "adaptive": 0.20202020202020202
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 12,
+          "clean_validation_fpr": {
+            "false": 0.02489905787348587,
+            "true": 0.02708613728129206
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.6697487437185929,
+              "adaptive": 0.6703030303030303,
+              "worst_case": 0.6697487437185929
+            },
+            "clear_road_spoof": {
+              "static": 0.4465272770968517,
+              "adaptive": 0.42679658952496957,
+              "worst_case": 0.42679658952496957
+            },
+            "drift_congestion": {
+              "static": 0.43243243243243246,
+              "adaptive": 0.430784123910939,
+              "worst_case": 0.430784123910939
+            },
+            "replay_stale": {
+              "static": 0.25006707807888384,
+              "adaptive": 0.23688480259599784,
+              "worst_case": 0.23688480259599784
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.6954643628509719,
+              "adaptive": 0.6959826275787188
+            },
+            "clear_road_spoof": {
+              "static": 0.49706457925636005,
+              "adaptive": 0.49476439790575916
+            },
+            "drift_congestion": {
+              "static": 0.4577373211963589,
+              "adaptive": 0.45418848167539266
+            },
+            "replay_stale": {
+              "static": 0.1926961926961927,
+              "adaptive": 0.18988326848249026
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 13,
+          "clean_validation_fpr": {
+            "false": 0.025908479138627188,
+            "true": 0.02708613728129206
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.6561058752757168,
+              "adaptive": 0.6564206268958545,
+              "worst_case": 0.6561058752757168
+            },
+            "clear_road_spoof": {
+              "static": 0.35780974009588695,
+              "adaptive": 0.34738445911630267,
+              "worst_case": 0.34738445911630267
+            },
+            "drift_congestion": {
+              "static": 0.4280601288475304,
+              "adaptive": 0.42696629213483145,
+              "worst_case": 0.42696629213483145
+            },
+            "replay_stale": {
+              "static": 0.2691292875989446,
+              "adaptive": 0.2646202699126753,
+              "worst_case": 0.2646202699126753
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.6943062465450525,
+              "adaptive": 0.6948304613674263
+            },
+            "clear_road_spoof": {
+              "static": 0.4445945945945946,
+              "adaptive": 0.3050847457627119
+            },
+            "drift_congestion": {
+              "static": 0.4533333333333333,
+              "adaptive": 0.4497991967871486
+            },
+            "replay_stale": {
+              "static": 0.21543162719633308,
+              "adaptive": 0.2085889570552147
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 4,
+          "clean_validation_fpr": {
+            "false": 0.024057873485868103,
+            "true": 0.024730820995962317
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.35096582466567605,
+              "adaptive": 0.34989586432609343,
+              "worst_case": 0.34989586432609343
+            },
+            "clear_road_spoof": {
+              "static": 0.210645894190198,
+              "adaptive": 0.2094835985709646,
+              "worst_case": 0.2094835985709646
+            },
+            "drift_congestion": {
+              "static": 0.21327319587628865,
+              "adaptive": 0.2136986301369863,
+              "worst_case": 0.21327319587628865
+            },
+            "replay_stale": {
+              "static": 0.32604735883424407,
+              "adaptive": 0.3288458629556799,
+              "worst_case": 0.32604735883424407
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.35784313725490197,
+              "adaptive": 0.35731807031888796
+            },
+            "clear_road_spoof": {
+              "static": 0.20850111856823267,
+              "adaptive": 0.2058165548098434
+            },
+            "drift_congestion": {
+              "static": 0.2103386809269162,
+              "adaptive": 0.20954079358002675
+            },
+            "replay_stale": {
+              "static": 0.3133951137320977,
+              "adaptive": 0.3183536329273415
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 5,
+          "clean_validation_fpr": {
+            "false": 0.025740242261103635,
+            "true": 0.02557200538358008
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.38735062663946374,
+              "adaptive": 0.38671135072125895,
+              "worst_case": 0.38671135072125895
+            },
+            "clear_road_spoof": {
+              "static": 0.2649653434152489,
+              "adaptive": 0.263597666719218,
+              "worst_case": 0.263597666719218
+            },
+            "drift_congestion": {
+              "static": 0.2317034196228827,
+              "adaptive": 0.230892228973457,
+              "worst_case": 0.230892228973457
+            },
+            "replay_stale": {
+              "static": 0.33186979560938684,
+              "adaptive": 0.328435085593092,
+              "worst_case": 0.328435085593092
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.4144996059889677,
+              "adaptive": 0.4135753749013418
+            },
+            "clear_road_spoof": {
+              "static": 0.270293609671848,
+              "adaptive": 0.26931376780319377
+            },
+            "drift_congestion": {
+              "static": 0.2306338028169014,
+              "adaptive": 0.2307353588727433
+            },
+            "replay_stale": {
+              "static": 0.30123037759864235,
+              "adaptive": 0.2968949383241174
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 6,
+          "clean_validation_fpr": {
+            "false": 0.025740242261103635,
+            "true": 0.02489905787348587
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.370781592403214,
+              "adaptive": 0.3695143358689292,
+              "worst_case": 0.3695143358689292
+            },
+            "clear_road_spoof": {
+              "static": 0.19983779399837795,
+              "adaptive": 0.19983779399837795,
+              "worst_case": 0.19983779399837795
+            },
+            "drift_congestion": {
+              "static": 0.21981177221247408,
+              "adaptive": 0.2187450103784129,
+              "worst_case": 0.2187450103784129
+            },
+            "replay_stale": {
+              "static": 0.2980488554309418,
+              "adaptive": 0.2988364972443356,
+              "worst_case": 0.2980488554309418
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.3689947517157852,
+              "adaptive": 0.36848484848484847
+            },
+            "clear_road_spoof": {
+              "static": 0.19569120287253142,
+              "adaptive": 0.19389587073608616
+            },
+            "drift_congestion": {
+              "static": 0.201246660730187,
+              "adaptive": 0.19964349376114082
+            },
+            "replay_stale": {
+              "static": 0.3033375580904098,
+              "adaptive": 0.30464135021097044
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 7,
+          "clean_validation_fpr": {
+            "false": 0.02557200538358008,
+            "true": 0.024730820995962317
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.25204531151667714,
+              "adaptive": 0.24584717607973422,
+              "worst_case": 0.24584717607973422
+            },
+            "clear_road_spoof": {
+              "static": 0.2952792348040728,
+              "adaptive": 0.29523368810735773,
+              "worst_case": 0.29523368810735773
+            },
+            "drift_congestion": {
+              "static": 0.1650951199338296,
+              "adaptive": 0.1636303411725737,
+              "worst_case": 0.1636303411725737
+            },
+            "replay_stale": {
+              "static": 0.32565889124507724,
+              "adaptive": 0.3117557251908397,
+              "worst_case": 0.3117557251908397
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.23838737949167396,
+              "adaptive": 0.2339489885664028
+            },
+            "clear_road_spoof": {
+              "static": 0.3100971694127588,
+              "adaptive": 0.293015332197615
+            },
+            "drift_congestion": {
+              "static": 0.16285452881976212,
+              "adaptive": 0.16537231612608497
+            },
+            "replay_stale": {
+              "static": 0.2778494623655914,
+              "adaptive": 0.26418362927674316
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 8,
+          "clean_validation_fpr": {
+            "false": 0.024730820995962317,
+            "true": 0.025235531628532974
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.3805774278215223,
+              "adaptive": 0.3805077327108258,
+              "worst_case": 0.3805077327108258
+            },
+            "clear_road_spoof": {
+              "static": 0.2601165170839238,
+              "adaptive": 0.2595275590551181,
+              "worst_case": 0.2595275590551181
+            },
+            "drift_congestion": {
+              "static": 0.22648139274876217,
+              "adaptive": 0.225383631713555,
+              "worst_case": 0.225383631713555
+            },
+            "replay_stale": {
+              "static": 0.336248492159228,
+              "adaptive": 0.3279975838115373,
+              "worst_case": 0.3279975838115373
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.41273584905660377,
+              "adaptive": 0.4125984251968504
+            },
+            "clear_road_spoof": {
+              "static": 0.26007802340702213,
+              "adaptive": 0.25985275010827197
+            },
+            "drift_congestion": {
+              "static": 0.24585876198779424,
+              "adaptive": 0.24520069808027922
+            },
+            "replay_stale": {
+              "static": 0.3032094594594595,
+              "adaptive": 0.3010570824524313
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 9,
+          "clean_validation_fpr": {
+            "false": 0.026917900403768506,
+            "true": 0.024730820995962317
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.40615561628074215,
+              "adaptive": 0.40558032503955127,
+              "worst_case": 0.40558032503955127
+            },
+            "clear_road_spoof": {
+              "static": 0.29167955459325706,
+              "adaptive": 0.29167955459325706,
+              "worst_case": 0.29167955459325706
+            },
+            "drift_congestion": {
+              "static": 0.2419431655818384,
+              "adaptive": 0.24218378035232502,
+              "worst_case": 0.2419431655818384
+            },
+            "replay_stale": {
+              "static": 0.3478391356542617,
+              "adaptive": 0.34240192394408536,
+              "worst_case": 0.34240192394408536
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.40961008270972826,
+              "adaptive": 0.408356326369728
+            },
+            "clear_road_spoof": {
+              "static": 0.2707348517404383,
+              "adaptive": 0.2691315563198624
+            },
+            "drift_congestion": {
+              "static": 0.23544857768052516,
+              "adaptive": 0.23467600700525393
+            },
+            "replay_stale": {
+              "static": 0.31021437578814626,
+              "adaptive": 0.30366933783213834
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 10,
+          "clean_validation_fpr": {
+            "false": 0.02759084791386272,
+            "true": 0.02506729475100942
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.39596541786743517,
+              "adaptive": 0.3953857245854362,
+              "worst_case": 0.3953857245854362
+            },
+            "clear_road_spoof": {
+              "static": 0.30630354957160344,
+              "adaptive": 0.30500689021589344,
+              "worst_case": 0.30500689021589344
+            },
+            "drift_congestion": {
+              "static": 0.23222522665818354,
+              "adaptive": 0.23229912490055687,
+              "worst_case": 0.23222522665818354
+            },
+            "replay_stale": {
+              "static": 0.33252866626433314,
+              "adaptive": 0.32759661835748793,
+              "worst_case": 0.32759661835748793
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.3793103448275862,
+              "adaptive": 0.37670682730923694
+            },
+            "clear_road_spoof": {
+              "static": 0.30269814502529513,
+              "adaptive": 0.29970451667370196
+            },
+            "drift_congestion": {
+              "static": 0.22202643171806166,
+              "adaptive": 0.22437307523097227
+            },
+            "replay_stale": {
+              "static": 0.32542655014565125,
+              "adaptive": 0.3191311612364244
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 11,
+          "clean_validation_fpr": {
+            "false": 0.026749663526244954,
+            "true": 0.02489905787348587
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.35271432809255415,
+              "adaptive": 0.3530633437175493,
+              "worst_case": 0.35271432809255415
+            },
+            "clear_road_spoof": {
+              "static": 0.21098687408847835,
+              "adaptive": 0.35076187630714073,
+              "worst_case": 0.21098687408847835
+            },
+            "drift_congestion": {
+              "static": 0.21614667095529108,
+              "adaptive": 0.21672025723472668,
+              "worst_case": 0.21614667095529108
+            },
+            "replay_stale": {
+              "static": 0.3069838833461243,
+              "adaptive": 0.31564501372369624,
+              "worst_case": 0.3069838833461243
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.36407964242177976,
+              "adaptive": 0.36274908499389996
+            },
+            "clear_road_spoof": {
+              "static": 0.23110720562390158,
+              "adaptive": 0.23266022827041263
+            },
+            "drift_congestion": {
+              "static": 0.20499108734402852,
+              "adaptive": 0.20499108734402852
+            },
+            "replay_stale": {
+              "static": 0.2887563884156729,
+              "adaptive": 0.29745762711864404
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 12,
+          "clean_validation_fpr": {
+            "false": 0.027422611036339164,
+            "true": 0.02456258411843876
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.3634762184380505,
+              "adaptive": 0.363689776733255,
+              "worst_case": 0.3634762184380505
+            },
+            "clear_road_spoof": {
+              "static": 0.2140899564726745,
+              "adaptive": 0.21178369652945925,
+              "worst_case": 0.21178369652945925
+            },
+            "drift_congestion": {
+              "static": 0.21245186136071886,
+              "adaptive": 0.2108646737383478,
+              "worst_case": 0.2108646737383478
+            },
+            "replay_stale": {
+              "static": 0.3008903899293829,
+              "adaptive": 0.31340331659820475,
+              "worst_case": 0.3008903899293829
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.3936633663366337,
+              "adaptive": 0.39333862014274384
+            },
+            "clear_road_spoof": {
+              "static": 0.20622222222222222,
+              "adaptive": 0.20293724966622162
+            },
+            "drift_congestion": {
+              "static": 0.2275711159737418,
+              "adaptive": 0.2283464566929134
+            },
+            "replay_stale": {
+              "static": 0.2674667809687098,
+              "adaptive": 0.27327070879590093
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 13,
+          "clean_validation_fpr": {
+            "false": 0.025740242261103635,
+            "true": 0.024730820995962317
+          },
+          "clean_choice": true,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.2581555834378921,
+              "adaptive": 0.24719456298403666,
+              "worst_case": 0.24719456298403666
+            },
+            "clear_road_spoof": {
+              "static": 0.3106083766432284,
+              "adaptive": 0.25485551871151113,
+              "worst_case": 0.25485551871151113
+            },
+            "drift_congestion": {
+              "static": 0.18366344737272877,
+              "adaptive": 0.17442817179529374,
+              "worst_case": 0.17442817179529374
+            },
+            "replay_stale": {
+              "static": 0.3261100166691923,
+              "adaptive": 0.3072916666666667,
+              "worst_case": 0.3072916666666667
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.2579244463742944,
+              "adaptive": 0.25943600867678956
+            },
+            "clear_road_spoof": {
+              "static": 0.31432192648922685,
+              "adaptive": 0.2621951219512195
+            },
+            "drift_congestion": {
+              "static": 0.19865168539325842,
+              "adaptive": 0.17900954111767378
+            },
+            "replay_stale": {
+              "static": 0.3086053412462908,
+              "adaptive": 0.2962014511310286
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 4,
+          "clean_validation_fpr": {
+            "false": 0.06342530282637954,
+            "true": 0.06561238223418574
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.4382921127107174,
+              "adaptive": 0.42676767676767674,
+              "worst_case": 0.42676767676767674
+            },
+            "clear_road_spoof": {
+              "static": 0.4437604924454393,
+              "adaptive": 0.4291166077738516,
+              "worst_case": 0.4291166077738516
+            },
+            "drift_congestion": {
+              "static": 0.43637762955361725,
+              "adaptive": 0.3875989800026842,
+              "worst_case": 0.3875989800026842
+            },
+            "replay_stale": {
+              "static": 0.4118316268486917,
+              "adaptive": 0.3677353242570634,
+              "worst_case": 0.3677353242570634
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.4534803583735355,
+              "adaptive": 0.4565826330532213
+            },
+            "clear_road_spoof": {
+              "static": 0.43455497382198954,
+              "adaptive": 0.4036627241510874
+            },
+            "drift_congestion": {
+              "static": 0.4034212401995723,
+              "adaptive": 0.3548748599178185
+            },
+            "replay_stale": {
+              "static": 0.3934687375547591,
+              "adaptive": 0.32737847943498133
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 5,
+          "clean_validation_fpr": {
+            "false": 0.06342530282637954,
+            "true": 0.06561238223418574
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.43846622032866706,
+              "adaptive": 0.4325207338527268,
+              "worst_case": 0.4325207338527268
+            },
+            "clear_road_spoof": {
+              "static": 0.44352617079889806,
+              "adaptive": 0.42552598578793366,
+              "worst_case": 0.42552598578793366
+            },
+            "drift_congestion": {
+              "static": 0.4318962228157192,
+              "adaptive": 0.3807620570210498,
+              "worst_case": 0.3807620570210498
+            },
+            "replay_stale": {
+              "static": 0.4073761261261261,
+              "adaptive": 0.3682539682539683,
+              "worst_case": 0.3682539682539683
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.4342336022448264,
+              "adaptive": 0.4403409090909091
+            },
+            "clear_road_spoof": {
+              "static": 0.44680851063829785,
+              "adaptive": 0.42223051100335696
+            },
+            "drift_congestion": {
+              "static": 0.40976645435244163,
+              "adaptive": 0.3585392843969015
+            },
+            "replay_stale": {
+              "static": 0.3663446054750403,
+              "adaptive": 0.3070539419087137
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 6,
+          "clean_validation_fpr": {
+            "false": 0.06342530282637954,
+            "true": 0.06561238223418574
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.43263618677042803,
+              "adaptive": 0.41946435307431157,
+              "worst_case": 0.41946435307431157
+            },
+            "clear_road_spoof": {
+              "static": 0.4452443582998754,
+              "adaptive": 0.4292901062045836,
+              "worst_case": 0.4292901062045836
+            },
+            "drift_congestion": {
+              "static": 0.42209272865467445,
+              "adaptive": 0.37579617834394907,
+              "worst_case": 0.37579617834394907
+            },
+            "replay_stale": {
+              "static": 0.4047246335562829,
+              "adaptive": 0.36146682188591384,
+              "worst_case": 0.36146682188591384
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.4635854341736695,
+              "adaptive": 0.4631728045325779
+            },
+            "clear_road_spoof": {
+              "static": 0.4304560874481719,
+              "adaptive": 0.40138142747505756
+            },
+            "drift_congestion": {
+              "static": 0.41622198505869795,
+              "adaptive": 0.36302895322939865
+            },
+            "replay_stale": {
+              "static": 0.393507521773555,
+              "adaptive": 0.3344262295081967
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 7,
+          "clean_validation_fpr": {
+            "false": 0.06342530282637954,
+            "true": 0.06561238223418574
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.4332112332112332,
+              "adaptive": 0.4219536757301108,
+              "worst_case": 0.4219536757301108
+            },
+            "clear_road_spoof": {
+              "static": 0.4515860922565452,
+              "adaptive": 0.4347461183382291,
+              "worst_case": 0.4347461183382291
+            },
+            "drift_congestion": {
+              "static": 0.4240481989488527,
+              "adaptive": 0.3746467501009285,
+              "worst_case": 0.3746467501009285
+            },
+            "replay_stale": {
+              "static": 0.4191228317585672,
+              "adaptive": 0.3799594555459021,
+              "worst_case": 0.3799594555459021
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.4714484679665738,
+              "adaptive": 0.4681898066783831
+            },
+            "clear_road_spoof": {
+              "static": 0.44494214259051884,
+              "adaptive": 0.418693009118541
+            },
+            "drift_congestion": {
+              "static": 0.4237047551454933,
+              "adaptive": 0.36681547619047616
+            },
+            "replay_stale": {
+              "static": 0.37096130833665736,
+              "adaptive": 0.3141794129805705
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 8,
+          "clean_validation_fpr": {
+            "false": 0.06342530282637954,
+            "true": 0.06561238223418574
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.43727947438861176,
+              "adaptive": 0.4251811141643767,
+              "worst_case": 0.4251811141643767
+            },
+            "clear_road_spoof": {
+              "static": 0.4444752915047196,
+              "adaptive": 0.42750877192982456,
+              "worst_case": 0.42750877192982456
+            },
+            "drift_congestion": {
+              "static": 0.43178372915613944,
+              "adaptive": 0.3889917967716327,
+              "worst_case": 0.3889917967716327
+            },
+            "replay_stale": {
+              "static": 0.4186505141569235,
+              "adaptive": 0.3710354815351195,
+              "worst_case": 0.3710354815351195
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.4462403373155306,
+              "adaptive": 0.4421502313990744
+            },
+            "clear_road_spoof": {
+              "static": 0.43350477590007347,
+              "adaptive": 0.41545893719806765
+            },
+            "drift_congestion": {
+              "static": 0.40225829216654907,
+              "adaptive": 0.33592304846466886
+            },
+            "replay_stale": {
+              "static": 0.3587263200322451,
+              "adaptive": 0.30597014925373134
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 9,
+          "clean_validation_fpr": {
+            "false": 0.06342530282637954,
+            "true": 0.06561238223418574
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.43287937743190663,
+              "adaptive": 0.4279618473895582,
+              "worst_case": 0.4279618473895582
+            },
+            "clear_road_spoof": {
+              "static": 0.4422166527429685,
+              "adaptive": 0.42776840921866216,
+              "worst_case": 0.42776840921866216
+            },
+            "drift_congestion": {
+              "static": 0.4190791990817498,
+              "adaptive": 0.3684491978609626,
+              "worst_case": 0.3684491978609626
+            },
+            "replay_stale": {
+              "static": 0.4216935712262815,
+              "adaptive": 0.3689519076158456,
+              "worst_case": 0.3689519076158456
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.44258872651356995,
+              "adaptive": 0.44820295983086683
+            },
+            "clear_road_spoof": {
+              "static": 0.43507214206437295,
+              "adaptive": 0.4112781954887218
+            },
+            "drift_congestion": {
+              "static": 0.4160224877020379,
+              "adaptive": 0.356959236136614
+            },
+            "replay_stale": {
+              "static": 0.3641479099678457,
+              "adaptive": 0.2964196502914238
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 10,
+          "clean_validation_fpr": {
+            "false": 0.06342530282637954,
+            "true": 0.06561238223418574
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.4389713871785585,
+              "adaptive": 0.42714570858283435,
+              "worst_case": 0.42714570858283435
+            },
+            "clear_road_spoof": {
+              "static": 0.45220030349013657,
+              "adaptive": 0.4338964121178277,
+              "worst_case": 0.4338964121178277
+            },
+            "drift_congestion": {
+              "static": 0.42933130699088146,
+              "adaptive": 0.3781837578343779,
+              "worst_case": 0.3781837578343779
+            },
+            "replay_stale": {
+              "static": 0.41497175141242937,
+              "adaptive": 0.3624121779859485,
+              "worst_case": 0.3624121779859485
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.4466154919748779,
+              "adaptive": 0.45170354759395853
+            },
+            "clear_road_spoof": {
+              "static": 0.4325337331334333,
+              "adaptive": 0.4139499620924943
+            },
+            "drift_congestion": {
+              "static": 0.42303664921465967,
+              "adaptive": 0.37139730025538126
+            },
+            "replay_stale": {
+              "static": 0.38574257425742575,
+              "adaptive": 0.32160392798690673
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 11,
+          "clean_validation_fpr": {
+            "false": 0.06342530282637954,
+            "true": 0.06561238223418574
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.4357920193470375,
+              "adaptive": 0.4266433391652087,
+              "worst_case": 0.4266433391652087
+            },
+            "clear_road_spoof": {
+              "static": 0.4433674882304071,
+              "adaptive": 0.42811143777124455,
+              "worst_case": 0.42811143777124455
+            },
+            "drift_congestion": {
+              "static": 0.4284632853898562,
+              "adaptive": 0.37650802068142647,
+              "worst_case": 0.37650802068142647
+            },
+            "replay_stale": {
+              "static": 0.4026579951929874,
+              "adaptive": 0.35994745292658004,
+              "worst_case": 0.35994745292658004
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.4552058111380145,
+              "adaptive": 0.459601259181532
+            },
+            "clear_road_spoof": {
+              "static": 0.4470063220528077,
+              "adaptive": 0.4214501510574018
+            },
+            "drift_congestion": {
+              "static": 0.4118685976686683,
+              "adaptive": 0.3612759643916914
+            },
+            "replay_stale": {
+              "static": 0.3737942122186495,
+              "adaptive": 0.31114808652246256
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 12,
+          "clean_validation_fpr": {
+            "false": 0.06342530282637954,
+            "true": 0.06561238223418574
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.43825665859564167,
+              "adaptive": 0.43112723633179034,
+              "worst_case": 0.43112723633179034
+            },
+            "clear_road_spoof": {
+              "static": 0.445125348189415,
+              "adaptive": 0.43133951137320975,
+              "worst_case": 0.43133951137320975
+            },
+            "drift_congestion": {
+              "static": 0.4252610134963076,
+              "adaptive": 0.37629550890247143,
+              "worst_case": 0.37629550890247143
+            },
+            "replay_stale": {
+              "static": 0.4074442392385282,
+              "adaptive": 0.3594944150499706,
+              "worst_case": 0.3594944150499706
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.4567425569176883,
+              "adaptive": 0.45409252669039146
+            },
+            "clear_road_spoof": {
+              "static": 0.4390602055800294,
+              "adaptive": 0.4177215189873418
+            },
+            "drift_congestion": {
+              "static": 0.40421792618629176,
+              "adaptive": 0.35380654652445753
+            },
+            "replay_stale": {
+              "static": 0.35418359057676685,
+              "adaptive": 0.2961104140526976
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 13,
+          "clean_validation_fpr": {
+            "false": 0.06342530282637954,
+            "true": 0.06561238223418574
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.4422681658807883,
+              "adaptive": 0.43069245165315034,
+              "worst_case": 0.43069245165315034
+            },
+            "clear_road_spoof": {
+              "static": 0.4430203399275564,
+              "adaptive": 0.42887294216969185,
+              "worst_case": 0.42887294216969185
+            },
+            "drift_congestion": {
+              "static": 0.43684613421791274,
+              "adaptive": 0.385448709375418,
+              "worst_case": 0.385448709375418
+            },
+            "replay_stale": {
+              "static": 0.41770906535488406,
+              "adaptive": 0.3793003758311651,
+              "worst_case": 0.3793003758311651
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.4448348559381588,
+              "adaptive": 0.4439701173959445
+            },
+            "clear_road_spoof": {
+              "static": 0.42873092668403423,
+              "adaptive": 0.3996971990915973
+            },
+            "drift_congestion": {
+              "static": 0.39598278335724535,
+              "adaptive": 0.3394806172374859
+            },
+            "replay_stale": {
+              "static": 0.36473918317832593,
+              "adaptive": 0.29774812343619683
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 4,
+          "clean_validation_fpr": {
+            "false": 0.02607671601615074,
+            "true": 0.028095558546433377
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.8389486681954489,
+              "adaptive": 0.4831302717900656,
+              "worst_case": 0.4831302717900656
+            },
+            "clear_road_spoof": {
+              "static": 0.14834054834054833,
+              "adaptive": 0.14834054834054833,
+              "worst_case": 0.14834054834054833
+            },
+            "drift_congestion": {
+              "static": 0.5882845188284519,
+              "adaptive": 0.4673112338858195,
+              "worst_case": 0.4673112338858195
+            },
+            "replay_stale": {
+              "static": 0.4140986132511556,
+              "adaptive": 0.41150357073923954,
+              "worst_case": 0.41150357073923954
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.8581048581048581,
+              "adaptive": 0.47774869109947643
+            },
+            "clear_road_spoof": {
+              "static": 0.1393841166936791,
+              "adaptive": 0.13765182186234817
+            },
+            "drift_congestion": {
+              "static": 0.5945633314054367,
+              "adaptive": 0.5009369144284822
+            },
+            "replay_stale": {
+              "static": 0.4190064794816415,
+              "adaptive": 0.4147265836491608
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 5,
+          "clean_validation_fpr": {
+            "false": 0.02607671601615074,
+            "true": 0.028095558546433377
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.8398375419389016,
+              "adaptive": 0.4835988753514527,
+              "worst_case": 0.4835988753514527
+            },
+            "clear_road_spoof": {
+              "static": 0.14074717636837533,
+              "adaptive": 0.14074717636837533,
+              "worst_case": 0.14074717636837533
+            },
+            "drift_congestion": {
+              "static": 0.5948203842940685,
+              "adaptive": 0.46593001841620624,
+              "worst_case": 0.46593001841620624
+            },
+            "replay_stale": {
+              "static": 0.40671425815164963,
+              "adaptive": 0.4042512077294686,
+              "worst_case": 0.4042512077294686
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.8630865989356555,
+              "adaptive": 0.487012987012987
+            },
+            "clear_road_spoof": {
+              "static": 0.11918367346938775,
+              "adaptive": 0.11764705882352941
+            },
+            "drift_congestion": {
+              "static": 0.5957696827262045,
+              "adaptive": 0.4831532104259377
+            },
+            "replay_stale": {
+              "static": 0.39008264462809916,
+              "adaptive": 0.3909691629955947
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 6,
+          "clean_validation_fpr": {
+            "false": 0.02607671601615074,
+            "true": 0.028095558546433377
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.8408769448373409,
+              "adaptive": 0.48371220998359504,
+              "worst_case": 0.48371220998359504
+            },
+            "clear_road_spoof": {
+              "static": 0.13379872018615474,
+              "adaptive": 0.13379872018615474,
+              "worst_case": 0.13379872018615474
+            },
+            "drift_congestion": {
+              "static": 0.591184457906831,
+              "adaptive": 0.4695891668579298,
+              "worst_case": 0.4695891668579298
+            },
+            "replay_stale": {
+              "static": 0.3958415064731267,
+              "adaptive": 0.3914240755310779,
+              "worst_case": 0.3914240755310779
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.8622522957950701,
+              "adaptive": 0.4358974358974359
+            },
+            "clear_road_spoof": {
+              "static": 0.12042310821806347,
+              "adaptive": 0.11879576891781937
+            },
+            "drift_congestion": {
+              "static": 0.5852507374631268,
+              "adaptive": 0.4846938775510204
+            },
+            "replay_stale": {
+              "static": 0.40857908847184987,
+              "adaptive": 0.4057971014492754
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 7,
+          "clean_validation_fpr": {
+            "false": 0.02607671601615074,
+            "true": 0.028095558546433377
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.8428141059720007,
+              "adaptive": 0.5016256386437529,
+              "worst_case": 0.5016256386437529
+            },
+            "clear_road_spoof": {
+              "static": 0.13174001748761294,
+              "adaptive": 0.13174001748761294,
+              "worst_case": 0.13174001748761294
+            },
+            "drift_congestion": {
+              "static": 0.5896682066358673,
+              "adaptive": 0.4678793460741423,
+              "worst_case": 0.4678793460741423
+            },
+            "replay_stale": {
+              "static": 0.4083991523791177,
+              "adaptive": 0.405019305019305,
+              "worst_case": 0.405019305019305
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.8668610301263362,
+              "adaptive": 0.44623655913978494
+            },
+            "clear_road_spoof": {
+              "static": 0.11503697617091208,
+              "adaptive": 0.11494252873563218
+            },
+            "drift_congestion": {
+              "static": 0.6002344665885111,
+              "adaptive": 0.4971537001897533
+            },
+            "replay_stale": {
+              "static": 0.3745743473325766,
+              "adaptive": 0.3699487763232783
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 8,
+          "clean_validation_fpr": {
+            "false": 0.02607671601615074,
+            "true": 0.028095558546433377
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.8425155004428698,
+              "adaptive": 0.48922211808809746,
+              "worst_case": 0.48922211808809746
+            },
+            "clear_road_spoof": {
+              "static": 0.1362048894062864,
+              "adaptive": 0.1362048894062864,
+              "worst_case": 0.1362048894062864
+            },
+            "drift_congestion": {
+              "static": 0.5875420875420876,
+              "adaptive": 0.4610027855153203,
+              "worst_case": 0.4610027855153203
+            },
+            "replay_stale": {
+              "static": 0.4135438463001712,
+              "adaptive": 0.410217308425467,
+              "worst_case": 0.410217308425467
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.8626692456479691,
+              "adaptive": 0.49935316946959896
+            },
+            "clear_road_spoof": {
+              "static": 0.1348497156783103,
+              "adaptive": 0.13008130081300814
+            },
+            "drift_congestion": {
+              "static": 0.5977686435701702,
+              "adaptive": 0.5031605562579013
+            },
+            "replay_stale": {
+              "static": 0.3887640449438202,
+              "adaptive": 0.38695163104611924
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 9,
+          "clean_validation_fpr": {
+            "false": 0.02607671601615074,
+            "true": 0.028095558546433377
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.8428141059720007,
+              "adaptive": 0.4739202265754071,
+              "worst_case": 0.4739202265754071
+            },
+            "clear_road_spoof": {
+              "static": 0.13368206916594014,
+              "adaptive": 0.13368206916594014,
+              "worst_case": 0.13368206916594014
+            },
+            "drift_congestion": {
+              "static": 0.5849056603773585,
+              "adaptive": 0.46885773385428636,
+              "worst_case": 0.46885773385428636
+            },
+            "replay_stale": {
+              "static": 0.41776253097007815,
+              "adaptive": 0.41352952417351424,
+              "worst_case": 0.41352952417351424
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.8635043562439496,
+              "adaptive": 0.4590818363273453
+            },
+            "clear_road_spoof": {
+              "static": 0.11783960720130933,
+              "adaptive": 0.11774325429272281
+            },
+            "drift_congestion": {
+              "static": 0.6004672897196262,
+              "adaptive": 0.5050251256281407
+            },
+            "replay_stale": {
+              "static": 0.3964660408614025,
+              "adaptive": 0.3909191583610188
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 10,
+          "clean_validation_fpr": {
+            "false": 0.02607671601615074,
+            "true": 0.028095558546433377
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.8420679886685553,
+              "adaptive": 0.5035971223021583,
+              "worst_case": 0.5035971223021583
+            },
+            "clear_road_spoof": {
+              "static": 0.1273736488460415,
+              "adaptive": 0.1273736488460415,
+              "worst_case": 0.1273736488460415
+            },
+            "drift_congestion": {
+              "static": 0.5881117412308339,
+              "adaptive": 0.4658040665434381,
+              "worst_case": 0.4658040665434381
+            },
+            "replay_stale": {
+              "static": 0.4053633890400311,
+              "adaptive": 0.4025695931477516,
+              "worst_case": 0.4025695931477516
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.864760058167717,
+              "adaptive": 0.45588235294117646
+            },
+            "clear_road_spoof": {
+              "static": 0.1306122448979592,
+              "adaptive": 0.1306122448979592
+            },
+            "drift_congestion": {
+              "static": 0.5886524822695035,
+              "adaptive": 0.4884910485933504
+            },
+            "replay_stale": {
+              "static": 0.3875968992248062,
+              "adaptive": 0.3858093126385809
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 11,
+          "clean_validation_fpr": {
+            "false": 0.02607671601615074,
+            "true": 0.028095558546433377
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.8420679886685553,
+              "adaptive": 0.492760392340028,
+              "worst_case": 0.492760392340028
+            },
+            "clear_road_spoof": {
+              "static": 0.1266413772979282,
+              "adaptive": 0.1266413772979282,
+              "worst_case": 0.1266413772979282
+            },
+            "drift_congestion": {
+              "static": 0.5917209497793654,
+              "adaptive": 0.48040339216135686,
+              "worst_case": 0.48040339216135686
+            },
+            "replay_stale": {
+              "static": 0.40938822624086185,
+              "adaptive": 0.40724330572144096,
+              "worst_case": 0.40724330572144096
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.8655992236778263,
+              "adaptive": 0.475
+            },
+            "clear_road_spoof": {
+              "static": 0.11311475409836065,
+              "adaptive": 0.11156685808039377
+            },
+            "drift_congestion": {
+              "static": 0.5992990654205608,
+              "adaptive": 0.509386733416771
+            },
+            "replay_stale": {
+              "static": 0.38946791003839826,
+              "adaptive": 0.38769906644700713
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 12,
+          "clean_validation_fpr": {
+            "false": 0.02607671601615074,
+            "true": 0.028095558546433377
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.8434119524738429,
+              "adaptive": 0.4603629417382999,
+              "worst_case": 0.4603629417382999
+            },
+            "clear_road_spoof": {
+              "static": 0.1320479111890155,
+              "adaptive": 0.1320479111890155,
+              "worst_case": 0.1320479111890155
+            },
+            "drift_congestion": {
+              "static": 0.5932773109243697,
+              "adaptive": 0.4727021423635107,
+              "worst_case": 0.4727021423635107
+            },
+            "replay_stale": {
+              "static": 0.40387596899224804,
+              "adaptive": 0.40201785021342645,
+              "worst_case": 0.40201785021342645
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.8655992236778263,
+              "adaptive": 0.48005232177894047
+            },
+            "clear_road_spoof": {
+              "static": 0.09233305853256389,
+              "adaptive": 0.0859504132231405
+            },
+            "drift_congestion": {
+              "static": 0.5945945945945946,
+              "adaptive": 0.5
+            },
+            "replay_stale": {
+              "static": 0.370412196499153,
+              "adaptive": 0.36970039570378743
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 13,
+          "clean_validation_fpr": {
+            "false": 0.02607671601615074,
+            "true": 0.028095558546433377
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.8407283012197277,
+              "adaptive": 0.4860948819817714,
+              "worst_case": 0.4860948819817714
+            },
+            "clear_road_spoof": {
+              "static": 0.15132336018411968,
+              "adaptive": 0.15132336018411968,
+              "worst_case": 0.15132336018411968
+            },
+            "drift_congestion": {
+              "static": 0.5957268537913699,
+              "adaptive": 0.4768454837230628,
+              "worst_case": 0.4768454837230628
+            },
+            "replay_stale": {
+              "static": 0.4160092360977487,
+              "adaptive": 0.4117306579201235,
+              "worst_case": 0.4117306579201235
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.8668610301263362,
+              "adaptive": 0.45187165775401067
+            },
+            "clear_road_spoof": {
+              "static": 0.12866449511400652,
+              "adaptive": 0.12855980471928397
+            },
+            "drift_congestion": {
+              "static": 0.6106870229007634,
+              "adaptive": 0.5025445292620865
+            },
+            "replay_stale": {
+              "static": 0.39183222958057395,
+              "adaptive": 0.3898398674765323
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 4,
+          "clean_validation_fpr": {
+            "false": 0.04441453566621804,
+            "true": 0.04441453566621804
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.03812316715542522,
+              "adaptive": 0.03812316715542522,
+              "worst_case": 0.03812316715542522
+            },
+            "clear_road_spoof": {
+              "static": 0.03812316715542522,
+              "adaptive": 0.03812316715542522,
+              "worst_case": 0.03812316715542522
+            },
+            "drift_congestion": {
+              "static": 0.03812316715542522,
+              "adaptive": 0.03812316715542522,
+              "worst_case": 0.03812316715542522
+            },
+            "replay_stale": {
+              "static": 0.03812316715542522,
+              "adaptive": 0.03812316715542522,
+              "worst_case": 0.03812316715542522
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "clear_road_spoof": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "drift_congestion": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "replay_stale": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 5,
+          "clean_validation_fpr": {
+            "false": 0.04441453566621804,
+            "true": 0.04441453566621804
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.035917170606560384,
+              "adaptive": 0.035917170606560384,
+              "worst_case": 0.035917170606560384
+            },
+            "clear_road_spoof": {
+              "static": 0.035917170606560384,
+              "adaptive": 0.035917170606560384,
+              "worst_case": 0.035917170606560384
+            },
+            "drift_congestion": {
+              "static": 0.035917170606560384,
+              "adaptive": 0.035917170606560384,
+              "worst_case": 0.035917170606560384
+            },
+            "replay_stale": {
+              "static": 0.035917170606560384,
+              "adaptive": 0.035917170606560384,
+              "worst_case": 0.035917170606560384
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.04279069767441861,
+              "adaptive": 0.04279069767441861
+            },
+            "clear_road_spoof": {
+              "static": 0.04279069767441861,
+              "adaptive": 0.04279069767441861
+            },
+            "drift_congestion": {
+              "static": 0.04279069767441861,
+              "adaptive": 0.04279069767441861
+            },
+            "replay_stale": {
+              "static": 0.04279069767441861,
+              "adaptive": 0.04279069767441861
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 6,
+          "clean_validation_fpr": {
+            "false": 0.04441453566621804,
+            "true": 0.04441453566621804
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.03848973607038123,
+              "adaptive": 0.03848973607038123,
+              "worst_case": 0.03848973607038123
+            },
+            "clear_road_spoof": {
+              "static": 0.03848973607038123,
+              "adaptive": 0.03848973607038123,
+              "worst_case": 0.03848973607038123
+            },
+            "drift_congestion": {
+              "static": 0.03848973607038123,
+              "adaptive": 0.03848973607038123,
+              "worst_case": 0.03848973607038123
+            },
+            "replay_stale": {
+              "static": 0.03848973607038123,
+              "adaptive": 0.03848973607038123,
+              "worst_case": 0.03848973607038123
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "clear_road_spoof": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "drift_congestion": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "replay_stale": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 7,
+          "clean_validation_fpr": {
+            "false": 0.04441453566621804,
+            "true": 0.04441453566621804
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.04178119846069269,
+              "adaptive": 0.04178119846069269,
+              "worst_case": 0.04178119846069269
+            },
+            "clear_road_spoof": {
+              "static": 0.041788856304985335,
+              "adaptive": 0.041788856304985335,
+              "worst_case": 0.041788856304985335
+            },
+            "drift_congestion": {
+              "static": 0.041788856304985335,
+              "adaptive": 0.041788856304985335,
+              "worst_case": 0.041788856304985335
+            },
+            "replay_stale": {
+              "static": 0.041788856304985335,
+              "adaptive": 0.041788856304985335,
+              "worst_case": 0.041788856304985335
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.05116279069767442,
+              "adaptive": 0.05116279069767442
+            },
+            "clear_road_spoof": {
+              "static": 0.05116279069767442,
+              "adaptive": 0.05116279069767442
+            },
+            "drift_congestion": {
+              "static": 0.05116279069767442,
+              "adaptive": 0.05116279069767442
+            },
+            "replay_stale": {
+              "static": 0.05116279069767442,
+              "adaptive": 0.05116279069767442
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 8,
+          "clean_validation_fpr": {
+            "false": 0.04441453566621804,
+            "true": 0.04441453566621804
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.04032258064516129,
+              "adaptive": 0.04032258064516129,
+              "worst_case": 0.04032258064516129
+            },
+            "clear_road_spoof": {
+              "static": 0.04032258064516129,
+              "adaptive": 0.04032258064516129,
+              "worst_case": 0.04032258064516129
+            },
+            "drift_congestion": {
+              "static": 0.04032258064516129,
+              "adaptive": 0.04032258064516129,
+              "worst_case": 0.04032258064516129
+            },
+            "replay_stale": {
+              "static": 0.04032258064516129,
+              "adaptive": 0.04032258064516129,
+              "worst_case": 0.04032258064516129
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.05581395348837209,
+              "adaptive": 0.05581395348837209
+            },
+            "clear_road_spoof": {
+              "static": 0.05581395348837209,
+              "adaptive": 0.05581395348837209
+            },
+            "drift_congestion": {
+              "static": 0.05581395348837209,
+              "adaptive": 0.05581395348837209
+            },
+            "replay_stale": {
+              "static": 0.05581395348837209,
+              "adaptive": 0.05581395348837209
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 9,
+          "clean_validation_fpr": {
+            "false": 0.04441453566621804,
+            "true": 0.04441453566621804
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.0406891495601173,
+              "adaptive": 0.0406891495601173,
+              "worst_case": 0.0406891495601173
+            },
+            "clear_road_spoof": {
+              "static": 0.0406891495601173,
+              "adaptive": 0.0406891495601173,
+              "worst_case": 0.0406891495601173
+            },
+            "drift_congestion": {
+              "static": 0.0406891495601173,
+              "adaptive": 0.0406891495601173,
+              "worst_case": 0.0406891495601173
+            },
+            "replay_stale": {
+              "static": 0.0406891495601173,
+              "adaptive": 0.0406891495601173,
+              "worst_case": 0.0406891495601173
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "clear_road_spoof": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "drift_congestion": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "replay_stale": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 10,
+          "clean_validation_fpr": {
+            "false": 0.04441453566621804,
+            "true": 0.04441453566621804
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.04252199413489736,
+              "adaptive": 0.04252199413489736,
+              "worst_case": 0.04252199413489736
+            },
+            "clear_road_spoof": {
+              "static": 0.04252199413489736,
+              "adaptive": 0.04252199413489736,
+              "worst_case": 0.04252199413489736
+            },
+            "drift_congestion": {
+              "static": 0.04252199413489736,
+              "adaptive": 0.04252199413489736,
+              "worst_case": 0.04252199413489736
+            },
+            "replay_stale": {
+              "static": 0.04252199413489736,
+              "adaptive": 0.04252199413489736,
+              "worst_case": 0.04252199413489736
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.05023255813953489,
+              "adaptive": 0.05023255813953489
+            },
+            "clear_road_spoof": {
+              "static": 0.05023255813953489,
+              "adaptive": 0.05023255813953489
+            },
+            "drift_congestion": {
+              "static": 0.05023255813953489,
+              "adaptive": 0.05023255813953489
+            },
+            "replay_stale": {
+              "static": 0.05023255813953489,
+              "adaptive": 0.05023255813953489
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 11,
+          "clean_validation_fpr": {
+            "false": 0.04441453566621804,
+            "true": 0.04441453566621804
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.0436217008797654,
+              "adaptive": 0.0436217008797654,
+              "worst_case": 0.0436217008797654
+            },
+            "clear_road_spoof": {
+              "static": 0.0436217008797654,
+              "adaptive": 0.0436217008797654,
+              "worst_case": 0.0436217008797654
+            },
+            "drift_congestion": {
+              "static": 0.0436217008797654,
+              "adaptive": 0.0436217008797654,
+              "worst_case": 0.0436217008797654
+            },
+            "replay_stale": {
+              "static": 0.0436217008797654,
+              "adaptive": 0.0436217008797654,
+              "worst_case": 0.0436217008797654
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.052093023255813956,
+              "adaptive": 0.052093023255813956
+            },
+            "clear_road_spoof": {
+              "static": 0.052093023255813956,
+              "adaptive": 0.052093023255813956
+            },
+            "drift_congestion": {
+              "static": 0.052093023255813956,
+              "adaptive": 0.052093023255813956
+            },
+            "replay_stale": {
+              "static": 0.052093023255813956,
+              "adaptive": 0.052093023255813956
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 12,
+          "clean_validation_fpr": {
+            "false": 0.04441453566621804,
+            "true": 0.04441453566621804
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.037016675829210186,
+              "adaptive": 0.037016675829210186,
+              "worst_case": 0.037016675829210186
+            },
+            "clear_road_spoof": {
+              "static": 0.03702346041055719,
+              "adaptive": 0.03702346041055719,
+              "worst_case": 0.03702346041055719
+            },
+            "drift_congestion": {
+              "static": 0.03702346041055719,
+              "adaptive": 0.03702346041055719,
+              "worst_case": 0.03702346041055719
+            },
+            "replay_stale": {
+              "static": 0.03702346041055719,
+              "adaptive": 0.03702346041055719,
+              "worst_case": 0.03702346041055719
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.05116279069767442,
+              "adaptive": 0.05116279069767442
+            },
+            "clear_road_spoof": {
+              "static": 0.05116279069767442,
+              "adaptive": 0.05116279069767442
+            },
+            "drift_congestion": {
+              "static": 0.05116279069767442,
+              "adaptive": 0.05116279069767442
+            },
+            "replay_stale": {
+              "static": 0.05116279069767442,
+              "adaptive": 0.05116279069767442
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 13,
+          "clean_validation_fpr": {
+            "false": 0.04441453566621804,
+            "true": 0.04441453566621804
+          },
+          "clean_choice": false,
+          "ensemble": {
+            "congestion_spoof": {
+              "static": 0.038849184533626534,
+              "adaptive": 0.038849184533626534,
+              "worst_case": 0.038849184533626534
+            },
+            "clear_road_spoof": {
+              "static": 0.038849184533626534,
+              "adaptive": 0.038849184533626534,
+              "worst_case": 0.038849184533626534
+            },
+            "drift_congestion": {
+              "static": 0.038849184533626534,
+              "adaptive": 0.038849184533626534,
+              "worst_case": 0.038849184533626534
+            },
+            "replay_stale": {
+              "static": 0.038849184533626534,
+              "adaptive": 0.038849184533626534,
+              "worst_case": 0.038849184533626534
+            }
+          },
+          "ensemble_validation": {
+            "congestion_spoof": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "clear_road_spoof": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "drift_congestion": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            },
+            "replay_stale": {
+              "static": 0.04744186046511628,
+              "adaptive": 0.04744186046511628
+            }
+          }
+        }
+      ]
+    }
+  }
+}

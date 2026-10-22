@@ -1,0 +1,447 @@
+{
+  "experiment": "hybrid_robustness_network",
+  "generated_at": "2026-10-04T00:36:59.425994+00:00",
+  "seeds": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "attacks": [
+    "congestion_spoof",
+    "replay_stale",
+    "position_spoof"
+  ],
+  "datasets": {
+    "pneuma": {
+      "units": [
+        {
+          "seed": 4,
+          "network": {
+            "hrllc": {
+              "forest": {
+                "benign_fpr": 0.052125,
+                "congestion_spoof": 0.5671535447096544,
+                "replay_stale": 0.5202480846406421,
+                "position_spoof": 0.5126945126945127
+              },
+              "lof": {
+                "benign_fpr": 0.043625,
+                "congestion_spoof": 0.3675328154299491,
+                "replay_stale": 0.3473658888621602,
+                "position_spoof": 0.5737656157049376
+              },
+              "hybrid": {
+                "benign_fpr": 0.047375,
+                "congestion_spoof": 0.5931647036107357,
+                "replay_stale": 0.5232311548101022,
+                "position_spoof": 0.5568544102019128
+              }
+            },
+            "lossy": {
+              "forest": {
+                "benign_fpr": 0.057467654817234017,
+                "congestion_spoof": 0.560169641279378,
+                "replay_stale": 0.5157437567861021,
+                "position_spoof": 0.508148631029987
+              },
+              "lof": {
+                "benign_fpr": 0.05784449189800276,
+                "congestion_spoof": 0.3634517766497462,
+                "replay_stale": 0.34192360791532445,
+                "position_spoof": 0.5611175785797439
+              },
+              "hybrid": {
+                "benign_fpr": 0.061298831805049615,
+                "congestion_spoof": 0.5787709497206703,
+                "replay_stale": 0.5096726190476191,
+                "position_spoof": 0.5456437704430568
+              }
+            },
+            "degraded": {
+              "forest": {
+                "benign_fpr": 0.16273170731707318,
+                "congestion_spoof": 0.4632298321200416,
+                "replay_stale": 0.43447251114413077,
+                "position_spoof": 0.43256855064353666
+              },
+              "lof": {
+                "benign_fpr": 0.3987642276422764,
+                "congestion_spoof": 0.2934301599909225,
+                "replay_stale": 0.2884934232342213,
+                "position_spoof": 0.3813759818302262
+              },
+              "hybrid": {
+                "benign_fpr": 0.399609756097561,
+                "congestion_spoof": 0.3736377789309808,
+                "replay_stale": 0.3490810923060949,
+                "position_spoof": 0.3755976286096768
+              }
+            },
+            "severe": {
+              "forest": {
+                "benign_fpr": 0.3568608766675742,
+                "congestion_spoof": 0.35503096879747575,
+                "replay_stale": 0.34819004524886876,
+                "position_spoof": 0.3448046181172291
+              },
+              "lof": {
+                "benign_fpr": 0.7661992921317724,
+                "congestion_spoof": 0.2617924528301887,
+                "replay_stale": 0.26299604627324646,
+                "position_spoof": 0.2881475225225225
+              },
+              "hybrid": {
+                "benign_fpr": 0.7662673563844269,
+                "congestion_spoof": 0.28456221198156684,
+                "replay_stale": 0.278158103336456,
+                "position_spoof": 0.2859563651768693
+              }
+            }
+          }
+        },
+        {
+          "seed": 5,
+          "network": {
+            "hrllc": {
+              "forest": {
+                "benign_fpr": 0.0475,
+                "congestion_spoof": 0.5916163280248947,
+                "replay_stale": 0.5453869047619048,
+                "position_spoof": 0.536222509702458
+              },
+              "lof": {
+                "benign_fpr": 0.043625,
+                "congestion_spoof": 0.3909933774834437,
+                "replay_stale": 0.35707456978967494,
+                "position_spoof": 0.5688756515264334
+              },
+              "hybrid": {
+                "benign_fpr": 0.0450625,
+                "congestion_spoof": 0.6302521008403361,
+                "replay_stale": 0.5468266253869969,
+                "position_spoof": 0.5617293347541483
+              }
+            },
+            "lossy": {
+              "forest": {
+                "benign_fpr": 0.05390463026952315,
+                "congestion_spoof": 0.5816863100634633,
+                "replay_stale": 0.535149061464851,
+                "position_spoof": 0.5290903246544519
+              },
+              "lof": {
+                "benign_fpr": 0.05729722937739524,
+                "congestion_spoof": 0.3849836230788612,
+                "replay_stale": 0.3526448362720403,
+                "position_spoof": 0.5577794010226442
+              },
+              "hybrid": {
+                "benign_fpr": 0.05792548847144562,
+                "congestion_spoof": 0.6064241486068112,
+                "replay_stale": 0.5323094212399325,
+                "position_spoof": 0.5506423662981774
+              }
+            },
+            "degraded": {
+              "forest": {
+                "benign_fpr": 0.16903057905009758,
+                "congestion_spoof": 0.4692249811888638,
+                "replay_stale": 0.4481536189069424,
+                "position_spoof": 0.4455916315717973
+              },
+              "lof": {
+                "benign_fpr": 0.4070917371502928,
+                "congestion_spoof": 0.285650623885918,
+                "replay_stale": 0.27776570310802,
+                "position_spoof": 0.36979020979020977
+              },
+              "hybrid": {
+                "benign_fpr": 0.40904359141184127,
+                "congestion_spoof": 0.3655293268735182,
+                "replay_stale": 0.3435970636215334,
+                "position_spoof": 0.3657164291072768
+              }
+            },
+            "severe": {
+              "forest": {
+                "benign_fpr": 0.3591415376256452,
+                "congestion_spoof": 0.36198673956031174,
+                "replay_stale": 0.3532988065750957,
+                "position_spoof": 0.3677544010304852
+              },
+              "lof": {
+                "benign_fpr": 0.7637870143982614,
+                "congestion_spoof": 0.2710568866676466,
+                "replay_stale": 0.2688486265341905,
+                "position_spoof": 0.294666012476344
+              },
+              "hybrid": {
+                "benign_fpr": 0.7640586797066015,
+                "congestion_spoof": 0.2898300201670988,
+                "replay_stale": 0.2865358349507584,
+                "position_spoof": 0.2937043282743114
+              }
+            }
+          }
+        },
+        {
+          "seed": 6,
+          "network": {
+            "hrllc": {
+              "forest": {
+                "benign_fpr": 0.0460625,
+                "congestion_spoof": 0.5962822595199423,
+                "replay_stale": 0.5178404632916122,
+                "position_spoof": 0.5401529636711281
+              },
+              "lof": {
+                "benign_fpr": 0.043625,
+                "congestion_spoof": 0.38113207547169814,
+                "replay_stale": 0.34822729480330256,
+                "position_spoof": 0.5789551576143259
+              },
+              "hybrid": {
+                "benign_fpr": 0.0455,
+                "congestion_spoof": 0.6190383492310687,
+                "replay_stale": 0.5238370970855047,
+                "position_spoof": 0.5700962695547533
+              }
+            },
+            "lossy": {
+              "forest": {
+                "benign_fpr": 0.05141888498242089,
+                "congestion_spoof": 0.585698886094143,
+                "replay_stale": 0.5158656522545927,
+                "position_spoof": 0.5328905755850727
+              },
+              "lof": {
+                "benign_fpr": 0.05744600703164239,
+                "congestion_spoof": 0.37538304392236976,
+                "replay_stale": 0.34492350486787204,
+                "position_spoof": 0.5667969315385729
+              },
+              "hybrid": {
+                "benign_fpr": 0.05851330989452536,
+                "congestion_spoof": 0.6025835866261399,
+                "replay_stale": 0.515185601799775,
+                "position_spoof": 0.5594117647058824
+              }
+            },
+            "degraded": {
+              "forest": {
+                "benign_fpr": 0.15932955064240528,
+                "congestion_spoof": 0.48252810695837134,
+                "replay_stale": 0.42996941896024465,
+                "position_spoof": 0.4579464773347897
+              },
+              "lof": {
+                "benign_fpr": 0.3988130176742973,
+                "congestion_spoof": 0.28995772877870446,
+                "replay_stale": 0.28172787141422034,
+                "position_spoof": 0.38309165008056106
+              },
+              "hybrid": {
+                "benign_fpr": 0.40090001956564275,
+                "congestion_spoof": 0.37383957442369875,
+                "replay_stale": 0.3448060075093867,
+                "position_spoof": 0.3782032961798609
+              }
+            },
+            "severe": {
+              "forest": {
+                "benign_fpr": 0.34468201007762495,
+                "congestion_spoof": 0.37547709923664124,
+                "replay_stale": 0.3532690744396702,
+                "position_spoof": 0.37390158172231985
+              },
+              "lof": {
+                "benign_fpr": 0.7673294293885333,
+                "congestion_spoof": 0.2660098522167488,
+                "replay_stale": 0.26364301389904904,
+                "position_spoof": 0.29360505973295853
+              },
+              "hybrid": {
+                "benign_fpr": 0.7662399564210813,
+                "congestion_spoof": 0.29171461449942465,
+                "replay_stale": 0.28059314713504174,
+                "position_spoof": 0.29183098591549295
+              }
+            }
+          }
+        },
+        {
+          "seed": 7,
+          "network": {
+            "hrllc": {
+              "forest": {
+                "benign_fpr": 0.0468125,
+                "congestion_spoof": 0.5735687533440342,
+                "replay_stale": 0.5271117668756916,
+                "position_spoof": 0.5276274799147401
+              },
+              "lof": {
+                "benign_fpr": 0.043625,
+                "congestion_spoof": 0.39505523408732246,
+                "replay_stale": 0.3353614018009248,
+                "position_spoof": 0.5733452593917711
+              },
+              "hybrid": {
+                "benign_fpr": 0.0470625,
+                "congestion_spoof": 0.5926204819277109,
+                "replay_stale": 0.530920060331825,
+                "position_spoof": 0.5602308977669755
+              }
+            },
+            "lossy": {
+              "forest": {
+                "benign_fpr": 0.052558956347215254,
+                "congestion_spoof": 0.5681858485547083,
+                "replay_stale": 0.5220883534136547,
+                "position_spoof": 0.52291192720182
+              },
+              "lof": {
+                "benign_fpr": 0.05669844455594581,
+                "congestion_spoof": 0.3889027743064234,
+                "replay_stale": 0.33519034354688954,
+                "position_spoof": 0.5634828188701223
+              },
+              "hybrid": {
+                "benign_fpr": 0.05983442047165078,
+                "congestion_spoof": 0.5811155668975574,
+                "replay_stale": 0.5183026771079949,
+                "position_spoof": 0.5523074640154325
+              }
+            },
+            "degraded": {
+              "forest": {
+                "benign_fpr": 0.1607850783128615,
+                "congestion_spoof": 0.469690166142793,
+                "replay_stale": 0.4354475933423302,
+                "position_spoof": 0.4414214325374792
+              },
+              "lof": {
+                "benign_fpr": 0.39936309871969844,
+                "congestion_spoof": 0.30202702702702705,
+                "replay_stale": 0.28021248339973437,
+                "position_spoof": 0.376973248889309
+              },
+              "hybrid": {
+                "benign_fpr": 0.4004029375446806,
+                "congestion_spoof": 0.3716250898265065,
+                "replay_stale": 0.34803117309269893,
+                "position_spoof": 0.3721815241175911
+              }
+            },
+            "severe": {
+              "forest": {
+                "benign_fpr": 0.34802121583027334,
+                "congestion_spoof": 0.35822650829119135,
+                "replay_stale": 0.3477160280750201,
+                "position_spoof": 0.355718085106383
+              },
+              "lof": {
+                "benign_fpr": 0.7734258125934993,
+                "congestion_spoof": 0.2620870706628746,
+                "replay_stale": 0.2590387686946421,
+                "position_spoof": 0.2855146390888128
+              },
+              "hybrid": {
+                "benign_fpr": 0.7747178022575819,
+                "congestion_spoof": 0.2809388335704125,
+                "replay_stale": 0.27743359680979846,
+                "position_spoof": 0.28395493667343086
+              }
+            }
+          }
+        },
+        {
+          "seed": 8,
+          "network": {
+            "hrllc": {
+              "forest": {
+                "benign_fpr": 0.0471875,
+                "congestion_spoof": 0.5774473358116481,
+                "replay_stale": 0.5250362844702468,
+                "position_spoof": 0.5256452139823587
+              },
+              "lof": {
+                "benign_fpr": 0.043625,
+                "congestion_spoof": 0.3781914893617021,
+                "replay_stale": 0.3559077809798271,
+                "position_spoof": 0.5811564426181391
+              },
+              "hybrid": {
+                "benign_fpr": 0.0448125,
+                "congestion_spoof": 0.6059558117195005,
+                "replay_stale": 0.5346722243273967,
+                "position_spoof": 0.5637441118371068
+              }
+            },
+            "lossy": {
+              "forest": {
+                "benign_fpr": 0.053812224322621297,
+                "congestion_spoof": 0.5728395061728395,
+                "replay_stale": 0.5165945165945166,
+                "position_spoof": 0.5186027619821284
+              },
+              "lof": {
+                "benign_fpr": 0.05746691871455577,
+                "congestion_spoof": 0.37044534412955465,
+                "replay_stale": 0.34838709677419355,
+                "position_spoof": 0.5684240852780179
+              },
+              "hybrid": {
+                "benign_fpr": 0.05834908632640202,
+                "congestion_spoof": 0.5896622504198544,
+                "replay_stale": 0.5211164157179581,
+                "position_spoof": 0.5512304250559285
+              }
+            },
+            "degraded": {
+              "forest": {
+                "benign_fpr": 0.1623165822620439,
+                "congestion_spoof": 0.4678640344366929,
+                "replay_stale": 0.4382834390207934,
+                "position_spoof": 0.43718732629238466
+              },
+              "lof": {
+                "benign_fpr": 0.39910401246591354,
+                "congestion_spoof": 0.2931015016371232,
+                "replay_stale": 0.2870634746321107,
+                "position_spoof": 0.3831503893423398
+              },
+              "hybrid": {
+                "benign_fpr": 0.3982599662381509,
+                "congestion_spoof": 0.37341576506955176,
+                "replay_stale": 0.35581061692969873,
+                "position_spoof": 0.3740348870460395
+              }
+            },
+            "severe": {
+              "forest": {
+                "benign_fpr": 0.3533537623425264,
+                "congestion_spoof": 0.35497431106959365,
+                "replay_stale": 0.3494465778179354,
+                "position_spoof": 0.3509933774834437
+              },
+              "lof": {
+                "benign_fpr": 0.767517875383044,
+                "congestion_spoof": 0.2656307263798285,
+                "replay_stale": 0.2639172252987467,
+                "position_spoof": 0.2915211621734879
+              },
+              "hybrid": {
+                "benign_fpr": 0.7676540687776643,
+                "congestion_spoof": 0.28557099871041697,
+                "replay_stale": 0.2822551758721972,
+                "position_spoof": 0.28635597978663674
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

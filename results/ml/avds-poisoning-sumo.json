@@ -1,0 +1,681 @@
+{
+  "experiment": "avds_validation_poisoning",
+  "generated_at": "2026-10-02T08:57:19.754115+00:00",
+  "seeds": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "attacks": [
+    "congestion_spoof",
+    "clear_road_spoof",
+    "drift_congestion",
+    "replay_stale"
+  ],
+  "rates": [
+    0.1
+  ],
+  "datasets": {
+    "sumo": {
+      "units": [
+        {
+          "model": "isolation_forest",
+          "seed": 4,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 5,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 6,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 7,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 8,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 9,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 10,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 11,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": false,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 12,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "isolation_forest",
+          "seed": 13,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 4,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 5,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 6,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 7,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 8,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 9,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 10,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 11,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 12,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "autoencoder",
+          "seed": 13,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 4,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 5,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 6,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 7,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 8,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 9,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 10,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 11,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 12,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "lof",
+          "seed": 13,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 4,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 5,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 6,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 7,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 8,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 9,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 10,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 11,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 12,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "mahalanobis",
+          "seed": 13,
+          "clean_choice": true,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": true,
+              "clear_road_spoof": true,
+              "drift_congestion": true,
+              "replay_stale": true
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 4,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 5,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 6,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 7,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 8,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 9,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 10,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 11,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 12,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        },
+        {
+          "model": "ewma_residual",
+          "seed": 13,
+          "clean_choice": false,
+          "poisoned_choice": {
+            "0.1": {
+              "congestion_spoof": false,
+              "clear_road_spoof": false,
+              "drift_congestion": false,
+              "replay_stale": false
+            }
+          }
+        }
+      ]
+    }
+  }
+}

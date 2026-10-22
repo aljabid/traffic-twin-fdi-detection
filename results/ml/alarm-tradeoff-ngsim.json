@@ -1,0 +1,1414 @@
+{
+  "experiment": "alarm_tradeoff",
+  "generated_at": "2026-10-04T06:51:48.033167+00:00",
+  "seeds": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "budgets": [
+    0.05,
+    0.02,
+    0.01,
+    0.005
+  ],
+  "rules": [
+    "1of1",
+    "2of3",
+    "3of5",
+    "4of5"
+  ],
+  "datasets": {
+    "ngsim": {
+      "units": [
+        {
+          "seed": 4,
+          "budgets": {
+            "0.05": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.85,
+                  "median_delay_s": 3.7493701005587354,
+                  "false_alarms_per_vehicle_hour": 85.23125145888811
+                },
+                "2of3": {
+                  "detection_rate": 0.6916666666666668,
+                  "median_delay_s": 4.794068620714825,
+                  "false_alarms_per_vehicle_hour": 36.013204841783704
+                },
+                "3of5": {
+                  "detection_rate": 0.6416666666666667,
+                  "median_delay_s": 8.254269989032764,
+                  "false_alarms_per_vehicle_hour": 21.127746840513108
+                },
+                "4of5": {
+                  "detection_rate": 0.6,
+                  "median_delay_s": 6.781851910753176,
+                  "false_alarms_per_vehicle_hour": 4.3215845810140445
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.775,
+                  "median_delay_s": 1.7718272176183139,
+                  "false_alarms_per_vehicle_hour": 57.38103971457537
+                },
+                "2of3": {
+                  "detection_rate": 0.5666666666666667,
+                  "median_delay_s": 1.975430384433518,
+                  "false_alarms_per_vehicle_hour": 34.81276468039092
+                },
+                "3of5": {
+                  "detection_rate": 0.4916666666666667,
+                  "median_delay_s": 2.0673800603253767,
+                  "false_alarms_per_vehicle_hour": 28.810563873426965
+                },
+                "4of5": {
+                  "detection_rate": 0.45,
+                  "median_delay_s": 2.4530353148196204,
+                  "false_alarms_per_vehicle_hour": 22.568275034184456
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.9,
+                  "median_delay_s": 1.372673890980271,
+                  "false_alarms_per_vehicle_hour": 81.38984294243117
+                },
+                "2of3": {
+                  "detection_rate": 0.7666666666666666,
+                  "median_delay_s": 1.975513754315519,
+                  "false_alarms_per_vehicle_hour": 35.05285271266948
+                },
+                "3of5": {
+                  "detection_rate": 0.7166666666666667,
+                  "median_delay_s": 2.781626441477177,
+                  "false_alarms_per_vehicle_hour": 24.008803227855804
+                },
+                "4of5": {
+                  "detection_rate": 0.6749999999999999,
+                  "median_delay_s": 3.897214248039139,
+                  "false_alarms_per_vehicle_hour": 13.44492980759925
+                }
+              }
+            },
+            "0.02": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.775,
+                  "median_delay_s": 5.012473626702558,
+                  "false_alarms_per_vehicle_hour": 55.70042348862547
+                },
+                "2of3": {
+                  "detection_rate": 0.65,
+                  "median_delay_s": 4.280642010993324,
+                  "false_alarms_per_vehicle_hour": 12.484577678485019
+                },
+                "3of5": {
+                  "detection_rate": 0.6083333333333333,
+                  "median_delay_s": 3.3523414176888764,
+                  "false_alarms_per_vehicle_hour": 5.522024742406835
+                },
+                "4of5": {
+                  "detection_rate": 0.5666666666666667,
+                  "median_delay_s": 4.835400160605786,
+                  "false_alarms_per_vehicle_hour": 1.4405281936713483
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.08333333333333333,
+                  "median_delay_s": 12.966163859236985,
+                  "false_alarms_per_vehicle_hour": 28.810563873426965
+                },
+                "2of3": {
+                  "detection_rate": 0.09166666666666667,
+                  "median_delay_s": 3.663747003437796,
+                  "false_alarms_per_vehicle_hour": 16.566074227220504
+                },
+                "3of5": {
+                  "detection_rate": 0.08333333333333333,
+                  "median_delay_s": 1.8079586465998243,
+                  "false_alarms_per_vehicle_hour": 13.204841775320693
+                },
+                "4of5": {
+                  "detection_rate": 0.08333333333333333,
+                  "median_delay_s": 2.1412919799331576,
+                  "false_alarms_per_vehicle_hour": 10.323785387977995
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.7416666666666667,
+                  "median_delay_s": 4.313554560882039,
+                  "false_alarms_per_vehicle_hour": 50.8986628430543
+                },
+                "2of3": {
+                  "detection_rate": 0.6749999999999999,
+                  "median_delay_s": 3.080439452858021,
+                  "false_alarms_per_vehicle_hour": 15.84581013038483
+                },
+                "3of5": {
+                  "detection_rate": 0.65,
+                  "median_delay_s": 3.653441572600665,
+                  "false_alarms_per_vehicle_hour": 10.803961452535113
+                },
+                "4of5": {
+                  "detection_rate": 0.5666666666666667,
+                  "median_delay_s": 5.778168492834084,
+                  "false_alarms_per_vehicle_hour": 7.202640968356741
+                }
+              }
+            },
+            "0.01": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.7166666666666667,
+                  "median_delay_s": 4.726364222801446,
+                  "false_alarms_per_vehicle_hour": 33.13214845444101
+                },
+                "2of3": {
+                  "detection_rate": 0.6416666666666667,
+                  "median_delay_s": 3.1706300929072313,
+                  "false_alarms_per_vehicle_hour": 6.2422888392425095
+                },
+                "3of5": {
+                  "detection_rate": 0.6,
+                  "median_delay_s": 4.173793923982885,
+                  "false_alarms_per_vehicle_hour": 3.3612324518998125
+                },
+                "4of5": {
+                  "detection_rate": 0.5416666666666666,
+                  "median_delay_s": 5.923656662664143,
+                  "false_alarms_per_vehicle_hour": 0.4801760645571161
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.05833333333333333,
+                  "median_delay_s": 11.39296177806682,
+                  "false_alarms_per_vehicle_hour": 22.08809896962734
+                },
+                "2of3": {
+                  "detection_rate": 0.041666666666666664,
+                  "median_delay_s": 11.397778740618378,
+                  "false_alarms_per_vehicle_hour": 9.84360932342088
+                },
+                "3of5": {
+                  "detection_rate": 0.06666666666666667,
+                  "median_delay_s": 1.5963819329238806,
+                  "false_alarms_per_vehicle_hour": 7.4427290006353
+                },
+                "4of5": {
+                  "detection_rate": 0.025000000000000005,
+                  "median_delay_s": 4.9521702897618525,
+                  "false_alarms_per_vehicle_hour": 6.482376871521067
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.7166666666666667,
+                  "median_delay_s": 2.7117750288258926,
+                  "false_alarms_per_vehicle_hour": 34.09250058355524
+                },
+                "2of3": {
+                  "detection_rate": 0.6333333333333333,
+                  "median_delay_s": 3.758444109465927,
+                  "false_alarms_per_vehicle_hour": 11.04404948481367
+                },
+                "3of5": {
+                  "detection_rate": 0.625,
+                  "median_delay_s": 4.386501192639116,
+                  "false_alarms_per_vehicle_hour": 6.002200806963951
+                },
+                "4of5": {
+                  "detection_rate": 0.44166666666666665,
+                  "median_delay_s": 6.959944556187838,
+                  "false_alarms_per_vehicle_hour": 4.081496548735487
+                }
+              }
+            },
+            "0.005": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.6749999999999999,
+                  "median_delay_s": 5.040969701891299,
+                  "false_alarms_per_vehicle_hour": 20.407482743677434
+                },
+                "2of3": {
+                  "detection_rate": 0.6083333333333333,
+                  "median_delay_s": 3.5636634139809757,
+                  "false_alarms_per_vehicle_hour": 3.6013204841783706
+                },
+                "3of5": {
+                  "detection_rate": 0.5916666666666667,
+                  "median_delay_s": 4.8733967226871755,
+                  "false_alarms_per_vehicle_hour": 0.9603521291142322
+                },
+                "4of5": {
+                  "detection_rate": 0.43333333333333335,
+                  "median_delay_s": 8.057998137403047,
+                  "false_alarms_per_vehicle_hour": 0.0
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.06666666666666667,
+                  "median_delay_s": 12.81701762874145,
+                  "false_alarms_per_vehicle_hour": 15.84581013038483
+                },
+                "2of3": {
+                  "detection_rate": 0.041666666666666664,
+                  "median_delay_s": 12.064445407285044,
+                  "false_alarms_per_vehicle_hour": 7.4427290006353
+                },
+                "3of5": {
+                  "detection_rate": 0.06666666666666667,
+                  "median_delay_s": 1.5963819329238806,
+                  "false_alarms_per_vehicle_hour": 5.041848677849719
+                },
+                "4of5": {
+                  "detection_rate": 0.008333333333333333,
+                  "median_delay_s": 5.154265501303598,
+                  "false_alarms_per_vehicle_hour": 4.081496548735487
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.6833333333333332,
+                  "median_delay_s": 6.98665710464896,
+                  "false_alarms_per_vehicle_hour": 17.52642635633474
+                },
+                "2of3": {
+                  "detection_rate": 0.6,
+                  "median_delay_s": 7.706095636938699,
+                  "false_alarms_per_vehicle_hour": 2.6409683550641385
+                },
+                "3of5": {
+                  "detection_rate": 0.4916666666666667,
+                  "median_delay_s": 5.531116974510951,
+                  "false_alarms_per_vehicle_hour": 0.7202640968356742
+                },
+                "4of5": {
+                  "detection_rate": 0.4166666666666667,
+                  "median_delay_s": 8.894718465890037,
+                  "false_alarms_per_vehicle_hour": 0.7202640968356742
+                }
+              }
+            }
+          }
+        },
+        {
+          "seed": 5,
+          "budgets": {
+            "0.05": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.9,
+                  "median_delay_s": 1.7770173871152413,
+                  "false_alarms_per_vehicle_hour": 83.5506352329382
+                },
+                "2of3": {
+                  "detection_rate": 0.7583333333333333,
+                  "median_delay_s": 5.9806095111610675,
+                  "false_alarms_per_vehicle_hour": 34.572676648112356
+                },
+                "3of5": {
+                  "detection_rate": 0.7000000000000001,
+                  "median_delay_s": 9.12700450810371,
+                  "false_alarms_per_vehicle_hour": 18.48677848544897
+                },
+                "4of5": {
+                  "detection_rate": 0.6416666666666667,
+                  "median_delay_s": 10.658217765720716,
+                  "false_alarms_per_vehicle_hour": 5.041848677849719
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.8250000000000001,
+                  "median_delay_s": 6.114919945578246,
+                  "false_alarms_per_vehicle_hour": 57.38103971457537
+                },
+                "2of3": {
+                  "detection_rate": 0.5083333333333333,
+                  "median_delay_s": 9.048361609476464,
+                  "false_alarms_per_vehicle_hour": 34.81276468039092
+                },
+                "3of5": {
+                  "detection_rate": 0.325,
+                  "median_delay_s": 11.270248192548753,
+                  "false_alarms_per_vehicle_hour": 28.810563873426965
+                },
+                "4of5": {
+                  "detection_rate": 0.23333333333333336,
+                  "median_delay_s": 11.951665837061592,
+                  "false_alarms_per_vehicle_hour": 22.568275034184456
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.8916666666666666,
+                  "median_delay_s": 3.047385565839553,
+                  "false_alarms_per_vehicle_hour": 80.90966687787406
+                },
+                "2of3": {
+                  "detection_rate": 0.7333333333333334,
+                  "median_delay_s": 4.59922338463366,
+                  "false_alarms_per_vehicle_hour": 34.81276468039092
+                },
+                "3of5": {
+                  "detection_rate": 0.7083333333333334,
+                  "median_delay_s": 6.6264577261172235,
+                  "false_alarms_per_vehicle_hour": 23.28853913102013
+                },
+                "4of5": {
+                  "detection_rate": 0.65,
+                  "median_delay_s": 7.024783322665219,
+                  "false_alarms_per_vehicle_hour": 13.204841775320693
+                }
+              }
+            },
+            "0.02": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.8083333333333332,
+                  "median_delay_s": 3.9307016520760953,
+                  "false_alarms_per_vehicle_hour": 55.70042348862547
+                },
+                "2of3": {
+                  "detection_rate": 0.6666666666666666,
+                  "median_delay_s": 6.488405966219337,
+                  "false_alarms_per_vehicle_hour": 13.925105872156367
+                },
+                "3of5": {
+                  "detection_rate": 0.65,
+                  "median_delay_s": 7.898124293540604,
+                  "false_alarms_per_vehicle_hour": 6.002200806963951
+                },
+                "4of5": {
+                  "detection_rate": 0.6166666666666667,
+                  "median_delay_s": 7.647017718816642,
+                  "false_alarms_per_vehicle_hour": 1.2004401613927902
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.10833333333333334,
+                  "median_delay_s": 8.887581966235302,
+                  "false_alarms_per_vehicle_hour": 28.810563873426965
+                },
+                "2of3": {
+                  "detection_rate": 0.049999999999999996,
+                  "median_delay_s": 5.687929806532338,
+                  "false_alarms_per_vehicle_hour": 16.566074227220504
+                },
+                "3of5": {
+                  "detection_rate": 0.041666666666666664,
+                  "median_delay_s": 9.414135564002208,
+                  "false_alarms_per_vehicle_hour": 13.204841775320693
+                },
+                "4of5": {
+                  "detection_rate": 0.03333333333333333,
+                  "median_delay_s": 8.187929806532338,
+                  "false_alarms_per_vehicle_hour": 10.323785387977995
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.7916666666666666,
+                  "median_delay_s": 4.287989498213089,
+                  "false_alarms_per_vehicle_hour": 50.8986628430543
+                },
+                "2of3": {
+                  "detection_rate": 0.6666666666666666,
+                  "median_delay_s": 2.6951790547270016,
+                  "false_alarms_per_vehicle_hour": 15.84581013038483
+                },
+                "3of5": {
+                  "detection_rate": 0.6333333333333333,
+                  "median_delay_s": 5.5851144265810335,
+                  "false_alarms_per_vehicle_hour": 10.323785387977995
+                },
+                "4of5": {
+                  "detection_rate": 0.5750000000000001,
+                  "median_delay_s": 8.381056895421352,
+                  "false_alarms_per_vehicle_hour": 6.722464903799625
+                }
+              }
+            },
+            "0.01": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.75,
+                  "median_delay_s": 5.148685295406419,
+                  "false_alarms_per_vehicle_hour": 32.41188435760534
+                },
+                "2of3": {
+                  "detection_rate": 0.625,
+                  "median_delay_s": 2.98255538783269,
+                  "false_alarms_per_vehicle_hour": 6.2422888392425095
+                },
+                "3of5": {
+                  "detection_rate": 0.6,
+                  "median_delay_s": 4.783853630826343,
+                  "false_alarms_per_vehicle_hour": 2.6409683550641385
+                },
+                "4of5": {
+                  "detection_rate": 0.5499999999999999,
+                  "median_delay_s": 10.590056092449231,
+                  "false_alarms_per_vehicle_hour": 0.24008803227855804
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.08333333333333333,
+                  "median_delay_s": 9.211038861249108,
+                  "false_alarms_per_vehicle_hour": 22.08809896962734
+                },
+                "2of3": {
+                  "detection_rate": 0.03333333333333333,
+                  "median_delay_s": 3.4379298065323383,
+                  "false_alarms_per_vehicle_hour": 9.84360932342088
+                },
+                "3of5": {
+                  "detection_rate": 0.03333333333333333,
+                  "median_delay_s": 7.187929806532338,
+                  "false_alarms_per_vehicle_hour": 7.4427290006353
+                },
+                "4of5": {
+                  "detection_rate": 0.025000000000000005,
+                  "median_delay_s": 5.461724049062468,
+                  "false_alarms_per_vehicle_hour": 6.482376871521067
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.7416666666666667,
+                  "median_delay_s": 4.420647694418828,
+                  "false_alarms_per_vehicle_hour": 31.211444196212547
+                },
+                "2of3": {
+                  "detection_rate": 0.6749999999999999,
+                  "median_delay_s": 3.1554740216621817,
+                  "false_alarms_per_vehicle_hour": 10.563873420256554
+                },
+                "3of5": {
+                  "detection_rate": 0.5916666666666667,
+                  "median_delay_s": 4.729719655801698,
+                  "false_alarms_per_vehicle_hour": 5.762112774685393
+                },
+                "4of5": {
+                  "detection_rate": 0.47500000000000003,
+                  "median_delay_s": 7.825552389607765,
+                  "false_alarms_per_vehicle_hour": 4.081496548735487
+                }
+              }
+            },
+            "0.005": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.7083333333333334,
+                  "median_delay_s": 4.920548314248056,
+                  "false_alarms_per_vehicle_hour": 17.766514388613295
+                },
+                "2of3": {
+                  "detection_rate": 0.65,
+                  "median_delay_s": 3.939970857813023,
+                  "false_alarms_per_vehicle_hour": 2.8810563873426966
+                },
+                "3of5": {
+                  "detection_rate": 0.5750000000000001,
+                  "median_delay_s": 5.938754033995792,
+                  "false_alarms_per_vehicle_hour": 0.7202640968356742
+                },
+                "4of5": {
+                  "detection_rate": 0.4583333333333333,
+                  "median_delay_s": 11.26701761042932,
+                  "false_alarms_per_vehicle_hour": 0.0
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.08333333333333333,
+                  "median_delay_s": 9.20564023940824,
+                  "false_alarms_per_vehicle_hour": 15.84581013038483
+                },
+                "2of3": {
+                  "detection_rate": 0.025000000000000005,
+                  "median_delay_s": 1.2117240490624681,
+                  "false_alarms_per_vehicle_hour": 7.4427290006353
+                },
+                "3of5": {
+                  "detection_rate": 0.016666666666666666,
+                  "median_delay_s": 2.235518291592598,
+                  "false_alarms_per_vehicle_hour": 5.041848677849719
+                },
+                "4of5": {
+                  "detection_rate": 0.016666666666666666,
+                  "median_delay_s": 3.235518291592598,
+                  "false_alarms_per_vehicle_hour": 4.081496548735487
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.7000000000000001,
+                  "median_delay_s": 5.636978553452839,
+                  "false_alarms_per_vehicle_hour": 17.286338324056178
+                },
+                "2of3": {
+                  "detection_rate": 0.5833333333333334,
+                  "median_delay_s": 3.4474952013406437,
+                  "false_alarms_per_vehicle_hour": 2.4008803227855804
+                },
+                "3of5": {
+                  "detection_rate": 0.4666666666666666,
+                  "median_delay_s": 5.731959552911576,
+                  "false_alarms_per_vehicle_hour": 0.7202640968356742
+                },
+                "4of5": {
+                  "detection_rate": 0.35833333333333334,
+                  "median_delay_s": 10.461023358657258,
+                  "false_alarms_per_vehicle_hour": 0.7202640968356742
+                }
+              }
+            }
+          }
+        },
+        {
+          "seed": 6,
+          "budgets": {
+            "0.05": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.8250000000000001,
+                  "median_delay_s": 1.710061610210687,
+                  "false_alarms_per_vehicle_hour": 85.71142752344522
+                },
+                "2of3": {
+                  "detection_rate": 0.75,
+                  "median_delay_s": 2.5881900448002852,
+                  "false_alarms_per_vehicle_hour": 34.81276468039092
+                },
+                "3of5": {
+                  "detection_rate": 0.7166666666666667,
+                  "median_delay_s": 5.369834296114277,
+                  "false_alarms_per_vehicle_hour": 17.52642635633474
+                },
+                "4of5": {
+                  "detection_rate": 0.6333333333333333,
+                  "median_delay_s": 4.631476124894107,
+                  "false_alarms_per_vehicle_hour": 4.561672613292603
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.7333333333333334,
+                  "median_delay_s": 6.7573864889758015,
+                  "false_alarms_per_vehicle_hour": 57.38103971457537
+                },
+                "2of3": {
+                  "detection_rate": 0.5499999999999999,
+                  "median_delay_s": 5.741239171222939,
+                  "false_alarms_per_vehicle_hour": 34.81276468039092
+                },
+                "3of5": {
+                  "detection_rate": 0.43333333333333335,
+                  "median_delay_s": 4.13896328494108,
+                  "false_alarms_per_vehicle_hour": 28.810563873426965
+                },
+                "4of5": {
+                  "detection_rate": 0.35000000000000003,
+                  "median_delay_s": 5.990188537378951,
+                  "false_alarms_per_vehicle_hour": 22.568275034184456
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.8833333333333333,
+                  "median_delay_s": 1.321922413558544,
+                  "false_alarms_per_vehicle_hour": 84.99116342660955
+                },
+                "2of3": {
+                  "detection_rate": 0.7416666666666667,
+                  "median_delay_s": 3.2973966609764225,
+                  "false_alarms_per_vehicle_hour": 37.213645003176495
+                },
+                "3of5": {
+                  "detection_rate": 0.7333333333333334,
+                  "median_delay_s": 2.8220741351833567,
+                  "false_alarms_per_vehicle_hour": 23.52862716329869
+                },
+                "4of5": {
+                  "detection_rate": 0.6916666666666668,
+                  "median_delay_s": 4.276733330179316,
+                  "false_alarms_per_vehicle_hour": 13.44492980759925
+                }
+              }
+            },
+            "0.02": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.775,
+                  "median_delay_s": 2.520657393247044,
+                  "false_alarms_per_vehicle_hour": 54.740071359511234
+                },
+                "2of3": {
+                  "detection_rate": 0.6833333333333332,
+                  "median_delay_s": 4.574564820019684,
+                  "false_alarms_per_vehicle_hour": 13.685017839877808
+                },
+                "3of5": {
+                  "detection_rate": 0.6666666666666666,
+                  "median_delay_s": 6.944880875079737,
+                  "false_alarms_per_vehicle_hour": 5.762112774685393
+                },
+                "4of5": {
+                  "detection_rate": 0.6166666666666667,
+                  "median_delay_s": 5.018600156618049,
+                  "false_alarms_per_vehicle_hour": 1.4405281936713483
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.09999999999999999,
+                  "median_delay_s": 12.317012384301051,
+                  "false_alarms_per_vehicle_hour": 28.810563873426965
+                },
+                "2of3": {
+                  "detection_rate": 0.075,
+                  "median_delay_s": 2.755791287694592,
+                  "false_alarms_per_vehicle_hour": 16.566074227220504
+                },
+                "3of5": {
+                  "detection_rate": 0.11666666666666665,
+                  "median_delay_s": 0.4678524747335662,
+                  "false_alarms_per_vehicle_hour": 13.204841775320693
+                },
+                "4of5": {
+                  "detection_rate": 0.03333333333333333,
+                  "median_delay_s": 12.385857599438168,
+                  "false_alarms_per_vehicle_hour": 10.323785387977995
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.7916666666666666,
+                  "median_delay_s": 3.5314951502756835,
+                  "false_alarms_per_vehicle_hour": 53.779719230397
+                },
+                "2of3": {
+                  "detection_rate": 0.6666666666666666,
+                  "median_delay_s": 5.834911726318144,
+                  "false_alarms_per_vehicle_hour": 15.365634065827715
+                },
+                "3of5": {
+                  "detection_rate": 0.6416666666666667,
+                  "median_delay_s": 7.216231907873104,
+                  "false_alarms_per_vehicle_hour": 10.083697355699439
+                },
+                "4of5": {
+                  "detection_rate": 0.5666666666666667,
+                  "median_delay_s": 14.583176526085785,
+                  "false_alarms_per_vehicle_hour": 6.9625529360781835
+                }
+              }
+            },
+            "0.01": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.7583333333333333,
+                  "median_delay_s": 3.9327258243380734,
+                  "false_alarms_per_vehicle_hour": 35.05285271266948
+                },
+                "2of3": {
+                  "detection_rate": 0.6416666666666667,
+                  "median_delay_s": 4.026992002152838,
+                  "false_alarms_per_vehicle_hour": 6.002200806963951
+                },
+                "3of5": {
+                  "detection_rate": 0.6,
+                  "median_delay_s": 4.265282865730114,
+                  "false_alarms_per_vehicle_hour": 2.6409683550641385
+                },
+                "4of5": {
+                  "detection_rate": 0.5416666666666666,
+                  "median_delay_s": 8.097140830155695,
+                  "false_alarms_per_vehicle_hour": 0.24008803227855804
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.05833333333333334,
+                  "median_delay_s": 11.710611080517992,
+                  "false_alarms_per_vehicle_hour": 22.08809896962734
+                },
+                "2of3": {
+                  "detection_rate": 0.016666666666666666,
+                  "median_delay_s": 19.173270476749167,
+                  "false_alarms_per_vehicle_hour": 9.84360932342088
+                },
+                "3of5": {
+                  "detection_rate": 0.06666666666666667,
+                  "median_delay_s": 4.7844350627468275,
+                  "false_alarms_per_vehicle_hour": 7.4427290006353
+                },
+                "4of5": {
+                  "detection_rate": 0.016666666666666666,
+                  "median_delay_s": 28.673270476749167,
+                  "false_alarms_per_vehicle_hour": 6.482376871521067
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.725,
+                  "median_delay_s": 4.760893897308658,
+                  "false_alarms_per_vehicle_hour": 35.53302877722659
+                },
+                "2of3": {
+                  "detection_rate": 0.6416666666666667,
+                  "median_delay_s": 6.553328902732271,
+                  "false_alarms_per_vehicle_hour": 10.803961452535113
+                },
+                "3of5": {
+                  "detection_rate": 0.625,
+                  "median_delay_s": 4.893030317267403,
+                  "false_alarms_per_vehicle_hour": 6.722464903799625
+                },
+                "4of5": {
+                  "detection_rate": 0.525,
+                  "median_delay_s": 11.020619969291147,
+                  "false_alarms_per_vehicle_hour": 4.3215845810140445
+                }
+              }
+            },
+            "0.005": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.7083333333333334,
+                  "median_delay_s": 4.760893897308658,
+                  "false_alarms_per_vehicle_hour": 21.607922905070225
+                },
+                "2of3": {
+                  "detection_rate": 0.6416666666666667,
+                  "median_delay_s": 6.553328902732271,
+                  "false_alarms_per_vehicle_hour": 3.1211444196212548
+                },
+                "3of5": {
+                  "detection_rate": 0.6166666666666667,
+                  "median_delay_s": 6.063369653740665,
+                  "false_alarms_per_vehicle_hour": 1.6806162259499062
+                },
+                "4of5": {
+                  "detection_rate": 0.5166666666666667,
+                  "median_delay_s": 10.967456590966322,
+                  "false_alarms_per_vehicle_hour": 0.24008803227855804
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.041666666666666664,
+                  "median_delay_s": 14.839678025979083,
+                  "false_alarms_per_vehicle_hour": 15.84581013038483
+                },
+                "2of3": {
+                  "detection_rate": 0.0,
+                  "median_delay_s": NaN,
+                  "false_alarms_per_vehicle_hour": 7.4427290006353
+                },
+                "3of5": {
+                  "detection_rate": 0.008333333333333333,
+                  "median_delay_s": 1.20666797994636,
+                  "false_alarms_per_vehicle_hour": 5.041848677849719
+                },
+                "4of5": {
+                  "detection_rate": 0.0,
+                  "median_delay_s": NaN,
+                  "false_alarms_per_vehicle_hour": 4.081496548735487
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.65,
+                  "median_delay_s": 5.164959641115274,
+                  "false_alarms_per_vehicle_hour": 15.605722098106273
+                },
+                "2of3": {
+                  "detection_rate": 0.6,
+                  "median_delay_s": 3.3552525733830407,
+                  "false_alarms_per_vehicle_hour": 2.4008803227855804
+                },
+                "3of5": {
+                  "detection_rate": 0.5750000000000001,
+                  "median_delay_s": 8.16770212361007,
+                  "false_alarms_per_vehicle_hour": 0.7202640968356742
+                },
+                "4of5": {
+                  "detection_rate": 0.45,
+                  "median_delay_s": 9.987807017168961,
+                  "false_alarms_per_vehicle_hour": 0.7202640968356742
+                }
+              }
+            }
+          }
+        },
+        {
+          "seed": 7,
+          "budgets": {
+            "0.05": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.9333333333333332,
+                  "median_delay_s": 3.142035820618427,
+                  "false_alarms_per_vehicle_hour": 85.47133949116666
+                },
+                "2of3": {
+                  "detection_rate": 0.7833333333333333,
+                  "median_delay_s": 4.175305970556413,
+                  "false_alarms_per_vehicle_hour": 34.572676648112356
+                },
+                "3of5": {
+                  "detection_rate": 0.725,
+                  "median_delay_s": 9.345814527381057,
+                  "false_alarms_per_vehicle_hour": 17.286338324056178
+                },
+                "4of5": {
+                  "detection_rate": 0.5916666666666667,
+                  "median_delay_s": 9.89815949027737,
+                  "false_alarms_per_vehicle_hour": 4.801760645571161
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.8250000000000001,
+                  "median_delay_s": 4.259711770515423,
+                  "false_alarms_per_vehicle_hour": 57.38103971457537
+                },
+                "2of3": {
+                  "detection_rate": 0.5916666666666667,
+                  "median_delay_s": 7.662075622666937,
+                  "false_alarms_per_vehicle_hour": 34.81276468039092
+                },
+                "3of5": {
+                  "detection_rate": 0.4666666666666666,
+                  "median_delay_s": 9.197316415278086,
+                  "false_alarms_per_vehicle_hour": 28.810563873426965
+                },
+                "4of5": {
+                  "detection_rate": 0.325,
+                  "median_delay_s": 8.864617670711596,
+                  "false_alarms_per_vehicle_hour": 22.568275034184456
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.9500000000000001,
+                  "median_delay_s": 3.1193065786501393,
+                  "false_alarms_per_vehicle_hour": 82.59028310382396
+                },
+                "2of3": {
+                  "detection_rate": 0.7333333333333334,
+                  "median_delay_s": 5.797690989857074,
+                  "false_alarms_per_vehicle_hour": 34.81276468039092
+                },
+                "3of5": {
+                  "detection_rate": 0.6916666666666668,
+                  "median_delay_s": 5.614195851589709,
+                  "false_alarms_per_vehicle_hour": 23.768715195577247
+                },
+                "4of5": {
+                  "detection_rate": 0.5916666666666667,
+                  "median_delay_s": 8.78719974483829,
+                  "false_alarms_per_vehicle_hour": 13.204841775320693
+                }
+              }
+            },
+            "0.02": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.8083333333333332,
+                  "median_delay_s": 3.8770661005207026,
+                  "false_alarms_per_vehicle_hour": 54.01980726267556
+                },
+                "2of3": {
+                  "detection_rate": 0.6916666666666668,
+                  "median_delay_s": 4.197131332359277,
+                  "false_alarms_per_vehicle_hour": 14.165193904434926
+                },
+                "3of5": {
+                  "detection_rate": 0.65,
+                  "median_delay_s": 3.8670878842822276,
+                  "false_alarms_per_vehicle_hour": 6.9625529360781835
+                },
+                "4of5": {
+                  "detection_rate": 0.6166666666666667,
+                  "median_delay_s": 10.805522525372604,
+                  "false_alarms_per_vehicle_hour": 0.9603521291142322
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.09166666666666667,
+                  "median_delay_s": 22.173524119483773,
+                  "false_alarms_per_vehicle_hour": 28.810563873426965
+                },
+                "2of3": {
+                  "detection_rate": 0.041666666666666664,
+                  "median_delay_s": 23.801733252446866,
+                  "false_alarms_per_vehicle_hour": 16.566074227220504
+                },
+                "3of5": {
+                  "detection_rate": 0.025000000000000005,
+                  "median_delay_s": 23.223653237335384,
+                  "false_alarms_per_vehicle_hour": 13.204841775320693
+                },
+                "4of5": {
+                  "detection_rate": 0.016666666666666666,
+                  "median_delay_s": 24.345212745596655,
+                  "false_alarms_per_vehicle_hour": 10.323785387977995
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.7583333333333333,
+                  "median_delay_s": 4.984380063969486,
+                  "false_alarms_per_vehicle_hour": 51.13875087533286
+                },
+                "2of3": {
+                  "detection_rate": 0.6833333333333332,
+                  "median_delay_s": 4.5443348417175,
+                  "false_alarms_per_vehicle_hour": 15.84581013038483
+                },
+                "3of5": {
+                  "detection_rate": 0.6416666666666667,
+                  "median_delay_s": 8.291998935320104,
+                  "false_alarms_per_vehicle_hour": 10.083697355699439
+                },
+                "4of5": {
+                  "detection_rate": 0.5166666666666667,
+                  "median_delay_s": 9.888960658945143,
+                  "false_alarms_per_vehicle_hour": 7.202640968356741
+                }
+              }
+            },
+            "0.01": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.725,
+                  "median_delay_s": 3.8845865457357527,
+                  "false_alarms_per_vehicle_hour": 32.89206042216245
+                },
+                "2of3": {
+                  "detection_rate": 0.6666666666666666,
+                  "median_delay_s": 2.6677334044943564,
+                  "false_alarms_per_vehicle_hour": 6.2422888392425095
+                },
+                "3of5": {
+                  "detection_rate": 0.625,
+                  "median_delay_s": 4.675076805753633,
+                  "false_alarms_per_vehicle_hour": 2.6409683550641385
+                },
+                "4of5": {
+                  "detection_rate": 0.5083333333333333,
+                  "median_delay_s": 6.6160672684782185,
+                  "false_alarms_per_vehicle_hour": 0.4801760645571161
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.08333333333333333,
+                  "median_delay_s": 20.42176697391551,
+                  "false_alarms_per_vehicle_hour": 22.08809896962734
+                },
+                "2of3": {
+                  "detection_rate": 0.041666666666666664,
+                  "median_delay_s": 23.801733252446866,
+                  "false_alarms_per_vehicle_hour": 9.84360932342088
+                },
+                "3of5": {
+                  "detection_rate": 0.025000000000000005,
+                  "median_delay_s": 23.223653237335384,
+                  "false_alarms_per_vehicle_hour": 7.4427290006353
+                },
+                "4of5": {
+                  "detection_rate": 0.016666666666666666,
+                  "median_delay_s": 24.345212745596655,
+                  "false_alarms_per_vehicle_hour": 6.482376871521067
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.7416666666666667,
+                  "median_delay_s": 6.560939474128342,
+                  "false_alarms_per_vehicle_hour": 32.651972389883895
+                },
+                "2of3": {
+                  "detection_rate": 0.6583333333333333,
+                  "median_delay_s": 8.419559615974626,
+                  "false_alarms_per_vehicle_hour": 9.603521291142322
+                },
+                "3of5": {
+                  "detection_rate": 0.6166666666666666,
+                  "median_delay_s": 7.940461613625909,
+                  "false_alarms_per_vehicle_hour": 6.482376871521067
+                },
+                "4of5": {
+                  "detection_rate": 0.43333333333333335,
+                  "median_delay_s": 8.255324247555109,
+                  "false_alarms_per_vehicle_hour": 4.3215845810140445
+                }
+              }
+            },
+            "0.005": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.7083333333333334,
+                  "median_delay_s": 5.2240484664022615,
+                  "false_alarms_per_vehicle_hour": 18.006602420891852
+                },
+                "2of3": {
+                  "detection_rate": 0.6416666666666667,
+                  "median_delay_s": 4.4397726324386895,
+                  "false_alarms_per_vehicle_hour": 2.1607922905070223
+                },
+                "3of5": {
+                  "detection_rate": 0.6083333333333333,
+                  "median_delay_s": 5.906338455970399,
+                  "false_alarms_per_vehicle_hour": 1.4405281936713483
+                },
+                "4of5": {
+                  "detection_rate": 0.43333333333333335,
+                  "median_delay_s": 7.966915089520626,
+                  "false_alarms_per_vehicle_hour": 0.24008803227855804
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.06666666666666667,
+                  "median_delay_s": 20.832779889780795,
+                  "false_alarms_per_vehicle_hour": 15.84581013038483
+                },
+                "2of3": {
+                  "detection_rate": 0.025000000000000005,
+                  "median_delay_s": 22.89031990400205,
+                  "false_alarms_per_vehicle_hour": 7.4427290006353
+                },
+                "3of5": {
+                  "detection_rate": 0.016666666666666666,
+                  "median_delay_s": 23.845212745596655,
+                  "false_alarms_per_vehicle_hour": 5.041848677849719
+                },
+                "4of5": {
+                  "detection_rate": 0.008333333333333333,
+                  "median_delay_s": 25.709891270380467,
+                  "false_alarms_per_vehicle_hour": 4.081496548735487
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.7333333333333334,
+                  "median_delay_s": 6.827272813495559,
+                  "false_alarms_per_vehicle_hour": 17.04625029177762
+                },
+                "2of3": {
+                  "detection_rate": 0.5916666666666667,
+                  "median_delay_s": 5.747650735410086,
+                  "false_alarms_per_vehicle_hour": 1.9207042582284644
+                },
+                "3of5": {
+                  "detection_rate": 0.5083333333333333,
+                  "median_delay_s": 6.57652841147501,
+                  "false_alarms_per_vehicle_hour": 0.9603521291142322
+                },
+                "4of5": {
+                  "detection_rate": 0.3833333333333333,
+                  "median_delay_s": 7.742336667870404,
+                  "false_alarms_per_vehicle_hour": 0.7202640968356742
+                }
+              }
+            }
+          }
+        },
+        {
+          "seed": 8,
+          "budgets": {
+            "0.05": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.85,
+                  "median_delay_s": 2.3929925716753737,
+                  "false_alarms_per_vehicle_hour": 82.35019507154541
+                },
+                "2of3": {
+                  "detection_rate": 0.75,
+                  "median_delay_s": 4.45387781203802,
+                  "false_alarms_per_vehicle_hour": 34.81276468039092
+                },
+                "3of5": {
+                  "detection_rate": 0.7000000000000001,
+                  "median_delay_s": 5.442132926817673,
+                  "false_alarms_per_vehicle_hour": 19.207042582284643
+                },
+                "4of5": {
+                  "detection_rate": 0.6333333333333333,
+                  "median_delay_s": 4.194508765474893,
+                  "false_alarms_per_vehicle_hour": 5.041848677849719
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.7999999999999999,
+                  "median_delay_s": 6.540112356519482,
+                  "false_alarms_per_vehicle_hour": 57.38103971457537
+                },
+                "2of3": {
+                  "detection_rate": 0.47500000000000003,
+                  "median_delay_s": 4.918388648560115,
+                  "false_alarms_per_vehicle_hour": 34.81276468039092
+                },
+                "3of5": {
+                  "detection_rate": 0.35000000000000003,
+                  "median_delay_s": 7.941040072958761,
+                  "false_alarms_per_vehicle_hour": 28.810563873426965
+                },
+                "4of5": {
+                  "detection_rate": 0.23333333333333336,
+                  "median_delay_s": 7.460915986118683,
+                  "false_alarms_per_vehicle_hour": 22.568275034184456
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.8916666666666666,
+                  "median_delay_s": 2.930060852629443,
+                  "false_alarms_per_vehicle_hour": 84.03081129749532
+                },
+                "2of3": {
+                  "detection_rate": 0.7416666666666667,
+                  "median_delay_s": 2.1255191776047773,
+                  "false_alarms_per_vehicle_hour": 38.17399713229073
+                },
+                "3of5": {
+                  "detection_rate": 0.7166666666666667,
+                  "median_delay_s": 4.358496661220367,
+                  "false_alarms_per_vehicle_hour": 25.92950748608427
+                },
+                "4of5": {
+                  "detection_rate": 0.6916666666666668,
+                  "median_delay_s": 5.8095234343588045,
+                  "false_alarms_per_vehicle_hour": 14.165193904434926
+                }
+              }
+            },
+            "0.02": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.775,
+                  "median_delay_s": 3.2205569231106588,
+                  "false_alarms_per_vehicle_hour": 56.6607756177397
+                },
+                "2of3": {
+                  "detection_rate": 0.6833333333333332,
+                  "median_delay_s": 5.054726456272571,
+                  "false_alarms_per_vehicle_hour": 15.84581013038483
+                },
+                "3of5": {
+                  "detection_rate": 0.6666666666666666,
+                  "median_delay_s": 7.375797099453242,
+                  "false_alarms_per_vehicle_hour": 7.4427290006353
+                },
+                "4of5": {
+                  "detection_rate": 0.6083333333333333,
+                  "median_delay_s": 4.875581095460802,
+                  "false_alarms_per_vehicle_hour": 1.2004401613927902
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.11666666666666668,
+                  "median_delay_s": 9.321340803260682,
+                  "false_alarms_per_vehicle_hour": 28.810563873426965
+                },
+                "2of3": {
+                  "detection_rate": 0.14166666666666666,
+                  "median_delay_s": 0.8626115464721806,
+                  "false_alarms_per_vehicle_hour": 16.566074227220504
+                },
+                "3of5": {
+                  "detection_rate": 0.08333333333333333,
+                  "median_delay_s": 1.7129969075322151,
+                  "false_alarms_per_vehicle_hour": 13.204841775320693
+                },
+                "4of5": {
+                  "detection_rate": 0.049999999999999996,
+                  "median_delay_s": 4.572019529063255,
+                  "false_alarms_per_vehicle_hour": 10.323785387977995
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.7333333333333334,
+                  "median_delay_s": 1.4485262855499361,
+                  "false_alarms_per_vehicle_hour": 54.25989529495412
+                },
+                "2of3": {
+                  "detection_rate": 0.7166666666666667,
+                  "median_delay_s": 2.093233239914601,
+                  "false_alarms_per_vehicle_hour": 16.806162259499065
+                },
+                "3of5": {
+                  "detection_rate": 0.6666666666666666,
+                  "median_delay_s": 3.728738538280595,
+                  "false_alarms_per_vehicle_hour": 10.083697355699439
+                },
+                "4of5": {
+                  "detection_rate": 0.6333333333333333,
+                  "median_delay_s": 5.833901268255431,
+                  "false_alarms_per_vehicle_hour": 6.9625529360781835
+                }
+              }
+            },
+            "0.01": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.6833333333333332,
+                  "median_delay_s": 4.113623663860683,
+                  "false_alarms_per_vehicle_hour": 36.73346893861938
+                },
+                "2of3": {
+                  "detection_rate": 0.6666666666666666,
+                  "median_delay_s": 8.394840079146283,
+                  "false_alarms_per_vehicle_hour": 6.9625529360781835
+                },
+                "3of5": {
+                  "detection_rate": 0.6166666666666667,
+                  "median_delay_s": 4.263933731330326,
+                  "false_alarms_per_vehicle_hour": 2.8810563873426966
+                },
+                "4of5": {
+                  "detection_rate": 0.5916666666666667,
+                  "median_delay_s": 8.681715746031841,
+                  "false_alarms_per_vehicle_hour": 0.24008803227855804
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.10833333333333334,
+                  "median_delay_s": 10.065211940230801,
+                  "false_alarms_per_vehicle_hour": 22.08809896962734
+                },
+                "2of3": {
+                  "detection_rate": 0.125,
+                  "median_delay_s": 0.6161077797878534,
+                  "false_alarms_per_vehicle_hour": 9.84360932342088
+                },
+                "3of5": {
+                  "detection_rate": 0.08333333333333333,
+                  "median_delay_s": 1.7129969075322151,
+                  "false_alarms_per_vehicle_hour": 7.4427290006353
+                },
+                "4of5": {
+                  "detection_rate": 0.041666666666666664,
+                  "median_delay_s": 3.749886045989115,
+                  "false_alarms_per_vehicle_hour": 6.482376871521067
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.7000000000000001,
+                  "median_delay_s": 1.1290967406821437,
+                  "false_alarms_per_vehicle_hour": 34.81276468039092
+                },
+                "2of3": {
+                  "detection_rate": 0.6749999999999999,
+                  "median_delay_s": 1.9345284510054626,
+                  "false_alarms_per_vehicle_hour": 10.803961452535113
+                },
+                "3of5": {
+                  "detection_rate": 0.6083333333333333,
+                  "median_delay_s": 3.4150560730098127,
+                  "false_alarms_per_vehicle_hour": 6.2422888392425095
+                },
+                "4of5": {
+                  "detection_rate": 0.5333333333333333,
+                  "median_delay_s": 6.056805375032127,
+                  "false_alarms_per_vehicle_hour": 4.081496548735487
+                }
+              }
+            },
+            "0.005": {
+              "forest": {
+                "1of1": {
+                  "detection_rate": 0.6583333333333333,
+                  "median_delay_s": 1.0994617245160043,
+                  "false_alarms_per_vehicle_hour": 21.127746840513108
+                },
+                "2of3": {
+                  "detection_rate": 0.6166666666666667,
+                  "median_delay_s": 2.6158663160167634,
+                  "false_alarms_per_vehicle_hour": 3.1211444196212548
+                },
+                "3of5": {
+                  "detection_rate": 0.5750000000000001,
+                  "median_delay_s": 4.472075685829623,
+                  "false_alarms_per_vehicle_hour": 1.2004401613927902
+                },
+                "4of5": {
+                  "detection_rate": 0.48333333333333334,
+                  "median_delay_s": 8.622031012258958,
+                  "false_alarms_per_vehicle_hour": 0.0
+                }
+              },
+              "lof": {
+                "1of1": {
+                  "detection_rate": 0.09166666666666667,
+                  "median_delay_s": 10.827020146697759,
+                  "false_alarms_per_vehicle_hour": 15.84581013038483
+                },
+                "2of3": {
+                  "detection_rate": 0.125,
+                  "median_delay_s": 0.6161077797878534,
+                  "false_alarms_per_vehicle_hour": 7.4427290006353
+                },
+                "3of5": {
+                  "detection_rate": 0.06666666666666667,
+                  "median_delay_s": 1.2482412521494552,
+                  "false_alarms_per_vehicle_hour": 5.041848677849719
+                },
+                "4of5": {
+                  "detection_rate": 0.03333333333333333,
+                  "median_delay_s": 2.927752562914975,
+                  "false_alarms_per_vehicle_hour": 4.081496548735487
+                }
+              },
+              "hybrid": {
+                "1of1": {
+                  "detection_rate": 0.6666666666666666,
+                  "median_delay_s": 5.193105717888102,
+                  "false_alarms_per_vehicle_hour": 15.365634065827715
+                },
+                "2of3": {
+                  "detection_rate": 0.5833333333333334,
+                  "median_delay_s": 4.2214247721422,
+                  "false_alarms_per_vehicle_hour": 2.1607922905070223
+                },
+                "3of5": {
+                  "detection_rate": 0.5416666666666666,
+                  "median_delay_s": 5.340165515663102,
+                  "false_alarms_per_vehicle_hour": 0.7202640968356742
+                },
+                "4of5": {
+                  "detection_rate": 0.4083333333333334,
+                  "median_delay_s": 8.862294442253187,
+                  "false_alarms_per_vehicle_hour": 0.7202640968356742
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
