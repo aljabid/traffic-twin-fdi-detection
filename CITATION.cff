@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Traffic Digital Twin: Falsified-Data Detection and Hardware Prototype"
+type: software
+version: 1.0.0
+date-released: 2026-10-23
+license: Apache-2.0
+repository-code: "https://github.com/aljabid/traffic-twin-fdi-detection"
+authors:
+  - family-names: "Jabid"
+    given-names: "Al"
+abstract: "Code, firmware and data for detecting falsified telemetry in traffic digital twins: a hybrid detector evaluated under adaptive attack on real trajectories, a microsimulation and the VeReMi Extension benchmark, a bench hardware prototype, and post-quantum cryptography costs on 8-bit and ESP32 microcontrollers."
+keywords:
+  - digital twin
+  - false data injection
+  - anomaly detection
+  - hardware prototype
+  - post-quantum cryptography
