@@ -1,10 +1,10 @@
 # Traffic Digital Twin: Falsified-Data Detection and Hardware Prototype
 
-Code, firmware, raw results and figures for the article
+Code, firmware, raw results and figures !
 
 > Low-Cost Electronic Prototype and Hybrid Detection Method for Traffic
 > Digital Twins: Engineering Design, Implementation and Hardware Validation
-> (submitted to Inventions, MDPI).
+> 
 
 A traffic digital twin acts on telemetry from vehicles and roadside devices.
 A compromised device keeps valid credentials, so its falsified readings pass
