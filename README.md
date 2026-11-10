@@ -8,11 +8,11 @@ Code, firmware, raw results and figures !
 
 A traffic digital twin acts on telemetry from vehicles and roadside devices.
 A compromised device keeps valid credentials, so its falsified readings pass
-authentication. The article evaluates which detector design holds up against
+authentication. The Showcase evaluates which detector design holds up against
 an adaptive attacker and against attacks never seen in training, runs the
 pipeline on a bench hardware prototype, and measures the cost of
 post-quantum protection on two microcontrollers. This repository contains the
-code, firmware, raw results and figures behind every number in the article.
+code, firmware, raw results and figures behind every number in the Showcase.
 
 ## Contents
 
@@ -20,8 +20,8 @@ code, firmware, raw results and figures behind every number in the article.
 2. Repository layout
 3. Environment
 4. Reproducing the results (four levels)
-5. Article tables and figures mapped to files
-6. Article sections mapped to commands
+5. Showcase tables and figures mapped to files
+6. Showcase sections mapped to commands
 7. Notes on the hardware data
 8. Known limitations
 9. Data and licences
@@ -50,7 +50,7 @@ code, firmware, raw results and figures behind every number in the article.
 | tests/ | Unit and integration tests (236) |
 | scripts/ | One script per experiment (run_*.sh), result checks, live-run analysis, figure scripts |
 | firmware/ | sensor_node (bench node), crypto_bench (ATmega2560), crypto_bench_esp32 (ESP32, PQClean), module_check |
-| results/ml/ | Raw JSON output of every experiment in the article |
+| results/ml/ | Raw JSON output of every experiment in the Showcase |
 | results/hardware/ | Bench recordings, live-run logs, crypto timings |
 | docs/ | Full experiment log (experiment6_avds.md), hardware results (hardware_testbed.md), wiring, figures and bench photos |
 | data/processed/ | Small samples of each dataset in the project's telemetry schema |
@@ -92,7 +92,7 @@ false-alarm rate.
 ### Level 2: rerun one experiment end to end, no downloads (about 10 minutes)
 
 The SUMO data are generated locally and are bit-identical to the data used in
-the article. Hybrid+ is then rerun for one seed and compared with the
+the showcase. Hybrid+ is then rerun for one seed and compared with the
 committed result.
 
     export SCS_DATA_DIR=./datasets
@@ -119,7 +119,7 @@ given seed.
 ### Level 4: hardware
 
 All parts come from a standard Arduino starter kit. Single-unit retail
-prices, October 2026 (Table 1 of the article):
+prices, October 2026 (Table 1 of the Showcase):
 
 | Part | Role | Price (USD) |
 |---|---|---|
@@ -157,16 +157,16 @@ spoof, 2 clear-road spoof, 4 identity spoof; durations in seconds):
     python -m smart_city_security.hardware.serial_bridge live --port COM8 --clock millis --model model.pkl --schedule 0:30,1:30,0:30,2:30,0:30,4:30 --log my_live.csv
     python scripts/analyse_live_run.py my_live.csv
 
-To reproduce the article's model exactly, train on
+To reproduce the Showcase's model exactly, train on
 results/hardware/recording_occ.csv instead of a new recording.
 
 Crypto benchmarks. Upload firmware/crypto_bench (ATmega2560) or
 firmware/crypto_bench_esp32 (ESP32) and read the serial output at 115200
 baud. The ESP32 prints CPU cycles: milliseconds = cycles / 240000.
 
-## 5. Article tables and figures mapped to files
+## 5. Showcase tables and figures mapped to files
 
-| Article | Source files in results/ |
+| Showcase | Source files in results/ |
 |---|---|
 | Table 1 (parts and prices) | section 4, level 4 of this file |
 | Table 2 (attack families and categories withheld) | ml/leave-one-out-\*.json, ml/leave-category-out-\*.json |
@@ -192,9 +192,9 @@ Figure 6 is fig7_pitfalls.png and Figure 7 is fig6_alarm_tradeoff.png.
 The asterisk stands for the three sources: sumo, ngsim and pneuma.
 docs/experiment6_avds.md gives the full tables per source and seed.
 
-## 6. Article sections mapped to commands
+## 6. Showcase sections mapped to commands
 
-| Article section | Command | Output in results/ml/ |
+| Showcase section | Command | Output in results/ml/ |
 |---|---|---|
 | 4.1 and 4.6 Supervised vs unsupervised, divergence | bash scripts/run_avds4.sh, run_avds_replace.sh, run_avds_kalman.sh | avds4-\*.json |
 | 4.2 Leave one family or category out | bash scripts/run_leave_one_out.sh, run_leave_category_out.sh | leave-one-out-\*.json, leave-category-out-\*.json |
@@ -257,7 +257,7 @@ data/raw/README.md.
 
 ## 10. Citation and licence
 
-See CITATION.cff. Please cite the article once it is published.
+See CITATION.cff. Please cite this repo when you use any of this repo's materials.
 
 Code and firmware: Apache License 2.0 (LICENSE).
 firmware/crypto_bench_esp32/src/ contains PQClean code under its own licences
